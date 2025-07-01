@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "css/styles.css">
+    <link rel = "stylesheet" href = "css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Travel Destination Explorer</title>   
+</head>
+<body>
+        <nav>
+        <div class="name">trvl</div>
+        <div class="name q">Q.</div>       
+    </nav>
+    <div class="container">
+            <div class="searchbar-bg">
+                <div class="searchbar">
+                    <input type="text" id="search" placeholder="Search any country...">
+                    <div id="autocomplete-list" class="autocomplete-items"></div>
+                    <div id="filter-popup" class="filter-items" style="display:none;"></div>
+                    <button onclick="handleSearchClick()"><i class="fa-solid fa-search"></i></button>
+                </div>
+            </div>
+                <div>
+                <div class="filter-dropdown-wrapper">
+                    <button id="filter">All Countries</button>
+                    <div class="filter">
+                        <div class="dropdown-section">
+                            <div class="dropdown-title">World Regions</div>
+                            <div class="dropdown-link">Africa</div>
+                            <div class="dropdown-link">Americas</div>
+                            <div class="dropdown-link">Asia</div>
+                            <div class="dropdown-link">Europe</div>
+                            <div class="dropdown-link">Oceania</div>
+                        </div>
+                        <div class="dropdown-section">
+                            <div class="dropdown-title">All Countries</div>
+                            <div class="dropdown-link">Browse All</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <h1>Explore a Travel Destination</h1>
+        <p>Select a country to learn more about it:</p>
+        <p>popular</p>
+        <!--Top Highlighted countries images-->
+        <div class="image-container" id = "country-img">        
+            <div class = "image-wrapper">
+                <img class = "images" src="images/france.jpg"
+                onclick="getCountryInfo('france')">
+                <div class = "label">France</div>
+            </div>
+            <div class = "image-wrapper">
+                <img class = "images" src="images/japan.webp"
+                onclick="getCountryInfo('japan')">
+                <div class = "label">Japan</div>
+            </div>
+            <div class = "image-wrapper">
+                <img class = "images" src="images/Brazil.jpg"
+                onclick="getCountryInfo('brazil')">  
+                <div class = "label">Brazil</div>
+            </div>
+            <div class = "image-wrapper">
+                <img class = "images" src="images/canada.jpg"
+                onclick="getCountryInfo('canada')">   
+                <div class = "label">Canada</div> 
+            </div>
+            <div class = "image-wrapper">
+                <img class = "images" src="images/australia.jpg"
+                onclick="getCountryInfo('australia')"> 
+                <div class = "label">Australia</div>               
+            </div>
+            <div class = "image-wrapper">
+                <img class = "images" src="images/spain.jpg"
+                onclick="getCountryInfo('spain')"> 
+                <div class = "label">Spain</div>
+        <!--    </div>  
+             <div class = "image-wrapper">
+                <img class = "images" src="images/spain.jpg"
+                onclick="getCountryInfo('italy')"> 
+                <div class = "label">italy</div>
+            </div>  
+            <div class = "image-wrapper">
+                <img class = "images" src="images/spain.jpg"
+                onclick="getCountryInfo('india')"> 
+                <div class = "label">india</div>
+            </div>    
+        -->
+        </div>
+        <!-- Information Display -->
+    </div>
+    <div id="info"></div>
+    <script src = "js/main.js"></script>
+        <button id="backToTop" title="Back to top">&#8679;</button>
+</body>
+</html>

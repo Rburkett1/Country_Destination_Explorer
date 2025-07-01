@@ -1,0 +1,138 @@
+/* global themes only */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #101935;      /* Deep navy */
+    color: #f5f6fa;
+}
+
+nav {
+    width: 100%;
+    min-width: 100%;
+    height: 50px;
+    background-color: #1a223a;;
+    display: flex;
+    justify-content: left;    /* Center nav links horizontally */
+    align-items: center;
+    padding: 0 0 0 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+
+nav .name {  
+    font-size: 24px;   
+    color: #ff9800;            /* Light text color */
+    font-weight: bold;       
+    margin-left: 15px;
+}
+
+nav .q{  
+    font-size: 24px;   
+    color: #ffffff;            /* Light text color */
+    font-weight: bold;
+    margin-right: 20px;            /* Space between name and links */
+    margin-left: 0;
+}
+
+.container {
+   /*  background-color: #232b47;      /* Slightly lighter blue/gray */
+    border-radius: 16px;
+   /* box-shadow: 0 4px 32px rgba(0,0,0,0.25); */
+    padding: 24px;
+}
+
+.searchbar-bg {
+  /*  background: rgba(35, 43, 71, 0.85); /* Glassy effect */
+}
+
+.searchbar {
+    background: #36415f;            /* Dark glassy */
+    border-radius: 30px;
+}
+
+.searchbar:hover {
+    border: 2px solid #ff9800; /* Slightly lighter on hover */
+}
+
+.searchbar button{
+     background: #717c9a;
+}
+
+.searchbar button:hover {
+   background-color: rgba(10, 13, 25, 0.85);  /* Slightly darker on hover */
+}
+
+/*Highlight for matching text in autocomplete*/
+.autocomplete-highlight {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.airport-title, .googlemap-title, .weather-title, 
+.forecast-title {
+   font-family: Arial, Helvetica, sans-serif;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffe156;
+    text-align: left;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+
+.info-box,
+.info-box-2,
+.info-box-4,
+.info-box-5,
+.info-box-6 {
+    background: rgba(30, 38, 58, 0.85); /* Glassy dark */
+    border-radius: 12px;
+    border: 1.5px solid #3e4a6d;        /* Subtle accent border */
+}
+
+.country-info-container-1,
+.country-info-container-2,
+.country-info-container-3,
+.country-info-container-4,
+.country-info-weather,
+.country-info-container-5 {
+  /*  background: rgba(35, 43, 71, 0.7);  /* Slightly lighter glassy */
+    border-radius: 16px;
+}
+
+.country-info-container-1 {
+    background: rgba(30, 38, 58, 0.85); /* Match .info-box background */
+    border-radius: 12px;                 /* Match .info-box border-radius */
+    border: 1.5px solid #3e4a6d;         /* Match .info-box border */
+    padding: 24px;                       /* Optional: add padding for consistency */
+}
+
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1002;
+    background: #ff9800;
+    color: #f5f6fa;
+    border: none;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    transition: background 0.2s;
+}
+#backToTop:hover {
+     background: #e65100;
+}

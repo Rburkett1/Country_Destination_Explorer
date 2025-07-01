@@ -1,0 +1,786 @@
+{
+  "france": {
+    "fun_fact": "France is the most visited country in the world.",
+    "history": "France has a rich history that includes the reign of the Merovingians, Carolingians, and Capetians, leading to the establishment of the French Republic in 1792.",
+    "map": "images/france-map.webp",
+    "airports": {
+      "Charles de Gaulle Airport": {
+        "code": "CDG",
+        "location": "Roissy-en-France, near Paris"
+      },
+      "Orly Airport": {
+        "code": "ORY",
+        "location": "Orly, near Paris"
+      },
+      "Nice Côte d'Azur Airport": {
+        "code": "NCE",
+        "location": "Nice, Provence-Alpes-Côte d'Azur"
+      }
+    },
+    "attractions": {
+      "Eiffel Tower": {
+        "location": "Paris",
+        "description": "An iconic symbol of France, the Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris."
+      },
+      "Louvre Museum": {
+        "location": "Paris",
+        "description": "The world's largest art museum and a historic monument in Paris, France."
+      },
+      "Palace of Versailles": {
+        "location": "Versailles",
+        "description": "A former royal residence located just outside Paris, known for its opulent architecture and gardens."
+      }
+    },
+    "food": {
+      "Croissant": {
+        "description": "A buttery, flaky pastry named for its crescent shape, often enjoyed at breakfast."
+      },
+      "Baguette": {
+        "description": "A long, thin loaf of French bread known for its crispy crust and soft interior."
+      },
+      "Ratatouille": {
+        "description": "A traditional Provençal vegetable dish made with zucchini, eggplant, peppers, and tomatoes."
+      },
+      "Crêpes": {
+        "description": "Thin pancakes that can be filled with sweet or savory ingredients, popular throughout France."
+      },
+      "Coq au Vin": {
+        "description": "A classic French dish of chicken braised with wine, lardons, mushrooms, and garlic."
+      }
+    },
+    "public_transit": {
+      "Paris Métro": {
+        "description": "The Paris Métro is a rapid transit system that serves the city of Paris and its suburbs, known for its efficiency and extensive network."
+      },
+      "TGV": {
+        "description": "The TGV (Train à Grande Vitesse) is France's high-speed train service, connecting major cities across the country."
+      },
+      "Tramway de Nice": {
+        "description": "A modern tram system in Nice that provides convenient transportation along the French Riviera."
+      }
+    },
+    "cultural_events": {
+      "Bastille Day": {
+        "date": "July 14",
+        "description": "France's national day, commemorating the storming of the Bastille prison in 1789, celebrated with fireworks and parades."
+      },
+      "Cannes Film Festival": {
+        "date": "May",
+        "description": "An annual film festival held in Cannes, showcasing new films of all genres from around the world."
+      },
+      "Fête de la Musique": {
+        "date": "June 21",
+        "description": "A music celebration held annually on the summer solstice, featuring free concerts across the country."
+      }
+    }
+  },
+  "japan": {
+    "fun_fact": "Japan has more than 6,800 islands.",
+    "history": "Japan's history spans thousands of years, from the Jomon period (14,000–300 BCE) through the Heian period (794–1185) and into the modern era with the Meiji Restoration in 1868.",
+    "map": "images/japan-map.webp",
+    "airports": {
+      "Tokyo Haneda Airport": {
+        "code": "HND",
+        "location": "Tokyo"
+      },
+      "Narita International Airport": {
+        "code": "NRT",
+        "location": "Narita, Chiba Prefecture"
+      },
+      "Kansai International Airport": {
+        "code": "KIX",
+        "location": "Osaka"
+      }
+    },
+    "attractions": {
+      "Mount Fuji": {
+        "location": "Honshu Island",
+        "description": "Japan’s tallest mountain and an iconic symbol, popular for climbing and scenic views."
+      },
+      "Fushimi Inari Taisha": {
+        "location": "Kyoto",
+        "description": "Famous for its thousands of vermilion torii gates leading up the sacred Mount Inari."
+      },
+      "Tokyo Skytree": {
+        "location": "Tokyo",
+        "description": "The tallest structure in Japan, offering panoramic views of the city from its observation decks."
+      }
+    },
+    "food": {
+      "Sushi": {
+        "description": "A traditional Japanese dish consisting of vinegared rice accompanied by various ingredients, including seafood and vegetables."
+      },
+      "Ramen": {
+        "description": "A popular noodle soup dish that comes in various styles, often topped with meat, vegetables, and a boiled egg."
+      },
+      "Tempura": {
+        "description": "Battered and deep-fried seafood or vegetables, served with a dipping sauce."
+      },
+      "Okonomiyaki": {
+        "description": "A savory pancake filled with a variety of ingredients, including cabbage, meat, and seafood."
+      },
+      "Matcha": {
+        "description": "A finely ground powder of specially grown green tea leaves, used in traditional Japanese tea ceremonies."
+      }
+    },
+    "public_transit": {
+      "Tokyo Metro": {
+        "description": "A vast and efficient subway system serving Tokyo and its suburbs, known for its punctuality and cleanliness."
+      },
+      "Shinkansen": {
+        "description": "Japan's high-speed rail network, connecting major cities with trains that can travel up to 320 km/h (200 mph)."
+      },
+      "Osaka Metro": {
+        "description": "The subway system in Osaka, providing convenient access to the city's attractions and neighborhoods."
+      }
+    },
+    "cultural_events": {
+      "Cherry Blossom Festival": {
+        "date": "March-April",
+        "description": "A celebration of the blooming of cherry blossoms, with festivals and picnics held in parks across Japan."
+      },
+      "Gion Matsuri": {
+        "date": "July",
+        "description": "Kyoto's most famous festival, featuring parades of floats and traditional performances."
+      },
+      "Tanabata Festival": {
+        "date": "July 7",
+        "description": "A star festival celebrating the meeting of two celestial lovers, with colorful decorations and wishes written on tanzaku (small pieces of paper)."
+      }
+    }
+  },
+
+  "brazil": {
+    "fun_fact": "Brazil is the largest country in South America.",
+    "history": "Brazil was a Portuguese colony from 1500 until it gained independence in 1822, becoming a republic in 1889.",
+    "map": "images/brazil-map.webp",
+    "airports": {
+      "São Paulo/Guarulhos–Governador André Franco Montoro International Airport": {
+        "code": "GRU",
+        "location": "São Paulo"
+      },
+      "Rio de Janeiro/Galeão–Antonio Carlos Jobim International Airport": {
+        "code": "GIG",
+        "location": "Rio de Janeiro"
+      },
+      "Brasília/Presidente Juscelino Kubitschek International Airport": {
+        "code": "BSB",
+        "location": "Brasília"
+      }
+    },
+    "attractions": {
+      "Christ the Redeemer": {
+        "location": "Rio de Janeiro",
+        "description": "An iconic statue of Jesus Christ overlooking the city."
+      },
+      "Amazon Rainforest": {
+        "location": "North Brazil",
+        "description": "The largest rainforest in the world, home to diverse wildlife."
+      },
+      "Iguazu Falls": {
+        "location": "Paraná",
+        "description": "A massive waterfall system on the border of Brazil and Argentina."
+      }
+    },
+    "food": {
+      "Feijoada": {
+        "description": "A traditional Brazilian stew made with black beans and various cuts of pork, often served with rice."
+      },
+      "Pão de Queijo": {
+        "description": "Cheese bread rolls made from tapioca flour, popular as a snack or breakfast item."
+      },
+      "Brigadeiro": {
+        "description": "A chocolate truffle made with condensed milk, cocoa powder, butter, and chocolate sprinkles."
+      },
+      "Coxinha": {
+        "description": "A popular street food snack made of shredded chicken wrapped in dough and deep-fried."
+      },
+      "Açaí Bowl": {
+        "description": "A smoothie bowl made from açaí berries, often topped with granola, fruits, and honey."
+      }
+    },
+    "public_transit": {
+      "São Paulo Metro": {
+        "description": "A comprehensive metro system serving São Paulo, known for its extensive network and efficiency."
+      },
+      "Rio de Janeiro Light Rail": {
+        "description": "A modern light rail system that connects key areas of Rio de Janeiro, including the city center and tourist attractions."
+      },
+      "Belo Horizonte Bus Rapid Transit": {
+        "description": "A bus rapid transit system in Belo Horizonte, providing fast and reliable public transportation."
+      }
+    },
+    "cultural_events": {
+      "Carnival": {
+        "date": "February/March",
+        "description": "A world-famous festival featuring parades, samba music, and vibrant costumes, celebrated across Brazil."
+      },
+      "Festa Junina": {
+        "date": "June",
+        "description": "A traditional Brazilian festival celebrating rural life with bonfires, dances, and typical foods."
+      },
+      "Parintins Folklore Festival": {
+        "date": "June",
+        "description": "An annual festival in the Amazon region celebrating local folklore with music, dance, and theatrical performances."
+      }
+    }
+  },
+
+  "canada": {
+    "fun_fact": "Canada has the longest coastline of any country in the world.",
+    "history": "Canada was originally inhabited by Indigenous peoples, later explored by Europeans in the 15th century, and became a self-governing dominion in 1867.",
+    "map": "images/canada-map.gif",
+    "airports": {
+      "Toronto Pearson International Airport": {
+        "code": "YYZ",
+        "location": "Toronto, Ontario"
+      },
+      "Vancouver International Airport": {
+        "code": "YVR",
+        "location": "Vancouver, British Columbia"
+      },
+      "Montréal-Pierre Elliott Trudeau International Airport": {
+        "code": "YUL",
+        "location": "Montréal, Quebec"
+      }
+    },
+    "attractions": {
+      "Niagara Falls": {
+        "location": "Ontario",
+        "description": "A world-famous waterfall located on the border between Canada and the United States, known for its stunning beauty and power."
+      },
+      "Banff National Park": {
+        "location": "Alberta",
+        "description": "Canada's oldest national park, famous for its mountainous terrain, glaciers, and turquoise lakes."
+      },
+      "CN Tower": {
+        "location": "Toronto",
+        "description": "A 553-meter-high concrete communications and observation tower, one of the tallest in the world."
+      }
+    },
+    "food": {
+      "Poutine": {
+        "description": "A Canadian dish consisting of fries topped with cheese curds and gravy."
+      },
+      "Butter Tarts": {
+        "description": "A sweet pastry filled with a mixture of butter, sugar, and eggs."
+      },
+      "Nanaimo Bars": {
+        "description": "A no-bake dessert bar originating from Nanaimo, British Columbia, with a crumbly base, custard-flavored icing, and chocolate topping."
+      }
+    },
+    "public_transit": {
+      "Toronto Transit Commission (TTC)": {
+        "description": "The public transit system serving Toronto, including subways, streetcars, and buses."
+      },
+      "Vancouver SkyTrain": {
+        "description": "A rapid transit system in Metro Vancouver, known for its efficiency and scenic views."
+      },
+      "Montreal Metro": {
+        "description": "A comprehensive subway system serving the city of Montreal, known for its unique art and architecture."
+      }
+    },
+    "cultural_events": {
+      "Toronto International Film Festival": {
+        "date": "September",
+        "description": "One of the largest publicly attended film festivals in the world, showcasing new films from around the globe."
+      },
+      "Canada Day": {
+        "date": "July 1",
+        "description": "Canada's national day, celebrated with fireworks, concerts, and parades across the country."
+      },
+      "Montreal Jazz Festival": {
+        "date": "June/July",
+        "description": "The largest jazz festival in the world, featuring thousands of artists from dozens of countries."
+      }
+    }
+  },
+
+  "australia": {
+    "fun_fact": "Australia is home to the world's longest fence, known as the Dingo Fence.",
+    "history": "Australia was inhabited by Indigenous Australians for over 65,000 years before British colonization began in 1788, leading to the establishment of the Commonwealth of Australia in 1901.",
+    "map": "images/australia-map.jpg",
+    "airports": {
+      "Sydney Kingsford Smith Airport": {
+        "code": "SYD",
+        "location": "Sydney, New South Wales"
+      },
+      "Melbourne Airport": {
+        "code": "MEL",
+        "location": "Melbourne, Victoria"
+      },
+      "Brisbane Airport": {
+        "code": "BNE",
+        "location": "Brisbane, Queensland"
+      }
+    },
+    "attractions": {
+      "Sydney Opera House": {
+        "location": "Sydney",
+        "description": "A world-famous performing arts center and architectural icon."
+      },
+      "Great Barrier Reef": {
+        "location": "Queensland",
+        "description": "The world's largest coral reef system, renowned for its marine biodiversity."
+      },
+      "Uluru (Ayers Rock)": {
+        "location": "Northern Territory",
+        "description": "A massive sandstone monolith and sacred Aboriginal site."
+      }
+    },
+    "food": {
+      "Vegemite": {
+        "description": "A savory spread made from yeast extract, popular on toast."
+      },
+      "Lamington": {
+        "description": "A sponge cake coated in chocolate and coconut."
+      },
+      "Meat Pie": {
+        "description": "A hand-sized pie filled with minced meat and gravy."
+      }
+    },
+    "public_transit": {
+      "Sydney Trains": {
+        "description": "A suburban rail network serving the Sydney metropolitan area."
+      },
+      "Melbourne Tram": {
+        "description": "The largest urban tramway network in the world, serving Melbourne."
+      },
+      "Transperth": {
+        "description": "Public transport system in Perth, including trains, buses, and ferries."
+      }
+    },
+    "cultural_events": {
+      "Sydney Festival": {
+        "date": "January",
+        "description": "An annual arts festival featuring music, theater, and dance performances."
+      },
+      "Melbourne Cup": {
+        "date": "November",
+        "description": "Australia's most famous horse race, known as 'the race that stops a nation.'"
+      },
+      "Vivid Sydney": {
+        "date": "May-June",
+        "description": "A festival of light, music, and ideas, featuring outdoor immersive light installations."
+      }
+    }
+  },
+
+  "spain": {
+    "fun_fact": "Spain is the second most spoken language in the world.",
+    "history": "Spain's history includes the Iberian Peninsula's early inhabitants, the Roman Empire, the Moorish occupation, and the unification of Spain under the Catholic Monarchs in 1492.",
+    "map": "images/spain-map.gif",
+    "airports": {
+      "Adolfo Suárez Madrid–Barajas Airport": {
+        "code": "MAD",
+        "location": "Madrid"
+      },
+      "Barcelona-El Prat Airport": {
+        "code": "BCN",
+        "location": "Barcelona"
+      },
+      "Málaga-Costa del Sol Airport": {
+        "code": "AGP",
+        "location": "Málaga"
+      }
+    },
+    "attractions": {
+      "Sagrada Família": {
+        "location": "Barcelona",
+        "description": "A large unfinished Roman Catholic basilica designed by Antoni Gaudí."
+      },
+      "Alhambra": {
+        "location": "Granada",
+        "description": "A palace and fortress complex of the Moorish monarchs of Granada."
+      },
+      "Park Güell": {
+        "location": "Barcelona",
+        "description": "A public park system composed of gardens and architectonic elements designed by Gaudí."
+      }
+    },
+    "food": {
+      "Paella": {
+        "description": "A rice dish originally from Valencia, made with seafood, meat, and vegetables."
+      },
+      "Tapas": {
+        "description": "Small savory dishes, snacks, or appetizers, typical in Spanish cuisine."
+      },
+      "Churros": {
+        "description": "Fried-dough pastry, often served with hot chocolate."
+      }
+    },
+    "public_transit": {
+      "Madrid Metro": {
+        "description": "The rapid transit system serving Madrid and its metropolitan area."
+      },
+      "Barcelona Metro": {
+        "description": "A large metro network serving the city of Barcelona."
+      },
+      "Renfe": {
+        "description": "Spain's national railway company, operating both commuter and long-distance trains."
+      }
+    },
+    "cultural_events": {
+      "La Tomatina": {
+        "date": "August",
+        "description": "A festival held in Buñol where participants throw tomatoes at each other."
+      },
+      "Running of the Bulls": {
+        "date": "July",
+        "description": "A part of the San Fermín festival in Pamplona, featuring the running of bulls through the streets."
+      },
+      "Semana Santa": {
+        "date": "March/April",
+        "description": "Holy Week, celebrated with elaborate processions throughout Spain."
+      }
+    }
+  },
+
+  "italy": {
+    "fun_fact": "Italy has more UNESCO World Heritage sites than any other country.",
+    "history": "Italy's history includes the Roman Empire, the Renaissance, and the unification of Italy in the 19th century.",
+    "map": "images/italy-map.webp",
+    "airports": {
+      "Leonardo da Vinci–Fiumicino Airport": {
+        "code": "FCO",
+        "location": "Rome"
+      },
+      "Milan Malpensa Airport": {
+        "code": "MXP",
+        "location": "Milan"
+      },
+      "Venice Marco Polo Airport": {
+        "code": "VCE",
+        "location": "Venice"
+      }
+    },
+    "attractions": {
+      "Colosseum": {
+        "location": "Rome",
+        "description": "An ancient Roman gladiatorial arena and one of the most iconic landmarks in Italy."
+      },
+      "Leaning Tower of Pisa": {
+        "location": "Pisa",
+        "description": "A world-famous freestanding bell tower known for its unintended tilt."
+      },
+      "Venice Canals": {
+        "location": "Venice",
+        "description": "A network of picturesque canals that wind through the historic city of Venice."
+      }
+    },
+    "food": {
+      "Pizza Margherita": {
+        "description": "A classic Neapolitan pizza topped with tomatoes, mozzarella, and basil."
+      },
+      "Pasta Carbonara": {
+        "description": "A Roman pasta dish made with eggs, cheese, pancetta, and pepper."
+      },
+      "Gelato": {
+        "description": "Italian-style ice cream, known for its rich flavor and smooth texture."
+      }
+    },
+    "public_transit": {
+      "Rome Metro": {
+        "description": "The rapid transit system serving Rome."
+      },
+      "Milan Metro": {
+        "description": "The largest metro system in Italy, serving Milan."
+      },
+      "Trenitalia": {
+        "description": "Italy's primary train operator, providing high-speed and regional rail services."
+      }
+    },
+    "cultural_events": {
+      "Venice Carnival": {
+        "date": "February",
+        "description": "A world-famous festival held in Venice, known for its elaborate masks and costumes."
+      },
+      "Palio di Siena": {
+        "date": "July/August",
+        "description": "A historic horse race held twice each summer in Siena."
+      },
+      "Milan Fashion Week": {
+        "date": "February/September",
+        "description": "A major event in the international fashion calendar, held twice a year in Milan."
+      }
+    }
+  },
+
+  "india": {
+    "fun_fact": "India is the world's largest democracy.",
+    "history": "India's history includes the Indus Valley Civilization, Mughal Empire, British colonial rule, and independence in 1947.",
+    "map": "images/india-map.webp",
+    "airports": {
+      "Indira Gandhi International Airport": {
+        "code": "DEL",
+        "location": "Delhi"
+      },
+      "Chhatrapati Shivaji Maharaj International Airport": {
+        "code": "BOM",
+        "location": "Mumbai"
+      },
+      "Kempegowda International Airport": {
+        "code": "BLR",
+        "location": "Bengaluru"
+      }
+    },
+    "attractions": {
+      "Taj Mahal": {
+        "location": "Agra",
+        "description": "A white marble mausoleum and UNESCO World Heritage site, considered one of the New Seven Wonders of the World."
+      },
+      "Jaipur City Palace": {
+        "location": "Jaipur",
+        "description": "A historic palace complex that blends Rajasthani and Mughal architecture."
+      },
+      "Gateway of India": {
+        "location": "Mumbai",
+        "description": "A monumental archway built during the 20th century in Mumbai, overlooking the Arabian Sea."
+      }
+    },
+    "food": {
+      "Biryani": {
+        "description": "A flavorful rice dish made with spices, rice, and meat or vegetables."
+      },
+      "Masala Dosa": {
+        "description": "A thin, crispy pancake made from fermented rice and lentil batter, filled with spiced potatoes."
+      },
+      "Butter Chicken": {
+        "description": "A popular North Indian dish of chicken in a mildly spiced tomato sauce."
+      }
+    },
+    "public_transit": {
+      "Delhi Metro": {
+        "description": "A rapid transit system serving Delhi and its satellite cities."
+      },
+      "Mumbai Suburban Railway": {
+        "description": "A suburban rail system serving Mumbai and its metropolitan region."
+      },
+      "Kolkata Metro": {
+        "description": "India's first underground metro system, serving Kolkata."
+      }
+    },
+    "cultural_events": {
+      "Diwali": {
+        "date": "October/November",
+        "description": "The Hindu festival of lights, celebrated with lamps, fireworks, and sweets."
+      },
+      "Holi": {
+        "date": "March",
+        "description": "The festival of colors, celebrated with vibrant powders and water."
+      },
+      "Durga Puja": {
+        "date": "September/October",
+        "description": "A major Hindu festival in West Bengal, celebrating the goddess Durga."
+      }
+    }
+  },
+
+  "panama": {
+    "fun_fact": "Panama is home to the Panama Canal, a key conduit for international maritime trade.",
+    "history": "Panama was part of Colombia until it gained independence in 1903, with the canal opening in 1914.",
+    "map": "images/panama-map.webp",
+    "airports": {
+      "Tocumen International Airport": {
+        "code": "PTY",
+        "location": "Panama City"
+      },
+      "Enrique Malek International Airport": {
+        "code": "DAV",
+        "location": "David"
+      },
+      "Panama Pacifico International Airport": {
+        "code": "BLB",
+        "location": "Balboa"
+      }
+    },
+    "attractions": {
+      "Panama Canal": {
+        "location": "Panama City",
+        "description": "A man-made waterway connecting the Atlantic and Pacific Oceans."
+      },
+      "San Blas Islands": {
+        "location": "Caribbean Sea",
+        "description": "An archipelago of over 350 islands known for their beauty and indigenous culture."
+      },
+      "Casco Viejo": {
+        "location": "Panama City",
+        "description": "The historic district of Panama City, known for its colonial-era landmarks."
+      }
+    },
+    "food": {
+      "Sancocho": {
+        "description": "A traditional chicken and vegetable stew, considered Panama's national dish."
+      },
+      "Ceviche": {
+        "description": "Seafood marinated in citrus juices, often served as an appetizer."
+      },
+      "Arroz con Pollo": {
+        "description": "A popular dish of rice cooked with chicken and vegetables."
+      }
+    },
+    "public_transit": {
+      "Metro de Panamá": {
+        "description": "The first rapid transit system in Central America, serving Panama City."
+      },
+      "MiBus": {
+        "description": "The main bus system in Panama City, providing urban and suburban service."
+      },
+      "Albrook Bus Terminal": {
+        "description": "The largest bus terminal in Panama, connecting the city with the rest of the country."
+      }
+    },
+    "cultural_events": {
+      "Carnaval de Panamá": {
+        "date": "February/March",
+        "description": "A lively festival with parades, music, and dancing, celebrated before Lent."
+      },
+      "Festival de la Mejorana": {
+        "date": "September",
+        "description": "A traditional folk festival held in Guararé, featuring music, dance, and crafts."
+      },
+      "Semana Santa": {
+        "date": "March/April",
+        "description": "Holy Week, celebrated with religious processions and events throughout Panama."
+      }
+    }
+  },
+  "mexico": {
+  "fun_fact": "Mexico introduced chocolate, chilies, and corn to the world.",
+  "history": "Mexico is home to ancient civilizations such as the Maya and Aztecs, was colonized by Spain in the 16th century, and gained independence in 1821.",
+  "map": "images/mexico-map.webp",
+  "airports": {
+    "Mexico City International Airport": {
+      "code": "MEX",
+      "location": "Mexico City"
+    },
+    "Cancún International Airport": {
+      "code": "CUN",
+      "location": "Cancún, Quintana Roo"
+    },
+    "Guadalajara International Airport": {
+      "code": "GDL",
+      "location": "Guadalajara, Jalisco"
+    }
+  },
+  "attractions": {
+    "Chichen Itza": {
+      "location": "Yucatán",
+      "description": "A large pre-Columbian archaeological site built by the Maya civilization."
+    },
+    "Teotihuacan": {
+      "location": "State of Mexico",
+      "description": "An ancient Mesoamerican city known for its massive pyramids."
+    },
+    "Cabo San Lucas": {
+      "location": "Baja California Sur",
+      "description": "A resort city known for its beaches, marine life, and nightlife."
+    }
+  },
+  "food": {
+    "Tacos": {
+      "description": "A traditional Mexican dish consisting of small hand-sized corn or wheat tortillas topped with a filling."
+    },
+    "Mole": {
+      "description": "A rich sauce made with chili peppers, spices, and chocolate, often served over chicken."
+    },
+    "Tamales": {
+      "description": "A traditional dish made of masa (corn dough) filled with meats, cheeses, or chilies, wrapped in corn husks and steamed."
+    }
+  },
+  "public_transit": {
+    "Mexico City Metro": {
+      "description": "One of the largest and busiest metro systems in the world, serving Mexico City."
+    },
+    "Metrobus": {
+      "description": "A bus rapid transit system operating in Mexico City."
+    },
+    "Guadalajara Light Rail": {
+      "description": "A light rail system serving the city of Guadalajara."
+    }
+  },
+  "cultural_events": {
+    "Día de los Muertos": {
+      "date": "November 1-2",
+      "description": "The Day of the Dead, a celebration honoring deceased loved ones with altars, offerings, and festivities."
+    },
+    "Guelaguetza": {
+      "date": "July",
+      "description": "An annual indigenous cultural event in Oaxaca featuring traditional dances, music, and costumes."
+    },
+    "Cinco de Mayo": {
+      "date": "May 5",
+      "description": "A holiday commemorating the Mexican victory over the French at the Battle of Puebla in 1862."
+    }
+  }
+},
+    "germany": {
+        "fun_fact": "Germany is home to the world's oldest zoo, the Berlin Zoo, founded in 1844.",
+        "history": "Germany's history includes the Holy Roman Empire, the Reformation, the unification in 1871, and the division during the Cold War, leading to reunification in 1990.",
+        "map": "images/germany-map.webp",
+        "airports": {
+        "Frankfurt Airport": {
+            "code": "FRA",
+            "location": "Frankfurt"
+        },
+        "Munich Airport": {
+            "code": "MUC",
+            "location": "Munich"
+        },
+        "Berlin Brandenburg Airport": {
+            "code": "BER",
+            "location": "Berlin"
+        }
+        },
+        "attractions": {
+        "Brandenburg Gate": {
+            "location": "Berlin",
+            "description": "An iconic neoclassical monument that has become a symbol of Berlin and Germany."
+        },
+        "Neuschwanstein Castle": {
+            "location": "Bavaria",
+            "description": "A fairy-tale castle built by King Ludwig II, known for its picturesque setting."
+        },
+        "Cologne Cathedral": {
+            "location": "Cologne",
+            "description": "A Gothic cathedral and UNESCO World Heritage site, famous for its twin spires."
+        }
+        },
+        "food": {
+        "Bratwurst": {
+            "description": "A type of German sausage made from pork, beef, or veal."
+        },
+        "Sauerkraut": {
+            "description": "Fermented cabbage, often served as a side dish with meats."
+        },
+        "Pretzel (Brezel)": {
+            "description": "A baked bread product, typically twisted into a knot shape and sprinkled with coarse salt."
+        }
+        },
+        "public_transit": {
+        "Berlin U-Bahn": {
+            "description": "The rapid transit system serving Berlin, known for its extensive network."
+        },
+        "Munich U-Bahn": {
+            "description": "The subway system serving Munich, providing efficient transportation across the city."
+        },
+        "Deutsche Bahn (DB)": {
+            "description": "Germany's national railway company, operating high-speed and regional trains."
+        }
+        },
+        "cultural_events": {
+        "Oktoberfest": {
+            "date": "September-October",
+            "description": "The world's largest beer festival held annually in Munich, celebrating Bavarian culture with beer, food, and music."
+        },
+        "Berlin International Film Festival (Berlinale)": {
+            "date": "February",
+            "description": "One of the most prestigious film festivals in the world, showcasing international films."
+        },
+        "Christmas Markets": {
+            "date": "December",
+            "description": "Traditional markets held throughout Germany, featuring festive decorations, food, and handmade crafts."
+        }
+    } 
+    }
+}
