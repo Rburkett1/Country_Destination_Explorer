@@ -223,7 +223,7 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
         <!-----/ Weather Section /----->
         <div class="country-info-weather">
             <div class="info-box-6 weather">
-                <div class = "weather-title">Today in ${countryData.capital?.[0] || 'NA'}</div>
+                <div class = "weather-title">Today in ${countryData.capital?.[0] || 'NA'}, ${countryData.name.common}</div>
                 <div class="weather-top">
                     <div id="weather-icon" class="weather-icon"></div>       
                     <div><span id="weather-temp"> Loading...</span> </div>
