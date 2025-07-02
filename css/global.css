@@ -48,9 +48,9 @@ nav .q{
     padding: 24px;
 }
 
-.searchbar-bg {
-  /*  background: rgba(35, 43, 71, 0.85); /* Glassy effect */
-}
+/* .searchbar-bg {
+  /*  background: rgba(35, 43, 71, 0.85); /* Glassy effect 
+} */
 
 .searchbar {
     background: #36415f;            /* Dark glassy */
@@ -102,13 +102,14 @@ nav .q{
 .info-box-2,
 .info-box-4,
 .info-box-5,
-.info-box-6 .weather,
+.info-box-6.weather,
+.info-box-6.forecast,
 .fact-container,
-.country-info-container-1
-{
-    background: rgba(30, 38, 58, 0.85); /* Glassy dark */
+.country-info-container-1 {
+    background: rgba(35, 43, 71, 0.85);
     border-radius: 12px;
     border: 1.5px solid #3e4a6d;        /* Subtle accent border */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .country-info-container-1,

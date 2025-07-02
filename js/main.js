@@ -326,9 +326,9 @@ async function fetchWikipediaSummary(countryName) {
         let summary = data.extract || 'No Wikipedia summary available.';
         // Limit to first 2 sentences
         const sentences = summary.match(/[^\.!\?]+[\.!\?]+/g);
-        if (sentences && sentences.length > 1) {
+         if (sentences && sentences.length > 1) {
             summary = sentences.slice(0, 5).join(' ');
-        }
+        } 
         return summary;
     } catch (error) {
         console.error('Wikipedia fetch error:', error);
@@ -577,3 +577,4 @@ document.addEventListener("DOMContentLoaded", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 });
+
