@@ -7,6 +7,7 @@ async function fetchCountryData(country) {
     return data[0];
 }
 
+
 async function fetchLocalData() {
     const res = await fetch('countryfacts.json');
     return res.json();
@@ -160,48 +161,50 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
                     ? `<img src="${countryData.coatOfArms.svg}" alt="Coat of Arms of ${countryData.name.common}" class="coat-of-arms-img">`
                     : 'Not available'}</div>
                 <div class="capital"><strong>Capital:</strong> ${countryData.capital?.[0] || 'N/A'}</div> 
-                <div class="extra">Fact: ${localFact}</div>   
-                
-                <div class="extra"> ${apiFact}</div> 
+             <!--   <div class="extra">Fact: ${localFact}</div>   -->         
             </div>
             <div class="flag-section">                                
                 <img src="${countryData.flags.svg}" alt="Flag of ${countryData.name.common}">
             </div>                                                  
         </div>
+        <div class="fact-container">
+            <div class="extra"> ${apiFact}</div> 
+        </div>
+        
         <!-----/ Section 2  /----->
         <div class="country-info-container-2">                 
             <div class="info-box">
-                <strong>Region:</strong> 
+                <strong>Region</strong> 
                 ${countryData.region}
                 ${getGlobeIcon(countryData.region)}
             </div>
             <div class="info-box">
-                <strong>Subregion:</strong> 
+                <strong>Subregion</strong> 
                 ${countryData.subregion}
                 <i class="fa-solid fa-map-marker-alt"></i>
             </div>
             <div class="info-box">
-                <strong>Area:</strong> 
+                <strong>Area</strong> 
                 ${countryData.area.toLocaleString()} km²
                 <i class="fa-regular fa-compass"></i>
             </div>
             <div class="info-box">
-                <strong>Currency:</strong> 
+                <strong>Currency</strong> 
                 ${Object.values(countryData.currencies)[0].name} <br>
                 ${currencyIcons[countryData.name.common.toLowerCase()] || ''}
             </div>
             <div class="info-box">
-                <strong>Population:</strong> 
+                <strong>Population</strong> 
                 ${countryData.population.toLocaleString()}
                 <i class="fa-solid fa-user"></i>
             </div>
         </div>
         <!-----/ Section 3  /----->
         <div class="country-info-container-3">    
-            <div class="info-box-2"><strong>Languages:</strong> ${Object.values(countryData.languages).join(', ')}</div>
-            <div class="info-box-2"><strong>Timezone:</strong> ${countryData.timezones?.[0] || 'N/A'}</div>
-            <div class="info-box-2"><strong>Start of Week:</strong> ${countryData.startOfWeek ? countryData.startOfWeek.charAt(0).toUpperCase() + countryData.startOfWeek.slice(1) : 'N/A'}</div>                        
-            <div class="info-box-2"><strong>Borders:</strong> ${countryData.borders?.join(', ') || 'None'}</div>
+            <div class="info-box-2"><strong>Languages</strong> ${Object.values(countryData.languages).join(', ')}</div>
+            <div class="info-box-2"><strong>Timezone</strong> ${countryData.timezones?.[0] || 'N/A'}</div>
+            <div class="info-box-2"><strong>Start of Week</strong> ${countryData.startOfWeek ? countryData.startOfWeek.charAt(0).toUpperCase() + countryData.startOfWeek.slice(1) : 'N/A'}</div>                        
+            <div class="info-box-2"><strong>Borders</strong> ${countryData.borders?.join(', ') || 'None'}</div>
         </div>
         <!-----/ Section 4  /----->
         <div class="country-info-container-4">
@@ -210,7 +213,7 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
                 ${airports}
             </div>
             <div class="info-box-4 map">
-                <div class="googlemap-title">Google Maps:</div><br>
+                <div class="googlemap-title">Map</div><br>
                 <iframe   
                     class="google-map"                                                   
                     loading="lazy"
@@ -324,7 +327,7 @@ async function fetchWikipediaSummary(countryName) {
         // Limit to first 2 sentences
         const sentences = summary.match(/[^\.!\?]+[\.!\?]+/g);
         if (sentences && sentences.length > 1) {
-            summary = sentences.slice(0, 2).join(' ');
+            summary = sentences.slice(0, 5).join(' ');
         }
         return summary;
     } catch (error) {
@@ -332,6 +335,9 @@ async function fetchWikipediaSummary(countryName) {
         return 'No Wikipedia summary available.';
     }
 }
+
+
+
 
 async function renderWeather(countryData) {
     const [lat, lon] = countryData.latlng || [];
@@ -549,6 +555,8 @@ function handleSearchClick() {
     getCountryInfo(val.toLowerCase());
     searchInput.value = '';
 }
+
+
 
 
 

@@ -75,9 +75,19 @@ nav .q{
     font-weight: bold;
 }
 
+/* Global font subheading styles  */
+.country-info-container-2 strong,
+.country-info-container-3 strong,
+.country-info-container-5 strong {
+    color: #ffe156;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 10px;
+}
+
 .airport-title, .googlemap-title, .weather-title, 
 .forecast-title {
-   font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 12px;
     margin-bottom: 10px;
     font-size: 18px;
@@ -88,18 +98,21 @@ nav .q{
 }
 
 
-
 .info-box,
 .info-box-2,
 .info-box-4,
 .info-box-5,
-.info-box-6 {
+.info-box-6 .weather,
+.fact-container,
+.country-info-container-1
+{
     background: rgba(30, 38, 58, 0.85); /* Glassy dark */
     border-radius: 12px;
     border: 1.5px solid #3e4a6d;        /* Subtle accent border */
 }
 
 .country-info-container-1,
+.fact-container,
 .country-info-container-2,
 .country-info-container-3,
 .country-info-container-4,
@@ -107,13 +120,7 @@ nav .q{
 .country-info-container-5 {
   /*  background: rgba(35, 43, 71, 0.7);  /* Slightly lighter glassy */
     border-radius: 16px;
-}
-
-.country-info-container-1 {
-    background: rgba(30, 38, 58, 0.85); /* Match .info-box background */
-    border-radius: 12px;                 /* Match .info-box border-radius */
-    border: 1.5px solid #3e4a6d;         /* Match .info-box border */
-    padding: 24px;                       /* Optional: add padding for consistency */
+    margin-top: 20px;
 }
 
 #backToTop {
