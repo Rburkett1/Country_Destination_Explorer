@@ -97,6 +97,23 @@ nav .q{
     font-weight: bold;
 }
 
+.country-info-box-5-name {
+    font-size: 16px;
+    color: #ececec;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.country-info-box-5-loc,
+.country-info-box-5-date {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+.country-info-box-5-desc {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
 
 .info-box,
 .info-box-2,

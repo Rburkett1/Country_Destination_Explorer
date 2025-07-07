@@ -8,6 +8,8 @@ async function fetchCountryData(country) {
 }
 
 
+
+
 async function fetchLocalData() {
     const res = await fetch('countryfacts.json');
     return res.json();
@@ -43,8 +45,9 @@ function buildAttractionsList(attractionsData) {
         attractionsData,
         ([name, info]) => `
             <li>
-                <strong>${name}</strong> (${info.location})<br>
-                <em>${info.description}</em>
+                <div class = "country-info-box-5-name">${name}</div> 
+                <div class = "country-info-box-5-loc">${info.location}<div>
+                <div class = "country-info-box-5-desc">${info.description}</div>
             </li>
         `,
         'No attractions available.'
@@ -56,8 +59,8 @@ function buildFoodList(foodData) {
         foodData,
         ([name, info]) => `
             <li>
-                <strong>${name}</strong>
-                <em>${info.description}</em>
+                <div class = "country-info-box-5-name">${name}</div>
+                <div class = "country-info-box-5-desc">${info.description}</div>
             </li>
         `,
         'No food information available.'
@@ -69,8 +72,9 @@ function buildCulturalEventsList(culturalEventsData) {
         culturalEventsData,
         ([name, info]) => `
             <li>
-                <strong>${name}</strong> (${info.date})<br>
-                <em>${info.description}</em>
+                <div class = "country-info-box-5-name">${name}</div> 
+                <div class = "country-info-box-5-date">(${info.date})<div>
+                <div class = "country-info-box-5-desc">${info.description}</div>
             </li>
         `,
         'No cultural events available.'
@@ -231,11 +235,11 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
                     <div id="weather-icon" class="weather-icon"></div>       
                     <div><span id="weather-temp"> Loading...</span> </div>
                 </div>            
-                <div class="weather-row"><span>Direction:</span> <span id="weather-winddir">...</span></div>
+                <div class="weather-row"><span>Wind Direction:</span> <span id="weather-winddir">...</span></div>
                 <div class="weather-row"><span>Wind Speed:</span> <span id="weather-wind">...</span></div>
                 <div class="weather-row"><span>Conditions:</span> <span id="weather-code">...</span></div>
                 <div class="weather-row"><span>Humidity:</span> <span id="weather-humidity">...</span></div>
-                <div class="weather-row"><span>Cloud Cover:</span> <span id="weather-cloud">...</span></div>                               
+                <div class="weather-row"><span>Cloud Cover:</span> <span id="weather-cloud">...</span></div>                                
             </div>
             <div class="info-box-6 forecast">
                 <span id="forecast-span"></span>
@@ -336,7 +340,11 @@ async function fetchWikipediaSummary(countryName) {
     }
 }
 
-
+function degreesToCompass(degrees) {
+    const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+    const index = Math.round(degrees / 45) % 8;
+    return directions[index];
+}
 
 
 async function renderWeather(countryData) {
@@ -369,7 +377,11 @@ async function renderWeather(countryData) {
         if (weather) {
             document.getElementById('weather-temp').textContent = `${weather.temperature}°F`;
             document.getElementById('weather-wind').textContent = `${weather.windspeed} mph`;
-            document.getElementById('weather-winddir').textContent = `${weather.winddirection}°`;
+            document.getElementById('weather-winddir').innerHTML =
+            ` ${weather.winddirection}° ${degreesToCompass(weather.winddirection)} 
+            <i id="wind-arrow" class="fas fa-arrow-up"></i>`;
+            document.getElementById('wind-arrow').style.transform =
+            `rotate(${weather.winddirection}deg)`;
             const iconHtml = weatherCodeIcons[weather.weathercode] || '';
             const iconColor = weatherCodeColors[weather.weathercode] || "#fff";
             document.getElementById('weather-icon').innerHTML =
@@ -473,6 +485,8 @@ async function getCountryInfo(country) {
     }
 }
 
+
+
 // --- Autocomplete logic ---
 let allCountries = [];
 fetch('https://restcountries.com/v3.1/all?fields=name,flags')
@@ -555,8 +569,6 @@ function handleSearchClick() {
     getCountryInfo(val.toLowerCase());
     searchInput.value = '';
 }
-
-
 
 
 

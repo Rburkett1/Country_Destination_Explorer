@@ -397,9 +397,6 @@ p {
     padding: 10px;
 }
 
-
-
-
 .weather-title{
     font-size: 18px;
     color: #ffffff;
@@ -642,4 +639,19 @@ p {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+.all-countires {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
 
+.all-images {
+    width: 200px;
+    height: 200px;
+    
+    
+}
