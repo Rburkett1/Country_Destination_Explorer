@@ -41,6 +41,17 @@ nav .q{
     margin-left: 0;
 }
 
+.back-link {
+    color: #ff9800;            /* Light text color */
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;         /* Space between name and links */
+}
+
+.back-link :hover {
+    color: #ffe156;            /* Slightly lighter on hover */
+}
+
 .container {
    /*  background-color: #232b47;      /* Slightly lighter blue/gray */
     border-radius: 16px;
@@ -135,7 +146,7 @@ nav .q{
 .country-info-container-3,
 .country-info-container-4,
 .country-info-weather,
-.country-info-container-5 {
+.country-info-container-5{
   /*  background: rgba(35, 43, 71, 0.7);  /* Slightly lighter glassy */
     border-radius: 16px;
     margin-top: 20px;

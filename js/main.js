@@ -7,8 +7,29 @@ async function fetchCountryData(country) {
     return data[0];
 }
 
+// -- DElete here //
+function renderAllCountries(countries) {
+    const container = document.getElementById('country-container');
+    if (!container) return;
+    container.innerHTML = buildAllCountriesHtml(countries);
+}
+
+function buildAllCountriesHtml(countries) {
+    return countries.map(country => `
+        
+        <div class="country-card">
+            <img class="all-images" src="${country.flags?.png || 'images/default.jpg'}" alt="Flag of ${country.name.common}">
+            <div><strong>${country.name.common}</strong></div>
+            <div>Capital: ${country.capital?.[0] || 'N/A'}</div>
+            <div>Region: ${country.region || 'N/A'}</div>
+            <div>Population: ${country.population?.toLocaleString() || 'N/A'}</div>
+        </div>
+    `).join('');
+}
 
 
+
+//-------- //
 
 async function fetchLocalData() {
     const res = await fetch('countryfacts.json');
@@ -485,6 +506,23 @@ async function getCountryInfo(country) {
     }
 }
 
+//---- delter here ----//
+fetch('https://restcountries.com/v3.1/all?fields=name,flags,capital,region,population')
+  .then(res => res.json())
+  .then(data => {
+    allCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+    renderAllCountries(allCountries); // ✅ Use the global array
+  })
+  .catch(error => {
+    console.error('Error loading countries:', error);
+    const container = document.getElementById('country-container');
+    if (container) container.textContent = 'Failed to load country data.';
+  });
+
+
+
+
+//---- delter here ----//
 
 
 // --- Autocomplete logic ---

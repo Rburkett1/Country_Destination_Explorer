@@ -10,37 +10,23 @@
 <body>
     <nav>
         <div class="name">trvl</div>
-        <div class="name q">Q.</div>       
+        <div class="name q">Q.</div>  
+        <a href="index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back to Home  
+        </a>   
     </nav>
-  <h1>Country List</h1>
-  <div class="all-countires" id = "country-img">        
-        <div >
-            <img class = "all-images" src="images/france.jpg"
-            >
-            <div>Country</div>
-            <div>Capital</div>
-            <div>region</div>
-            <div>Population</div>
-        </div>       
-         <div >
-            <img class = "all-images" src="images/france.jpg"
-            >
-            <div>Country</div>
-            <div>Capital</div>
-            <div>region</div>
-            <div>Population</div>
-        </div>       
-         <div >
-            <img class = "all-images" src="images/france.jpg"
-            >
-            <div>Country</div>
-            <div>Capital</div>
-            <div>region</div>
-            <div>Population</div>
-        </div>       
-    </div>  
-    <div class="all-countires" id="country-container"></div>
- 
-  <script src = "js/main.js"></script>
+    <h1>All Countries</h1>
+    <div class="filter-bar">
+  <ul>
+    <li><button data-region="Africa">Africa</button></li>
+    <li><button data-region="Americas">Americas</button></li>
+    <li><button data-region="Asia">Asia</button></li>
+    <li><button data-region="Europe">Europe</button></li>
+    <li><button data-region="Oceania">Oceania</button></li>
+  </ul>
+</div>
+
+    <div id="country-container" class="country-grid"></div>
+    <script src = "js/main.js"></script>
 </body>
 </html>
