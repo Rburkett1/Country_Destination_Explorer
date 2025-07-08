@@ -1,3 +1,5 @@
+let allCountries = [];
+
 // --- Helper Functions ---
 
 async function fetchCountryData(country) {
@@ -6,30 +8,6 @@ async function fetchCountryData(country) {
     const data = await res.json();
     return data[0];
 }
-
-// -- DElete here //
-function renderAllCountries(countries) {
-    const container = document.getElementById('country-container');
-    if (!container) return;
-    container.innerHTML = buildAllCountriesHtml(countries);
-}
-
-function buildAllCountriesHtml(countries) {
-    return countries.map(country => `
-        
-        <div class="country-card">
-            <img class="all-images" src="${country.flags?.png || 'images/default.jpg'}" alt="Flag of ${country.name.common}">
-            <div><strong>${country.name.common}</strong></div>
-            <div>Capital: ${country.capital?.[0] || 'N/A'}</div>
-            <div>Region: ${country.region || 'N/A'}</div>
-            <div>Population: ${country.population?.toLocaleString() || 'N/A'}</div>
-        </div>
-    `).join('');
-}
-
-
-
-//-------- //
 
 async function fetchLocalData() {
     const res = await fetch('countryfacts.json');
@@ -66,9 +44,9 @@ function buildAttractionsList(attractionsData) {
         attractionsData,
         ([name, info]) => `
             <li>
-                <div class = "country-info-box-5-name">${name}</div> 
-                <div class = "country-info-box-5-loc">${info.location}<div>
-                <div class = "country-info-box-5-desc">${info.description}</div>
+                <div class="country-info-box-5-name">${name}</div> 
+                <div class="country-info-box-5-loc">${info.location}</div>
+                <div class="country-info-box-5-desc">${info.description}</div>
             </li>
         `,
         'No attractions available.'
@@ -80,8 +58,8 @@ function buildFoodList(foodData) {
         foodData,
         ([name, info]) => `
             <li>
-                <div class = "country-info-box-5-name">${name}</div>
-                <div class = "country-info-box-5-desc">${info.description}</div>
+                <div class="country-info-box-5-name">${name}</div>
+                <div class="country-info-box-5-desc">${info.description}</div>
             </li>
         `,
         'No food information available.'
@@ -93,9 +71,9 @@ function buildCulturalEventsList(culturalEventsData) {
         culturalEventsData,
         ([name, info]) => `
             <li>
-                <div class = "country-info-box-5-name">${name}</div> 
-                <div class = "country-info-box-5-date">(${info.date})<div>
-                <div class = "country-info-box-5-desc">${info.description}</div>
+                <div class="country-info-box-5-name">${name}</div> 
+                <div class="country-info-box-5-date">(${info.date})</div>
+                <div class="country-info-box-5-desc">${info.description}</div>
             </li>
         `,
         'No cultural events available.'
@@ -185,8 +163,7 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
                 <div class="country">${countryData.name.common} ${countryData.coatOfArms?.svg
                     ? `<img src="${countryData.coatOfArms.svg}" alt="Coat of Arms of ${countryData.name.common}" class="coat-of-arms-img">`
                     : 'Not available'}</div>
-                <div class="capital"><strong>Capital:</strong> ${countryData.capital?.[0] || 'N/A'}</div> 
-             <!--   <div class="extra">Fact: ${localFact}</div>   -->         
+                <div class="capital"><strong>Capital:</strong> ${countryData.capital?.[0] || 'N/A'}</div>         
             </div>
             <div class="flag-section">                                
                 <img src="${countryData.flags.svg}" alt="Flag of ${countryData.name.common}">
@@ -195,7 +172,6 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
         <div class="fact-container">
             <div class="extra"> ${apiFact}</div> 
         </div>
-        
         <!-----/ Section 2  /----->
         <div class="country-info-container-2">                 
             <div class="info-box">
@@ -251,7 +227,7 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
         <!-----/ Weather Section /----->
         <div class="country-info-weather">
             <div class="info-box-6 weather">
-                <div class = "weather-title">Today in ${countryData.capital?.[0] || 'NA'}, ${countryData.name.common}</div>
+                <div class="weather-title">Today in ${countryData.capital?.[0] || 'NA'}, ${countryData.name.common}</div>
                 <div class="weather-top">
                     <div id="weather-icon" class="weather-icon"></div>       
                     <div><span id="weather-temp"> Loading...</span> </div>
@@ -272,7 +248,7 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
             <div class="info-box-5"><strong>Food:</strong> ${food}</div>
             <div class="info-box-5"><strong>Cultural Events:</strong> ${culturalEvents}</div>
             <div class="info-box-5"><strong>Public Transit:</strong></div>  
-            <div class="info-box-5" id = "airports"></div>
+            <div class="info-box-5" id="airports"></div>
         </div>
     `;
 }
@@ -281,63 +257,83 @@ function showError(message) {
     document.getElementById('info').innerHTML = `<p>${message}</p>`;
 }
 
-async function renderAirports(countryData) {
-    const apiKey = '857e84fcc8e43fb6604ba22eb772c283';
-    const airportBox = document.getElementById('airports');
-    if (!airportBox) return;
-    try {
-        const res = await fetch(`https://api.aviationstack.com/v1/airports?access_key=${apiKey}&country_name=${encodeURIComponent(countryData.name.common)}`);
-        const airportData = await res.json();
-        console.log(airportData.data); // Add this line
-        if (airportData.data && airportData.data.length) {
-            const largeAirports = airportData.data
-                .filter(airport => airport.type === 'international_airport' || airport.airport_size === 'large')
-                .slice(0, 3);
-            const topAirports = largeAirports.length >= 3
-                ? largeAirports
-                : airportData.data.slice(0, 5);
-            airportBox.innerHTML = `
-                <div class="airport-title">Airports</div>
-                <ul>
-                    ${topAirports.map(airport =>
-                        `<li>
-                            <strong>${airport.airport_name || 'N/A'}</strong><br>
-                            Code: ${airport.iata_code || airport.icao_code || 'N/A'}<br>
-                            Location: ${airport.city || airport.city_name || airport.airport_city || 'Unknown City'}, ${airport.country_name || countryData.name.common}
-                        </li>`
-                    ).join('')}
-                </ul>
-            `;
-        } else {
-            airportBox.innerHTML = '<div class="airport-title">Airports</div><p>No airport data available.</p>';
-        }
-    } catch (error) {
-        airportBox.innerHTML = '<div class="airport-title">Airports</div><p>Error loading airport data.</p>';
-    }
+// --- Render Functions ---
+
+function renderAllCountries(countries) {
+    const container = document.getElementById('country-container');
+    if (!container) return;
+    container.innerHTML = buildAllCountriesHtml(countries);
 }
-//premium feature only 
-async function fetchCountryFact(countryName) {
-    const apiKey = 'r1hbeZM9JOtJ0GO1QnuJ6A==lfPe7VfwB0TXhp0K'
-; // Replace with your API Ninjas key
-    try {
-        const res = await fetch('https://api.api-ninjas.com/v1/facts?limit=10', {
-            headers: { 'X-Api-Key': apiKey }
-        });
-        if (!res.ok) {
-            console.error('API response not OK:', res.status, await res.text());
-            return 'Error loading fact.';
-        }
-        const facts = await res.json();
-        const countryFact = facts.find(fact =>
-            fact.fact.toLowerCase().includes(countryName.toLowerCase())
-        );
-        return countryFact ? countryFact.fact : 'No country-specific fact found.';
-    } catch (error) {
-        console.error('Fetch error:', error);
-        return 'Error loading fact.';
-    }
+
+function buildAllCountriesHtml(countries) {
+    return countries.map(country => `
+        <div class="country-card">           
+            <img class="all-images" src="${country.flags?.png || 'images/default.jpg'}" alt="Flag of ${country.name.common}">
+            <div><strong>${country.name.common}</strong></div>
+            <div>Capital: ${country.capital?.[0] || 'N/A'}</div>
+            <div>Region: ${country.region || 'N/A'}</div>
+            <div>Population: ${country.population?.toLocaleString() || 'N/A'}</div>
+        </div>
+    `).join('');
 }
-//wikipedia summary fetch function
+
+// --- Filter Logic ---
+
+function highlightActiveFilter(buttonId) {
+    document.querySelectorAll('.filter-bar button').forEach(btn => {
+        btn.classList.remove('active-filter');
+    });
+    const btn = document.getElementById(buttonId);
+    if (btn) btn.classList.add('active-filter');
+}
+
+function filterRegion(regionCountries, buttonId) {
+    highlightActiveFilter(buttonId);
+    if (!allCountries || !allCountries.length) {
+        console.warn('allCountries not loaded yet.');
+        return;
+    }
+    const filtered = allCountries.filter(c => regionCountries.includes(c.name.common));
+    renderAllCountries(filtered);
+}
+
+function filterNorthAmerica() {
+    filterRegion(
+        ["Canada", "United States", "United States of America", "Mexico"],
+        "north-america-btn"
+    );
+}
+
+function filterCentralAmerica() {
+    filterRegion(
+        ["Belize", "Costa Rica", "El Salvador", "Guatemala", "Honduras", "Nicaragua", "Panama"],
+        "central-america-btn"
+    );
+}
+
+function filterSouthAmerica() {
+    filterRegion(
+        ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador",
+         "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela"],
+        "south-america-btn"
+    );
+}
+
+function filterEurope() {
+    filterRegion(
+        ["Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina",
+        "Bulgaria", "Croatia", "Czech Republic", "Denmark", "Estonia", "Finland",
+        "France", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy",
+        "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Malta", "Moldova",
+        "Monaco", "Montenegro", "Netherlands", "North Macedonia", "Norway", "Poland",
+        "Portugal", "Romania", "Russia", "San Marino", "Serbia", "Slovakia",
+        "Slovenia", "Spain", "Sweden", "Switzerland", "Ukraine", "United Kingdom",
+        "Vatican City"],
+        "europe-btn"
+    );
+}
+
+// --- Wikipedia Summary Fetch ---
 async function fetchWikipediaSummary(countryName) {
     const apiUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(countryName)}`;
     try {
@@ -347,13 +343,11 @@ async function fetchWikipediaSummary(countryName) {
             return 'No Wikipedia summary available.';
         }
         const data = await res.json();
-        // Use plain text extract for easier trimming
         let summary = data.extract || 'No Wikipedia summary available.';
-        // Limit to first 2 sentences
         const sentences = summary.match(/[^\.!\?]+[\.!\?]+/g);
-         if (sentences && sentences.length > 1) {
-            summary = sentences.slice(0, 5).join(' ');
-        } 
+        if (sentences && sentences.length > 1) {
+            summary = sentences.slice(0, 2).join(' ');
+        }
         return summary;
     } catch (error) {
         console.error('Wikipedia fetch error:', error);
@@ -361,12 +355,12 @@ async function fetchWikipediaSummary(countryName) {
     }
 }
 
+// --- Weather ---
 function degreesToCompass(degrees) {
     const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
     const index = Math.round(degrees / 45) % 8;
     return directions[index];
 }
-
 
 async function renderWeather(countryData) {
     const [lat, lon] = countryData.latlng || [];
@@ -374,7 +368,6 @@ async function renderWeather(countryData) {
     try {
         const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&temperature_unit=fahrenheit&hourly=relative_humidity_2m,cloudcover&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`);
         const data = await res.json();
-        // --- Current Weather ---
         const weather = data.current_weather;
         const hourlyTimes = data.hourly?.time || [];
         const currentTime = weather?.time;
@@ -468,8 +461,42 @@ async function renderWeather(countryData) {
     }
 }
 
-// --- Main Function ---
+// --- Airports ---
+async function renderAirports(countryData) {
+    const apiKey = '857e84fcc8e43fb6604ba22eb772c283';
+    const airportBox = document.getElementById('airports');
+    if (!airportBox) return;
+    try {
+        const res = await fetch(`https://api.aviationstack.com/v1/airports?access_key=${apiKey}&country_name=${encodeURIComponent(countryData.name.common)}`);
+        const airportData = await res.json();
+        if (airportData.data && airportData.data.length) {
+            const largeAirports = airportData.data
+                .filter(airport => airport.type === 'international_airport' || airport.airport_size === 'large')
+                .slice(0, 3);
+            const topAirports = largeAirports.length >= 3
+                ? largeAirports
+                : airportData.data.slice(0, 5);
+            airportBox.innerHTML = `
+                <div class="airport-title">Airports</div>
+                <ul>
+                    ${topAirports.map(airport =>
+                        `<li>
+                            <strong>${airport.airport_name || 'N/A'}</strong><br>
+                            Code: ${airport.iata_code || airport.icao_code || 'N/A'}<br>
+                            Location: ${airport.city || airport.city_name || airport.airport_city || 'Unknown City'}, ${airport.country_name || countryData.name.common}
+                        </li>`
+                    ).join('')}
+                </ul>
+            `;
+        } else {
+            airportBox.innerHTML = '<div class="airport-title">Airports</div><p>No airport data available.</p>';
+        }
+    } catch (error) {
+        airportBox.innerHTML = '<div class="airport-title">Airports</div><p>Error loading airport data.</p>';
+    }
+}
 
+// --- Main Function ---
 async function getCountryInfo(country) {
     try {
         const countryData = await fetchCountryData(country);
@@ -481,7 +508,6 @@ async function getCountryInfo(country) {
         const food = buildFoodList(localData[country]?.food);
         const culturalEvents = buildCulturalEventsList(localData[country]?.cultural_events);
         const apiFact = await fetchWikipediaSummary(countryData.name.common);
-       // const apiFact = await fetchCountryFact(country);
 
         const infoHtml = buildCountryInfoHtml(
             countryData,
@@ -492,8 +518,6 @@ async function getCountryInfo(country) {
             food,
             culturalEvents,
             apiFact
-            
-            
         );
         document.getElementById('info').innerHTML = infoHtml;
 
@@ -506,125 +530,93 @@ async function getCountryInfo(country) {
     }
 }
 
-//---- delter here ----//
-fetch('https://restcountries.com/v3.1/all?fields=name,flags,capital,region,population')
-  .then(res => res.json())
-  .then(data => {
-    allCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
-    renderAllCountries(allCountries); // ✅ Use the global array
-  })
-  .catch(error => {
-    console.error('Error loading countries:', error);
-    const container = document.getElementById('country-container');
-    if (container) container.textContent = 'Failed to load country data.';
-  });
+// --- Fetch All Countries Once & Setup Autocomplete ---
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('https://restcountries.com/v3.1/all?fields=name,flags,capital,region,population')
+        .then(res => res.json())
+        .then(data => {
+            allCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+            renderAllCountries(allCountries);
+            document.querySelectorAll('.filter-bar button').forEach(btn => btn.disabled = false);
+        })
+        .catch(error => {
+            console.error('Error loading countries:', error);
+            const container = document.getElementById('country-container');
+            if (container) container.textContent = 'Failed to load country data.';
+        });
 
-
-
-
-//---- delter here ----//
-
-
-// --- Autocomplete logic ---
-let allCountries = [];
-fetch('https://restcountries.com/v3.1/all?fields=name,flags')
-    .then(res => res.json())
-    .then(data => {
-        if (Array.isArray(data)) {
-            allCountries = data.map(c => ({
-                name: c.name.common,
-                flag: c.flags && c.flags.png ? c.flags.png : ''
-            })).sort((a, b) => a.name.localeCompare(b.name));
-        } else {
-            allCountries = [];
-            console.error('Unexpected API response:', data);
-        }
-    })
-    .catch(error => {
-        console.error('Error fetching country list:', error);
-    });
-
-const searchInput = document.getElementById('search');
-const autocompleteList = document.getElementById('autocomplete-list');
-// Add event listener for the search button
-searchInput.addEventListener('input', function() {
-    if (!allCountries.length) return;
-    const val = this.value.trim();
-    autocompleteList.innerHTML = '';
-    if (!val) return;
-    const matches = allCountries.filter(country =>
-        country.name.toLowerCase().startsWith(val.toLowerCase())
-    );
-    //checks for no matches
-     if (matches.length === 0) {
-        const item = document.createElement('div');
-        item.classList.add('autocomplete-item');
-        item.style.color = '#ff9800';
-        item.style.cursor = 'default';
-        item.textContent = 'No countries with that name';
-        autocompleteList.appendChild(item);
-        return;
-    }
-    matches.forEach(country => {
-        // Highlight the matching part
-        const matchLen = val.length;
-        const countryName = country.name;
-        const highlighted =
-            `<span class="autocomplete-highlight">${countryName.slice(0, matchLen)}</span>${countryName.slice(matchLen)}`;
-        const item = document.createElement('div');
-        item.classList.add('autocomplete-item');
-        item.innerHTML = `
-            <img src="${country.flag}" alt="Flag of ${country.name}" style="width:22px;height:16px;vertical-align:middle;margin-right:8px;border-radius:2px;">
-            <span>${highlighted}</span>
-        `;
-        // Add click event to the item
-        item.addEventListener('click', function() {
-            searchInput.value = country.name;
+    // --- Autocomplete logic ---
+    const searchInput = document.getElementById('search');
+    const autocompleteList = document.getElementById('autocomplete-list');
+    if (searchInput && autocompleteList) {
+        searchInput.addEventListener('input', function() {
+            if (!allCountries.length) return;
+            const val = this.value.trim();
             autocompleteList.innerHTML = '';
-            getCountryInfo(country.name.toLowerCase());
+            if (!val) return;
+            const matches = allCountries.filter(country =>
+                country.name.common.toLowerCase().startsWith(val.toLowerCase())
+            );
+            if (matches.length === 0) {
+                const item = document.createElement('div');
+                item.classList.add('autocomplete-item');
+                item.style.color = '#ff9800';
+                item.style.cursor = 'default';
+                item.textContent = 'No countries with that name';
+                autocompleteList.appendChild(item);
+                return;
+            }
+            matches.forEach(country => {
+                const matchLen = val.length;
+                const countryName = country.name.common;
+                const highlighted =
+                    `<span class="autocomplete-highlight">${countryName.slice(0, matchLen)}</span>${countryName.slice(matchLen)}`;
+                const item = document.createElement('div');
+                item.classList.add('autocomplete-item');
+                item.innerHTML = `
+                    <img src="${country.flags?.png || ''}" alt="Flag of ${countryName}" style="width:22px;height:16px;vertical-align:middle;margin-right:8px;border-radius:2px;">
+                    <span>${highlighted}</span>
+                `;
+                item.addEventListener('click', function() {
+                    searchInput.value = countryName;
+                    autocompleteList.innerHTML = '';
+                    getCountryInfo(countryName.toLowerCase());
+                    searchInput.value = '';
+                });
+                autocompleteList.appendChild(item);
+            });
+        });
+    }
+
+    // --- Search Button Logic ---
+    const searchBtn = document.querySelector('.searchbar button');
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener('click', function() {
+            const val = searchInput.value.trim();
+            if (!val) {
+                alert('Please enter a country to search.');
+                return;
+            }
+            const found = allCountries.find(
+                country => country.name.common.toLowerCase() === val.toLowerCase()
+            );
+            if (!found) {
+                alert('Please enter the full country name as shown in the suggestions.');
+                return;
+            }
+            getCountryInfo(val.toLowerCase());
             searchInput.value = '';
         });
-        autocompleteList.appendChild(item);
-    });
-});
-
-
-
-function handleSearchClick() {
-    const val = searchInput.value.trim();
-    if (!val) {
-        alert('Please enter a country to search.');
-        return;
     }
-    // Only search if the input exactly matches a country name
-    const found = allCountries.find(
-        country => country.name.toLowerCase() === val.toLowerCase()
-    );
-    if (!found) {
-        alert('Please enter the full country name as shown in the suggestions.');
-        return;
+
+    // --- Back to Top Button Logic ---
+    var backToTop = document.getElementById("backToTop");
+    if (backToTop) {
+        window.addEventListener("scroll", function() {
+            backToTop.style.display = window.scrollY > 600 ? "block" : "none";
+        });
+        backToTop.onclick = function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
     }
-    getCountryInfo(val.toLowerCase());
-    searchInput.value = '';
-}
-
-
-
-// Wait until the DOM is fully loaded before running this code
-document.addEventListener("DOMContentLoaded", function() {
-  // Get the "Back to Top" button by its ID
-  var backToTop = document.getElementById("backToTop");
-
-  // Listen for scroll events on the window
-  window.addEventListener("scroll", function() {
-    // If the user has scrolled down more than 600px, show the button
-    // Otherwise, hide the button
-    backToTop.style.display = window.scrollY > 600 ? "block" : "none";
-  });
-
-  // When the button is clicked, smoothly scroll back to the top of the page
-  backToTop.onclick = function() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 });
-

@@ -658,34 +658,50 @@ p {
     
 }
 
+
+
+/* Sticky filter bar at the top */
 .filter-bar {
+  position: sticky;
+  top: 50px; /* ✅ same as nav height */
+  z-index: 1000; /* just under nav’s z-index */
+  background-color: #101935f5;
   display: flex;
   justify-content: center;
-  margin-top: 24px;
+  padding: 12px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
 }
 
+
+/* Horizontal list of filter buttons */
 .filter-bar ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   gap: 24px;
 }
 
+/* Individual region button styling */
 .filter-bar li button {
-  background-color: #101935; ;
+  background-color: #101935;
   color: #fff;
   padding: 10px 18px;
   border: 1px solid white;
   border-radius: 20px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
+/* Hover effect for buttons */
 .filter-bar li button:hover {
-  background-color: #090e1d; ;
+  background-color: #090e1d;
 }
+
+
+
 
 
 #country-container {

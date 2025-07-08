@@ -15,17 +15,26 @@
             <i class="fa-solid fa-arrow-left"></i> Back to Home  
         </a>   
     </nav>
-    <h1>All Countries</h1>
-    <div class="filter-bar">
-  <ul>
-    <li><button data-region="Africa">Africa</button></li>
-    <li><button data-region="Americas">Americas</button></li>
-    <li><button data-region="Asia">Asia</button></li>
-    <li><button data-region="Europe">Europe</button></li>
-    <li><button data-region="Oceania">Oceania</button></li>
-  </ul>
-</div>
-
+    <div class = "all-countries-header">
+        <h1>All Countries</h1>
+    </div>
+        <div class="filter-bar">
+            <ul>
+              <li><button id="north-america-btn" data-region="North America" 
+                onclick="filterNorthAmerica()">North America</button></li>
+              <li><button id="central-america-btn" data-region="Central America" 
+                onclick="filterCentralAmerica()">Central America</button></li>
+              <li><button id="south-america-btn" data-region="South America"  
+                onclick="filterSouthAmerica()">South America</button></li>
+              <li><button id="caribbean-btn" data-region="Caribbean">Caribbean</button></li>
+              <li><button id="europe-btn" data-region="Europe" 
+                onclick="filterEurope()">Europe</button></li>
+              <li><button id="middle-east-btn" data-region="Middle East">Middle East</button></li>
+              <li><button id="africa-btn" data-region="Africa">Africa</button></li>
+              <li><button id="asia-btn" data-region="Asia">Asia</button></li>
+              <li><button id="oceania-btn" data-region="Oceania">Oceania</button></li>
+            </ul>
+        </div>
     <div id="country-container" class="country-grid"></div>
     <script src = "js/main.js"></script>
 </body>
