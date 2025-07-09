@@ -171,15 +171,23 @@ p {
 }
 
 .dropdown-link {
-    padding: 6px 0;
+    display: block;
+    width: 100%;
+    padding: 0.5em 1em;
+    margin: 0.2em 0;
+    background: #f5f5f5;
+    border: none;
+    text-align: left;
     cursor: pointer;
-    color: #f5f6fa;
-    transition: color 0.2s;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+.dropdown-link:hover {
+    background: #e0e0e0;
 }
 
-.dropdown-link:hover {
-    color: #ff9800;
-}
+
 
 
 
@@ -696,11 +704,20 @@ p {
 }
 
 /* Hover effect for buttons */
-.filter-bar li button:hover {
-  background-color: #090e1d;
+.filter-bar li button:hover:not(.active-filter) {
+    background-color: #232b47;
+     border: 1.5px solid #ffcc7f;
 }
 
 
+/* Prevent hover effect on active filter button */
+.filter-bar li button.active-filter:hover,
+.filter-bar li button.active-filter {
+    background-color: #ff9800;
+    color: #ffcc7f;
+    border: 1px solid #ffcc7f;
+    /* Keep any other active styles here */
+}
 
 
 
@@ -708,26 +725,25 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px;
+  gap: 42px;
   padding: 32px;
   background-color: transparent;
+  
 }
 
 /* 🧱 Country Card */
 .country-card {
   background: rgba(35, 43, 71, 0.85);
-  
-  
   padding: 16px;
   width: 220px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
-   border-radius: 12px;
-    border: 1.5px solid #3e4a6d;        /* Subtle accent border */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  border: 1.5px solid #3e4a6d;        /* Subtle accent border */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .country-card:hover {
@@ -737,8 +753,8 @@ p {
 
 /* 🌍 Flag Image */
 .country-card img.all-images {
-  width: 100%;
-  height: auto;
+  width: 220px;
+  height: 150px;
   border-radius: 4px;
   margin-bottom: 12px;
 }
@@ -747,6 +763,36 @@ p {
 .country-card div {
   margin: 6px 0;
   font-size: 15px;
-  text-align: center;
+  text-align: left;
   color: #ffffff;
+}
+
+/* Simple pop-out/modal for filter & sort */
+.filter-sort-popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.filter-sort-popup .popup-content {
+    background: #232b47;
+    color: #fff;
+    padding: 2em 2.5em;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    min-width: 260px;
+    position: relative;
+}
+.filter-sort-popup .close-btn {
+    position: absolute;
+    top: 0.5em;
+    right: 0.7em;
+    background: none;
+    border: none;
+    color: #ff9800;
+    font-size: 1.5em;
+    cursor: pointer;
 }

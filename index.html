@@ -27,11 +27,15 @@
                     <div class="filter">
                         <div class="dropdown-section">
                             <div class="dropdown-title">World Regions</div>
-                            <div class="dropdown-link">Africa</div>
-                            <div class="dropdown-link">Americas</div>
-                            <div class="dropdown-link">Asia</div>
-                            <div class="dropdown-link">Europe</div>
-                            <div class="dropdown-link">Oceania</div>
+                            <button class="dropdown-link" onclick="filterAfrica()">Africa</button>
+                            <button class="dropdown-link" onclick="filterNorthAmerica()">North America</button>
+                            <button class="dropdown-link" onclick="filterCentralAmerica()">Central America</button>
+                            <button class="dropdown-link" onclick="filterSouthAmerica()">South America</button>
+                            <button class="dropdown-link" onclick="filterCaribbean()">Caribbean</button>
+                            <button class="dropdown-link" onclick="filterEurope()">Europe</button>
+                            <button class="dropdown-link" onclick="filterMiddleEast()">Middle East</button>
+                            <button class="dropdown-link" onclick="filterAsia()">Asia</button>
+                            <button class="dropdown-link" onclick="filterOceania()">Oceania</button>
                         </div>
                         <div class="dropdown-section">
                             <div class="dropdown-title">All Countries</div>
@@ -93,7 +97,8 @@
     </div>
     <button id="backToTop" title="Back to top">&#8679;</button>
 
-    
+    <script src = "js/weather.js"></script>
+    <script src = "js/localData.js"></script>
     <script src = "js/main.js"></script>
 </body>
 </html>

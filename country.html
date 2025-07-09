@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>All Countries</title>
-   <link rel = "stylesheet" href = "css/styles.css">
-    <link rel = "stylesheet" href = "css/global.css">
+    <meta charset="UTF-8">
+    <title>Country Info</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .country-container {
+            margin: auto;
+            max-width: 1200px;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <div class="name">trvl</div>
         <div class="name q">Q.</div>  
-        <a href="index.html" class="back-link">
-            <i class="fa-solid fa-arrow-left"></i> Back to Home  
-        </a>   
+        <a onclick="window.history.back()" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back 
+        </a>       
     </nav>
-    <div class = "all-countries-header">
-        <h1>All Countries</h1>
-    </div>
-        <div class="filter-bar">
+    <div class="filter-bar">
             <ul>
                 <li><button id="All" data-region="North America" 
                 onclick="filterAll()">All</button></li>
@@ -40,26 +43,23 @@
                 onclick="filterAsia()">Asia</button></li>
               <li><button id="oceania-btn" data-region="Oceania"
                 onclick="filterOceania()">Oceania</button></li>
-                <li><button id="filterSort-btn"
-                onclick="filterSort()">Filter & Sort</button></li>
             </ul>
         </div>
-        <!-- Filter & Sort Pop-out -->
-        <div id="filterSortPopup" class="filter-sort-popup" style="display:none;">
-            <div class="popup-content">
-                <button class="close-btn" onclick="closeFilterSortPopup()">&times;</button>
-                <h3>Filter & Sort Options</h3>
-                <!-- Add your filter/sort controls here -->
-                <button onclick="sortByName()">Sort by Name</button>
-                <label style="display:block; margin-top:1em;">
-            <input type="checkbox" id="popOver10M" onchange="togglePopulationFilter()">
-            Population High to Low
-        </label>
-                <!-- ... -->
-            </div>
-        </div>
-    <div id="country-container" class="country-grid"></div>
+    <div class="country-container">
+        <div id="info"></div>
+    </div>
     <button id="backToTop" title="Back to top">&#8679;</button>
-    <script src = "js/main.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/localData.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const countryName = params.get('name');
+        if (countryName) {
+            getCountryInfo(countryName.toLowerCase());
+        } else {
+            document.getElementById('info').textContent = 'No country selected.';
+        }
+    </script>
 </body>
 </html>

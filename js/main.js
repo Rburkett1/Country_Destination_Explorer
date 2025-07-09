@@ -2,83 +2,25 @@ let allCountries = [];
 
 // --- Helper Functions ---
 
+function getExactCountryData(countryName, countriesArray) {
+    // Try to find an exact match (case-insensitive)
+    const exact = countriesArray.find(
+        c => c.name.common.toLowerCase() === countryName.toLowerCase()
+    );
+    if (exact) return exact;
+
+    // Fallback: first result
+    return countriesArray[0];
+}
+
 async function fetchCountryData(country) {
     const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
     if (!res.ok) throw new Error('Network response was not ok');
     const data = await res.json();
-    return data[0];
+    return getExactCountryData(country, data);
 }
 
-async function fetchLocalData() {
-    const res = await fetch('countryfacts.json');
-    return res.json();
-}
 
-function buildList(data, itemBuilder, emptyMsg) {
-    if (!data) return emptyMsg;
-    return `<ul>` +
-        Object.entries(data)
-            .map(itemBuilder)
-            .join('') +
-        `</ul>`;
-}
-
-function buildAirportsList(airportData) {
-    return buildList(
-        airportData,
-        ([name, info]) => `
-            <li>
-                <div class="airport-name">${name}</div>
-                <ul class="airport-info">
-                    <li class="airport-code">Code: ${info.code}</li>
-                    <li class="airport-location">Location: ${info.location}</li>
-                </ul>
-            </li>
-        `,
-        'No airport available.'
-    );
-}
-
-function buildAttractionsList(attractionsData) {
-    return buildList(
-        attractionsData,
-        ([name, info]) => `
-            <li>
-                <div class="country-info-box-5-name">${name}</div> 
-                <div class="country-info-box-5-loc">${info.location}</div>
-                <div class="country-info-box-5-desc">${info.description}</div>
-            </li>
-        `,
-        'No attractions available.'
-    );
-}
-
-function buildFoodList(foodData) {
-    return buildList(
-        foodData,
-        ([name, info]) => `
-            <li>
-                <div class="country-info-box-5-name">${name}</div>
-                <div class="country-info-box-5-desc">${info.description}</div>
-            </li>
-        `,
-        'No food information available.'
-    );
-}
-
-function buildCulturalEventsList(culturalEventsData) {
-    return buildList(
-        culturalEventsData,
-        ([name, info]) => `
-            <li>
-                <div class="country-info-box-5-name">${name}</div> 
-                <div class="country-info-box-5-date">(${info.date})</div>
-                <div class="country-info-box-5-desc">${info.description}</div>
-            </li>
-        `,
-        'No cultural events available.'
-    );
-}
 
 function getGlobeIcon(region) {
     switch (region) {
@@ -102,58 +44,6 @@ const currencyIcons = {
     india: '<i class="fa-solid fa-rupee-sign"></i>',
 };
 
-const weatherCodeDescriptions = {
-    0: "Clear sky", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
-    45: "Fog", 48: "Depositing rime fog", 51: "Light drizzle", 53: "Moderate drizzle",
-    55: "Dense drizzle", 56: "Light freezing drizzle", 57: "Dense freezing drizzle",
-    61: "Slight rain", 63: "Moderate rain", 65: "Heavy rain", 66: "Light freezing rain",
-    67: "Heavy freezing rain", 71: "Slight snow fall", 73: "Moderate snow fall",
-    75: "Heavy snow fall", 77: "Snow grains", 80: "Slight rain showers",
-    81: "Moderate rain showers", 82: "Violent rain showers", 85: "Slight snow showers",
-    86: "Heavy snow showers", 95: "Thunderstorm", 96: "Thunderstorm with slight hail",
-    99: "Thunderstorm with heavy hail"
-};
-
-const weatherCodeIcons = {
-    0: '<i class="fa-solid fa-sun"></i>',
-    1: '<i class="fa-regular fa-sun"></i>',
-    2: '<i class="fa-solid fa-cloud-sun"></i>',
-    3: '<i class="fa-solid fa-cloud"></i>',
-    45: '<i class="fa-solid fa-smog"></i>',
-    48: '<i class="fa-solid fa-smog"></i>',
-    51: '<i class="fa-solid fa-cloud-rain"></i>',
-    53: '<i class="fa-solid fa-cloud-rain"></i>',
-    55: '<i class="fa-solid fa-cloud-showers-heavy"></i>',
-    56: '<i class="fa-solid fa-cloud-meatball"></i>',
-    57: '<i class="fa-solid fa-cloud-meatball"></i>',
-    61: '<i class="fa-solid fa-cloud-rain"></i>',
-    63: '<i class="fa-solid fa-cloud-rain"></i>',
-    65: '<i class="fa-solid fa-cloud-showers-heavy"></i>',
-    66: '<i class="fa-solid fa-snowflake"></i>',
-    67: '<i class="fa-solid fa-snowflake"></i>',
-    71: '<i class="fa-regular fa-snowflake"></i>',
-    73: '<i class="fa-solid fa-snowflake"></i>',
-    75: '<i class="fa-solid fa-snowflake"></i>',
-    77: '<i class="fa-solid fa-snowflake"></i>',
-    80: '<i class="fa-solid fa-cloud-showers-heavy"></i>',
-    81: '<i class="fa-solid fa-cloud-showers-heavy"></i>',
-    82: '<i class="fa-solid fa-cloud-showers-heavy"></i>',
-    85: '<i class="fa-solid fa-snowflake"></i>',
-    86: '<i class="fa-solid fa-snowflake"></i>',
-    95: '<i class="fa-solid fa-bolt"></i>',
-    96: '<i class="fa-solid fa-cloud-bolt"></i>',
-    99: '<i class="fa-solid fa-cloud-bolt"></i>'
-};
-
-const weatherCodeColors = {
-    0: "#FFD600", 1: "#FFD600", 2: "#90A4AE", 3: "#90A4AE",
-    45: "#90A4AE", 48: "#90A4AE", 51: "#2196F3", 53: "#2196F3",
-    55: "#2196F3", 56: "#2196F3", 57: "#2196F3", 61: "#2196F3",
-    63: "#2196F3", 65: "#2196F3", 66: "#2196F3", 67: "#2196F3",
-    71: "#90A4AE", 73: "#90A4AE", 75: "#90A4AE", 77: "#90A4AE",
-    80: "#2196F3", 81: "#2196F3", 82: "#2196F3", 85: "#90A4AE",
-    86: "#90A4AE", 95: "#FFD600", 96: "#FFD600", 99: "#FFD600"
-};
 
 function buildCountryInfoHtml(countryData, localFact, history, airports, attractions, food, culturalEvents, apiFact) {
     return `
@@ -267,7 +157,7 @@ function renderAllCountries(countries) {
 
 function buildAllCountriesHtml(countries) {
     return countries.map(country => `
-        <div class="country-card">           
+        <div class="country-card" onclick="window.location.href='country.html?name=${encodeURIComponent(country.name.common)}'">           
             <img class="all-images" src="${country.flags?.png || 'images/default.jpg'}" alt="Flag of ${country.name.common}">
             <div><strong>${country.name.common}</strong></div>
             <div>Capital: ${country.capital?.[0] || 'N/A'}</div>
@@ -295,6 +185,15 @@ function filterRegion(regionCountries, buttonId) {
     }
     const filtered = allCountries.filter(c => regionCountries.includes(c.name.common));
     renderAllCountries(filtered);
+}
+
+function filterAll() {
+    if (!allCountries || !allCountries.length) {
+        console.warn('allCountries not loaded yet.');
+        return;
+    }
+    renderAllCountries(allCountries);
+    highlightActiveFilter('All'); // Optional: highlight the "All Countries" button
 }
 
 function filterNorthAmerica() {
@@ -333,6 +232,89 @@ function filterEurope() {
     );
 }
 
+function filterCaribbean() {
+    filterRegion(
+        [
+            "Antigua and Barbuda", "Bahamas", "Barbados", "Cuba", "Dominica",
+            "Dominican Republic", "Grenada", "Haiti", "Jamaica", "Saint Kitts and Nevis",
+            "Saint Lucia", "Saint Vincent and the Grenadines", "Trinidad and Tobago"
+        ],
+        "caribbean-btn"
+    );
+}
+
+function filterMiddleEast() {
+    filterRegion(
+        [
+            "Bahrain", "Cyprus", "Egypt", "Iran", "Iraq", "Israel", "Jordan", "Kuwait",
+            "Lebanon", "Oman", "Palestine", "Qatar", "Saudi Arabia", "Syria",
+            "Turkey", "United Arab Emirates", "Yemen"
+        ],
+        "middle-east-btn"
+    );
+}
+
+function filterAfrica() {
+    filterRegion(
+        [
+            "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde",
+            "Cameroon", "Central African Republic", "Chad", "Comoros", "Congo", "Democratic Republic of the Congo",
+            "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Eswatini", "Ethiopia", "Gabon",
+            "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Ivory Coast", "Kenya", "Lesotho",
+            "Liberia", "Libya", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius",
+            "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Sao Tome and Principe",
+            "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan",
+            "Sudan", "Tanzania", "Togo", "Tunisia", "Uganda", "Zambia", "Zimbabwe"
+        ],
+        "africa-btn"
+    );
+}
+
+function filterAsia() {
+    filterRegion(
+        [
+            "Afghanistan", "Armenia", "Azerbaijan", "Bahrain", "Bangladesh", "Bhutan", "Brunei",
+            "Cambodia", "China", "Cyprus", "Georgia", "India", "Indonesia", "Iran", "Iraq",
+            "Israel", "Japan", "Jordan", "Kazakhstan", "Kuwait", "Kyrgyzstan", "Laos",
+            "Lebanon", "Malaysia", "Maldives", "Mongolia", "Myanmar", "Nepal", "North Korea",
+            "Oman", "Pakistan", "Palestine", "Philippines", "Qatar", "Russia", "Saudi Arabia",
+            "Singapore", "South Korea", "Sri Lanka", "Syria", "Taiwan", "Tajikistan", "Thailand",
+            "Timor-Leste", "Turkey", "Turkmenistan", "United Arab Emirates", "Uzbekistan", "Vietnam", "Yemen"
+        ],
+        "asia-btn"
+    );
+}
+
+function filterOceania() {
+    filterRegion(
+        [
+            "Australia", "Fiji", "Kiribati", "Marshall Islands", "Micronesia", "Nauru",
+            "New Zealand", "Palau", "Papua New Guinea", "Samoa", "Solomon Islands",
+            "Tonga", "Tuvalu", "Vanuatu"
+        ],
+        "oceania-btn"
+    );
+}
+
+function filterSort() {
+    document.getElementById('filterSortPopup').style.display = 'flex';
+}
+function closeFilterSortPopup() {
+    document.getElementById('filterSortPopup').style.display = 'none';
+}
+
+function togglePopulationFilter() {
+    const checkbox = document.getElementById('popOver10M');
+    if (checkbox.checked) {
+        const filtered = allCountries
+            .filter(c => c.population > 10000000)
+            .sort((a, b) => b.population - a.population); // Sort high to low
+        renderAllCountries(filtered);
+    } else {
+        filterAll();
+    }
+}
+
 // --- Wikipedia Summary Fetch ---
 async function fetchWikipediaSummary(countryName) {
     const apiUrl = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(countryName)}`;
@@ -346,7 +328,7 @@ async function fetchWikipediaSummary(countryName) {
         let summary = data.extract || 'No Wikipedia summary available.';
         const sentences = summary.match(/[^\.!\?]+[\.!\?]+/g);
         if (sentences && sentences.length > 1) {
-            summary = sentences.slice(0, 2).join(' ');
+            summary = sentences.slice(0, 5).join(' ');
         }
         return summary;
     } catch (error) {
@@ -355,111 +337,6 @@ async function fetchWikipediaSummary(countryName) {
     }
 }
 
-// --- Weather ---
-function degreesToCompass(degrees) {
-    const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-    const index = Math.round(degrees / 45) % 8;
-    return directions[index];
-}
-
-async function renderWeather(countryData) {
-    const [lat, lon] = countryData.latlng || [];
-    if (!(lat && lon)) return;
-    try {
-        const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&temperature_unit=fahrenheit&hourly=relative_humidity_2m,cloudcover&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`);
-        const data = await res.json();
-        const weather = data.current_weather;
-        const hourlyTimes = data.hourly?.time || [];
-        const currentTime = weather?.time;
-        let humidity = 'N/A';
-        let cloudcover = 'N/A';
-        if (currentTime && hourlyTimes.length) {
-            let minDiff = Infinity;
-            let closestIdx = -1;
-            for (let i = 0; i < hourlyTimes.length; i++) {
-                const diff = Math.abs(new Date(hourlyTimes[i]) - new Date(currentTime));
-                if (diff < minDiff) {
-                    minDiff = diff;
-                    closestIdx = i;
-                }
-            }
-            if (closestIdx !== -1) {
-                humidity = data.hourly.relative_humidity_2m[closestIdx];
-                cloudcover = data.hourly.cloudcover[closestIdx];
-            }
-        }
-        if (weather) {
-            document.getElementById('weather-temp').textContent = `${weather.temperature}°F`;
-            document.getElementById('weather-wind').textContent = `${weather.windspeed} mph`;
-            document.getElementById('weather-winddir').innerHTML =
-            ` ${weather.winddirection}° ${degreesToCompass(weather.winddirection)} 
-            <i id="wind-arrow" class="fas fa-arrow-up"></i>`;
-            document.getElementById('wind-arrow').style.transform =
-            `rotate(${weather.winddirection}deg)`;
-            const iconHtml = weatherCodeIcons[weather.weathercode] || '';
-            const iconColor = weatherCodeColors[weather.weathercode] || "#fff";
-            document.getElementById('weather-icon').innerHTML =
-                `<span style="color: ${iconColor};">${iconHtml}</span>`;
-            document.getElementById('weather-code').textContent =
-                weatherCodeDescriptions[weather.weathercode] || weather.weathercode;
-            document.getElementById('weather-humidity').textContent = humidity !== undefined ? `${humidity}%` : 'N/A';
-            document.getElementById('weather-cloud').textContent = cloudcover !== undefined ? `${cloudcover}%` : 'N/A';
-        } else {
-            document.getElementById('weather-temp').textContent = 'Not available';
-            document.getElementById('weather-wind').textContent = 'Not available';
-            document.getElementById('weather-winddir').textContent = 'Not available';
-            document.getElementById('weather-icon').innerHTML = '';
-            document.getElementById('weather-code').textContent = 'Not available';
-            document.getElementById('weather-humidity').textContent = "Not available";
-            document.getElementById('weather-cloud').textContent = 'Not available';
-        }
-
-        // --- 7-Day Forecast ---
-        const days = data.daily.time;
-        const maxTemps = data.daily.temperature_2m_max;
-        const minTemps = data.daily.temperature_2m_min;
-        const codes = data.daily.weathercode;
-        let forecastHtml = `
-            <div class="forecast-title">7-Day Forecast</div>
-            <ul class="forecast-list">
-        `;
-        const today = new Date();
-        today.setHours(0, 0, 0, 0); // Midnight today
-        for (let i = 0; i < days.length; i++) {
-            const dateObj = new Date(days[i]);
-            dateObj.setHours(0, 0, 0, 0); // Midnight for comparison
-            if (dateObj < today) continue; // Skip days before today
-            let formattedDate;
-            if (dateObj.getTime() === today.getTime()) {
-                formattedDate = "Today";
-            } else {
-                const options = { weekday: 'short', month: 'long', day: 'numeric' };
-                formattedDate = dateObj.toLocaleDateString(undefined, options).replace(',', '');
-            }
-            forecastHtml += `
-                <li class="forecast-row">
-                    <span class="forecast-date">${formattedDate}</span>
-                    <span class="min-temp">Low ${minTemps[i]}°F</span>
-                    <span class="max-temp">${maxTemps[i]}°F High</span>
-                    <span class="weather-icon" style="color: ${weatherCodeColors[codes[i]] || '#fff'};">
-                        ${weatherCodeIcons[codes[i]] || ''}
-                    </span>
-                    <span class="forecast-desc">${weatherCodeDescriptions[codes[i]] || codes[i]}</span>
-                </li>
-            `;
-        }
-        forecastHtml += '</ul>';
-        const forecastSpan = document.getElementById('forecast-span');
-        if (forecastSpan) {
-            forecastSpan.innerHTML = forecastHtml;
-        }
-    } catch (error) {
-        const forecastSpan = document.getElementById('forecast-span');
-        if (forecastSpan) {
-            forecastSpan.innerHTML = '<p>Error loading weather data.</p>';
-        }
-    }
-}
 
 // --- Airports ---
 async function renderAirports(countryData) {
