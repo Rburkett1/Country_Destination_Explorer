@@ -21,30 +21,20 @@
             <i class="fa-solid fa-arrow-left"></i> Back 
         </a>       
     </nav>
-    <div class="filter-bar">
-            <ul>
-                <li><button id="All" data-region="North America" 
-                onclick="filterAll()">All</button></li>
-              <li><button id="north-america-btn" data-region="North America" 
-                onclick="filterNorthAmerica()">North America</button></li>
-              <li><button id="central-america-btn" data-region="Central America" 
-                onclick="filterCentralAmerica()">Central America</button></li>
-              <li><button id="south-america-btn" data-region="South America"  
-                onclick="filterSouthAmerica()">South America</button></li>
-              <li><button id="caribbean-btn" data-region="Caribbean" 
-                onclick="filterCaribbean()">Caribbean</button></li>
-              <li><button id="europe-btn" data-region="Europe" 
-                onclick="filterEurope()">Europe</button></li>
-              <li><button id="middle-east-btn" data-region="Middle East"
-                onclick="filterMiddleEast()">Middle East</button></li>
-              <li><button id="africa-btn" data-region="Africa" 
-                onclick="filterAfrica()">Africa</button></li>
-              <li><button id="asia-btn" data-region="Asia"
-                onclick="filterAsia()">Asia</button></li>
-              <li><button id="oceania-btn" data-region="Oceania"
-                onclick="filterOceania()">Oceania</button></li>
-            </ul>
-        </div>
+        <div class="filter-bar">
+      <ul>
+        <li><button onclick="window.location.href='allcountries.html'">All</button></li>
+        <li><button onclick="window.location.href='allcountries.html?region=North America'">North America</button></li>
+        <li><button onclick="window.location.href='allcountries.html?region=Central America'">Central America</button></li>
+        <li><button onclick="window.location.href='allcountries.html?region=South America'">South America</button></li>
+        <li><button onclick="window.location.href='allcountries.html?region=Caribbean'">Caribbean</button></li>
+        <li><button onclick="window.location.href='allcountries.html?region=Europe'">Europe</button></li>
+        <li><button onclick="window.location.href='allcountries.html?region=Middle East'">Middle East</button></li>
+        <li><button onclick="window.location.href='allcountries.html?region=Africa'">Africa</button></li>
+        <li><button onclick="window.location.href='allcountries.html?region=Asia'">Asia</button></li>
+        <li><button onclick="window.location.href='allcountries.html?region=Oceania'">Oceania</button></li>
+      </ul>
+    </div>
     <div class="country-container">
         <div id="info"></div>
     </div>
@@ -61,5 +51,8 @@
             document.getElementById('info').textContent = 'No country selected.';
         }
     </script>
+    <footer>
+        <p>Created by Ryan Burkett &copy; 2025</p>
+    </footer>
 </body>
 </html>

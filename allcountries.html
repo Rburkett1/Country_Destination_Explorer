@@ -16,8 +16,16 @@
         </a>   
     </nav>
     <div class = "all-countries-header">
-        <h1>All Countries</h1>
+       <!-- h1>All Countries</h1>--> 
     </div>
+     <div class="searchbar-bg">
+        <div class="searchbar">
+          <input type="text" id="search" placeholder="Search any country...">
+          <div id="autocomplete-list" class="autocomplete-items"></div>
+          <div id="filter-popup" class="filter-items" style="display:none;"></div>
+          <button onclick="handleSearchClick()"><i class="fa-solid fa-search"></i></button>
+        </div>
+      </div>
         <div class="filter-bar">
             <ul>
                 <li><button id="All" data-region="North America" 
@@ -39,9 +47,11 @@
               <li><button id="asia-btn" data-region="Asia"
                 onclick="filterAsia()">Asia</button></li>
               <li><button id="oceania-btn" data-region="Oceania"
-                onclick="filterOceania()">Oceania</button></li>
+                onclick="filterOceania()">Oceania</button></li>           
                 <li><button id="filterSort-btn"
-                onclick="filterSort()">Filter & Sort</button></li>
+                onclick="filterSort()">Filter & Sort 
+                <i class="fa-solid fa-angle-down"></i>
+              </button></li>
             </ul>
         </div>
         <!-- Filter & Sort Pop-out -->
@@ -50,16 +60,36 @@
                 <button class="close-btn" onclick="closeFilterSortPopup()">&times;</button>
                 <h3>Filter & Sort Options</h3>
                 <!-- Add your filter/sort controls here -->
-                <button onclick="sortByName()">Sort by Name</button>
+                <button onclick="sortByName()">Language</button>
                 <label style="display:block; margin-top:1em;">
-            <input type="checkbox" id="popOver10M" onchange="togglePopulationFilter()">
-            Population High to Low
-        </label>
-                <!-- ... -->
+                    <input type="radio" id="SortAtoZ" onchange="toggleSortAtoZ(event)" checked>
+                    A to Z (default)
+                </label>
+                <label style="display:block; margin-top:1em;">
+                    <input type="radio" id="SortZtoA" onchange="toggleSortZtoA()">
+                    Z to A
+                </label>
+                <label style="display:block; margin-top:1em;">
+                    <input type="radio" id="popHighToLow" onchange="togglePopulationHighToLow(event)" >
+                    Population High to Low
+                </label>
+                <label style="display:block; margin-top:1em;">
+                    <input type="radio" id="popLowToHigh" onchange="togglePopulationLowToHigh(event)">
+                    Population Low to High
+                </label>
             </div>
         </div>
+        <div class = "title-container">
+          <div id = "region-title"> All Countries</div>
+          <div id = "sort-title"> </div>
+        </div>
     <div id="country-container" class="country-grid"></div>
-    <button id="backToTop" title="Back to top">&#8679;</button>
+    <button id="backToTop" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <footer>
+        <p>Created by Ryan Burkett &copy; 2025</p>
+    </footer>
+    <script src = "js/weather.js"></script>
+    <script src = "js/localData.js"></script>
     <script src = "js/main.js"></script>
 </body>
 </html>

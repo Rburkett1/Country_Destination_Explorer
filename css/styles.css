@@ -24,7 +24,7 @@ p {
 
 /* Styles the main search bar container */
 .searchbar {
-   display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 0;
@@ -34,6 +34,8 @@ p {
     border: none;
     position: relative;   
 }
+
+
 
 /* Styles the search input inside the searchbar */
 .searchbar input[type="text"] {
@@ -145,8 +147,8 @@ p {
     gap: 0;
 }
 
-.filter-dropdown-wrapper:hover .filter,
-.filter:hover {
+.filter-dropdown-wrapper.show .filter,
+.filter.show {
     display: flex;
 }
 
@@ -175,16 +177,19 @@ p {
     width: 100%;
     padding: 0.5em 1em;
     margin: 0.2em 0;
-    background: #f5f5f5;
+    background: transparent;
+    color: #ffffff;
     border: none;
     text-align: left;
     cursor: pointer;
     font-size: 1rem;
     border-radius: 4px;
     transition: background 0.2s;
+    text-decoration: none;
 }
 .dropdown-link:hover {
     background: #e0e0e0;
+    color: #000000;
 }
 
 
@@ -537,7 +542,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  flex-grow: 1; 
   font-size: 16px;
   color: #ffffff;
 }
@@ -625,6 +630,13 @@ p {
     margin-top: 25px;
     margin-bottom: 25px;
     font-size: 75px;
+    
+}
+
+.currency-symbol {
+    margin-top: 25px;
+    font-size: 75px;
+    font-weight: bold;
 }
 
 .info-box-2 {
@@ -666,14 +678,42 @@ p {
     
 }
 
+.title-container {
+    position: sticky;
+    top: 110px; /* Adjust as needed */
+    z-index: 1100;
+    background: #101935;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Remove margin-left and set width to 100% */
+    margin-left: 0;
+    margin-left: 50px; /* Adjust as needed */
+    width: 100vw; /* or 100% if inside a container */
+    left: 0;
+    padding: 8px 32px; /* Add horizontal padding if you want space on sides */
+    box-sizing: border-box;
+    gap: 10;
+}
 
+#region-title {
+    font-size: 24px;
+    color: #ff9800;
+    font-weight: bold;
+}
+
+#sort-title {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 12px;
+}
 
 /* Sticky filter bar at the top */
 .filter-bar {
   position: sticky;
   top: 50px; /* ✅ same as nav height */
   z-index: 1000; /* just under nav’s z-index */
-  background-color: #101935f5;
+  background-color: #101935;
   display: flex;
   justify-content: center;
   padding: 12px 0;
@@ -695,10 +735,11 @@ p {
 .filter-bar li button {
   background-color: #101935;
   color: #fff;
-  padding: 10px 18px;
+  padding: 10px;
+  min-width: 90px;
   border: 1px solid white;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -706,16 +747,17 @@ p {
 /* Hover effect for buttons */
 .filter-bar li button:hover:not(.active-filter) {
     background-color: #232b47;
-     border: 1.5px solid #ffcc7f;
+     border: 1px solid #ffcc7f;
 }
 
 
 /* Prevent hover effect on active filter button */
 .filter-bar li button.active-filter:hover,
 .filter-bar li button.active-filter {
-    background-color: #ff9800;
-    color: #ffcc7f;
-    border: 1px solid #ffcc7f;
+    background-color: #101935f5;;
+    color: #ff9800;;
+    border: 1px solid #ff9800;
+    font-style: bold; /* Make active filter bold */
     /* Keep any other active styles here */
 }
 
@@ -729,9 +771,10 @@ p {
   padding: 32px;
   background-color: transparent;
   
+  
 }
 
-/* 🧱 Country Card */
+/*  Country Card */
 .country-card {
   background: rgba(35, 43, 71, 0.85);
   padding: 16px;
@@ -751,7 +794,7 @@ p {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* 🌍 Flag Image */
+/*  Flag Image */
 .country-card img.all-images {
   width: 220px;
   height: 150px;
@@ -762,12 +805,12 @@ p {
 /* 📝 Text Styling */
 .country-card div {
   margin: 6px 0;
-  font-size: 15px;
+  font-size: 16px;
   text-align: left;
   color: #ffffff;
 }
 
-/* Simple pop-out/modal for filter & sort */
+/* Simple pop-out/modal for filter & sort   */
 .filter-sort-popup {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -779,12 +822,17 @@ p {
 }
 .filter-sort-popup .popup-content {
     background: #232b47;
-    color: #fff;
-    padding: 2em 2.5em;
+    color: #ffffff;
+    padding: 20px;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
     min-width: 260px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    
 }
 .filter-sort-popup .close-btn {
     position: absolute;
@@ -795,4 +843,12 @@ p {
     color: #ff9800;
     font-size: 1.5em;
     cursor: pointer;
+}
+
+input[type="radio"] {
+  accent-color: #ff9800; /* Modern browsers */
+  width: 18px;
+  height: 18px;
+  
+
 }

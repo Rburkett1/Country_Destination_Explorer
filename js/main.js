@@ -1,5 +1,6 @@
-let allCountries = [];
 
+let allCountries = [];
+let currentCountries = [];
 // --- Helper Functions ---
 
 function getExactCountryData(countryName, countriesArray) {
@@ -20,8 +21,29 @@ async function fetchCountryData(country) {
     return getExactCountryData(country, data);
 }
 
+// Fetch all countries data
+document.addEventListener('DOMContentLoaded', function() {
+    const params = new URLSearchParams(window.location.search);
+    const region = params.get('region');
+    if (region) {
+        switch(region) {
+            case 'Africa': filterAfrica(); break;
+            case 'North America': filterNorthAmerica(); break;
+            case 'Central America': filterCentralAmerica(); break;
+            case 'South America': filterSouthAmerica(); break;
+            case 'Caribbean': filterCaribbean(); break;
+            case 'Europe': filterEurope(); break;
+            case 'Middle East': filterMiddleEast(); break;
+            case 'Asia': filterAsia(); break;
+            case 'Oceania': filterOceania(); break;
+            default: filterAll();
+        }
+    } else {
+        filterAll();
+    }
+});
 
-
+// Icons for Region to switch based on country region
 function getGlobeIcon(region) {
     switch (region) {
         case 'Europe': return '<i class="fa-solid fa-earth-europe"></i>';
@@ -32,7 +54,7 @@ function getGlobeIcon(region) {
         default: return '<i class="fa-solid fa-globe"></i>';
     }
 }
-
+// Icons for currency to switch based on country currency
 const currencyIcons = {
     france: '<i class="fa-solid fa-euro"></i>',
     spain: '<i class="fa-solid fa-euro"></i>',
@@ -60,7 +82,8 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
             </div>                                                  
         </div>
         <div class="fact-container">
-            <div class="extra"> ${apiFact}</div> 
+            <div class="extra"> ${apiFact}
+            </div> 
         </div>
         <!-----/ Section 2  /----->
         <div class="country-info-container-2">                 
@@ -83,6 +106,9 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
                 <strong>Currency</strong> 
                 ${Object.values(countryData.currencies)[0].name} <br>
                 ${currencyIcons[countryData.name.common.toLowerCase()] || ''}
+                <span class="currency-symbol">
+                    ${Object.values(countryData.currencies)[0].symbol || ''}
+                </span>
             </div>
             <div class="info-box">
                 <strong>Population</strong> 
@@ -143,6 +169,7 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
     `;
 }
 
+
 function showError(message) {
     document.getElementById('info').innerHTML = `<p>${message}</p>`;
 }
@@ -150,10 +177,13 @@ function showError(message) {
 // --- Render Functions ---
 
 function renderAllCountries(countries) {
+    currentCountries = countries; // Store the current countries
     const container = document.getElementById('country-container');
     if (!container) return;
-    container.innerHTML = buildAllCountriesHtml(countries);
+    const filtered = countries.filter(c => c.name.common !== "Antarctica");
+    container.innerHTML = buildAllCountriesHtml(filtered);
 }
+// After renderAllCountries(allCountries);
 
 function buildAllCountriesHtml(countries) {
     return countries.map(country => `
@@ -166,6 +196,23 @@ function buildAllCountriesHtml(countries) {
         </div>
     `).join('');
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtn = document.getElementById('filter');
+    const filterDropdown = filterBtn?.nextElementSibling;
+    if (filterBtn && filterDropdown) {
+        filterBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            filterDropdown.classList.toggle('show');
+        });
+        // Optional: close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!filterDropdown.contains(e.target) && e.target !== filterBtn) {
+                filterDropdown.classList.remove('show');
+            }
+        });
+    }
+});
 
 // --- Filter Logic ---
 
@@ -185,9 +232,11 @@ function filterRegion(regionCountries, buttonId) {
     }
     const filtered = allCountries.filter(c => regionCountries.includes(c.name.common));
     renderAllCountries(filtered);
+    
 }
 
 function filterAll() {
+    document.getElementById('region-title').textContent = 'All Countries'; // <-- Add this line
     if (!allCountries || !allCountries.length) {
         console.warn('allCountries not loaded yet.');
         return;
@@ -196,29 +245,45 @@ function filterAll() {
     highlightActiveFilter('All'); // Optional: highlight the "All Countries" button
 }
 
+function resetSortUIToAtoZ() {
+    document.getElementById('SortAtoZ').checked = true;
+    document.getElementById('SortZtoA').checked = false;
+    document.getElementById('popHighToLow').checked = false;
+    document.getElementById('popLowToHigh').checked = false;
+    document.getElementById('sort-title').textContent = "A to Z";
+}
+
 function filterNorthAmerica() {
+    document.getElementById('region-title').textContent = 'North America'; // <-- Add this line
     filterRegion(
         ["Canada", "United States", "United States of America", "Mexico"],
         "north-america-btn"
     );
+    resetSortUIToAtoZ();
 }
 
+
 function filterCentralAmerica() {
+    document.getElementById('region-title').textContent = 'Central America'; // <-- Add this line
     filterRegion(
         ["Belize", "Costa Rica", "El Salvador", "Guatemala", "Honduras", "Nicaragua", "Panama"],
         "central-america-btn"
     );
+    resetSortUIToAtoZ();
 }
 
 function filterSouthAmerica() {
+    document.getElementById('region-title').textContent = 'South America'; // <-- Add this line
     filterRegion(
         ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador",
          "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela"],
         "south-america-btn"
     );
+    resetSortUIToAtoZ();
 }
 
 function filterEurope() {
+    document.getElementById('region-title').textContent = 'Europe'; // <-- Add this line
     filterRegion(
         ["Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina",
         "Bulgaria", "Croatia", "Czech Republic", "Denmark", "Estonia", "Finland",
@@ -230,9 +295,12 @@ function filterEurope() {
         "Vatican City"],
         "europe-btn"
     );
+    resetSortUIToAtoZ();
+    
 }
 
 function filterCaribbean() {
+    document.getElementById('region-title').textContent = 'Caribbean'; // <-- Add this line
     filterRegion(
         [
             "Antigua and Barbuda", "Bahamas", "Barbados", "Cuba", "Dominica",
@@ -244,6 +312,7 @@ function filterCaribbean() {
 }
 
 function filterMiddleEast() {
+    document.getElementById('region-title').textContent = 'Middle East'; // <-- Add this line
     filterRegion(
         [
             "Bahrain", "Cyprus", "Egypt", "Iran", "Iraq", "Israel", "Jordan", "Kuwait",
@@ -252,9 +321,11 @@ function filterMiddleEast() {
         ],
         "middle-east-btn"
     );
+    resetSortUIToAtoZ();
 }
 
 function filterAfrica() {
+    document.getElementById('region-title').textContent = 'Africa'; // <-- Add this line
     filterRegion(
         [
             "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde",
@@ -268,9 +339,11 @@ function filterAfrica() {
         ],
         "africa-btn"
     );
+    resetSortUIToAtoZ();    
 }
 
 function filterAsia() {
+    document.getElementById('region-title').textContent = 'Asia'; // <-- Add this line
     filterRegion(
         [
             "Afghanistan", "Armenia", "Azerbaijan", "Bahrain", "Bangladesh", "Bhutan", "Brunei",
@@ -283,9 +356,11 @@ function filterAsia() {
         ],
         "asia-btn"
     );
+    resetSortUIToAtoZ();
 }
 
 function filterOceania() {
+    document.getElementById('region-title').textContent = 'Oceania'; // <-- Add this line
     filterRegion(
         [
             "Australia", "Fiji", "Kiribati", "Marshall Islands", "Micronesia", "Nauru",
@@ -294,26 +369,102 @@ function filterOceania() {
         ],
         "oceania-btn"
     );
+    resetSortUIToAtoZ();
 }
 
 function filterSort() {
     document.getElementById('filterSortPopup').style.display = 'flex';
 }
+
 function closeFilterSortPopup() {
     document.getElementById('filterSortPopup').style.display = 'none';
 }
 
-function togglePopulationFilter() {
-    const checkbox = document.getElementById('popOver10M');
+function uncheckOtherSortCheckboxes(checkedId) {
+    const ids = ['popHighToLow', 'popLowToHigh', 'SortAtoZ', 'SortZtoA'];
+    ids.forEach(id => {
+        if (id !== checkedId) {
+            const box = document.getElementById(id);
+            if (box) box.checked = false;
+        }
+    });
+}
+
+function resetSortToAtoZ() {
+    document.getElementById('SortAtoZ').checked = true;
+    document.getElementById('sort-title').textContent = "A to Z";
+    const sorted = currentCountries.slice().sort((a, b) => a.name.common.localeCompare(b.name.common));
+    renderAllCountries(sorted);
+}
+
+function toggleSortAtoZ(event) {
+    uncheckOtherSortCheckboxes('SortAtoZ');
+    const checkbox = event ? event.target : document.getElementById('SortAtoZ');
     if (checkbox.checked) {
-        const filtered = allCountries
-            .filter(c => c.population > 10000000)
-            .sort((a, b) => b.population - a.population); // Sort high to low
-        renderAllCountries(filtered);
+        document.getElementById('sort-title').textContent = "A to Z";
+        const sorted = currentCountries // Use currentCountries to maintain the current filter
+            .slice()
+            .sort((a, b) => a.name.common.localeCompare(b.name.common));
+        renderAllCountries(sorted);
     } else {
+        alert("cant be unchecked");
+        document.getElementById('sort-title').textContent = "";
         filterAll();
     }
 }
+
+function toggleSortZtoA(event) {
+    uncheckOtherSortCheckboxes('SortZtoA');
+    const checkbox = event ? event.target : document.getElementById('SortZtoA');
+    if (checkbox.checked) {
+        document.getElementById('sort-title').textContent = "Z to A";
+        const sorted = currentCountries
+            .slice()
+            .sort((a, b) => b.name.common.localeCompare(a.name.common));
+        renderAllCountries(sorted);
+    } else {
+        document.getElementById('sort-title').textContent = "";
+        document.getElementById('SortAtoZ').checked = true; // checks A to Z
+        resetSortToAtoZ();
+    }
+}
+
+function togglePopulationHighToLow(event) {
+    uncheckOtherSortCheckboxes('popHighToLow'); 
+    const checkbox = event ? event.target : document.getElementById('popHighToLow');
+    if (checkbox.checked) {
+        document.getElementById('sort-title').textContent = "Population High to Low";
+        const sorted = currentCountries
+            .slice()
+            .sort((a, b) => b.population - a.population);
+        renderAllCountries(sorted);
+      //  closeFilterSortPopup();  Close the popup after sorting
+    } else {
+        document.getElementById('sort-title').textContent = ""; // Clear the title
+        document.getElementById('SortAtoZ').checked = true; // checks A to Z
+        resetSortToAtoZ();
+     //   closeFilterSortPopup();  Close the popup after resetting
+    }
+}
+
+function togglePopulationLowToHigh(event) {
+    uncheckOtherSortCheckboxes('popLowToHigh');
+    const checkbox = event ? event.target : document.getElementById('popLowToHigh');
+    if (checkbox.checked) {
+        document.getElementById('sort-title').textContent = "Population Low To High";
+        const sorted = currentCountries
+            .slice()
+            .sort((a, b) => a.population - b.population);
+        renderAllCountries(sorted);
+     //   closeFilterSortPopup();  Close the popup after sorting
+    } else {
+        document.getElementById('sort-title').textContent = ""; // Clear the title
+        document.getElementById('SortAtoZ').checked = true; // checks A to Z
+        resetSortToAtoZ();
+      //  closeFilterSortPopup();  Close the popup after resetting
+    }
+}
+
 
 // --- Wikipedia Summary Fetch ---
 async function fetchWikipediaSummary(countryName) {
@@ -413,6 +564,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(res => res.json())
         .then(data => {
             allCountries = data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+            currentCountries = allCountries; // Initialize currentCountries
             renderAllCountries(allCountries);
             document.querySelectorAll('.filter-bar button').forEach(btn => btn.disabled = false);
         })
@@ -489,11 +641,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- Back to Top Button Logic ---
     var backToTop = document.getElementById("backToTop");
     if (backToTop) {
-        window.addEventListener("scroll", function() {
-            backToTop.style.display = window.scrollY > 600 ? "block" : "none";
-        });
-        backToTop.onclick = function() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        };
-    }
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 600) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+    backToTop.onclick = function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+}
 });
