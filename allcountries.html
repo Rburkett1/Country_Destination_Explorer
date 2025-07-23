@@ -26,39 +26,46 @@
           <button onclick="handleSearchClick()"><i class="fa-solid fa-search"></i></button>
         </div>
       </div>
-        <div class="filter-bar">
-            <ul>
-                <li><button id="All" data-region="North America" 
-                onclick="filterAll()">All</button></li>
-              <li><button id="north-america-btn" data-region="North America" 
-                onclick="filterNorthAmerica()">North America</button></li>
-              <li><button id="central-america-btn" data-region="Central America" 
-                onclick="filterCentralAmerica()">Central America</button></li>
-              <li><button id="south-america-btn" data-region="South America"  
-                onclick="filterSouthAmerica()">South America</button></li>
-              <li><button id="caribbean-btn" data-region="Caribbean" 
-                onclick="filterCaribbean()">Caribbean</button></li>
-              <li><button id="europe-btn" data-region="Europe" 
-                onclick="filterEurope()">Europe</button></li>
-              <li><button id="middle-east-btn" data-region="Middle East"
-                onclick="filterMiddleEast()">Middle East</button></li>
-              <li><button id="africa-btn" data-region="Africa" 
-                onclick="filterAfrica()">Africa</button></li>
-              <li><button id="asia-btn" data-region="Asia"
-                onclick="filterAsia()">Asia</button></li>
-              <li><button id="oceania-btn" data-region="Oceania"
-                onclick="filterOceania()">Oceania</button></li>           
-                <li><button id="filterSort-btn"
-                onclick="filterSort()">Filter & Sort 
-                <i class="fa-solid fa-angle-down"></i>
-              </button></li>
-            </ul>
-        </div>
+        <div class="filter-wrapper">
+            <div class="filter-bar">
+                <ul>
+                    <li><button id="All" data-region="North America" 
+                    onclick="filterAll()">All</button></li>
+                  <li><button id="north-america-btn" data-region="North America" 
+                    onclick="filterNorthAmerica()">North America</button></li>
+                  <li><button id="central-america-btn" data-region="Central America" 
+                    onclick="filterCentralAmerica()">Central America</button></li>
+                  <li><button id="south-america-btn" data-region="South America"  
+                    onclick="filterSouthAmerica()">South America</button></li>
+                  <li><button id="caribbean-btn" data-region="Caribbean" 
+                    onclick="filterCaribbean()">Caribbean</button></li>
+                  <li><button id="europe-btn" data-region="Europe" 
+                    onclick="filterEurope()">Europe</button></li>
+                  <li><button id="middle-east-btn" data-region="Middle East"
+                    onclick="filterMiddleEast()">Middle East</button></li>
+                  <li><button id="africa-btn" data-region="Africa" 
+                    onclick="filterAfrica()">Africa</button></li>
+                  <li><button id="asia-btn" data-region="Asia"
+                    onclick="filterAsia()">Asia</button></li>
+                  <li><button id="oceania-btn" data-region="Oceania"
+                    onclick="filterOceania()">Oceania</button></li>           
+                  <li><button id="filterSort-btn"
+                    onclick="filterSort()">Filter & Sort 
+                    <i class="fa-solid fa-angle-down"></i>
+                  </button></li>          
+                </ul>
+                
+            </div>
+            <div class="filter-bar-subregion">
+               <div id="europe-region"></div>     
+               <div id="asia-region"></div>            
+            </div>
+        </div>    
         <!-- Filter & Sort Pop-out -->
         <div id="filterSortPopup" class="filter-sort-popup" style="display:none;">
             <div class="popup-content">
                 <button class="close-btn" onclick="closeFilterSortPopup()">&times;</button>
-                <h3>Filter & Sort Options</h3>
+                <h3>Sort Options</h3>
                 <!-- Add your filter/sort controls here -->
                 <button onclick="sortByName()">Language</button>
                 <label style="display:block; margin-top:1em;">
@@ -77,6 +84,9 @@
                     <input type="radio" id="popLowToHigh" onchange="togglePopulationLowToHigh(event)">
                     Population Low to High
                 </label>
+                <h3>Filter Options</h3>
+                <div id = "europe-region"></div>
+                <div id = "asia-region"></div>
             </div>
         </div>
         <div class = "title-container">

@@ -105,7 +105,7 @@ function buildCountryInfoHtml(countryData, localFact, history, airports, attract
             <div class="info-box">
                 <strong>Currency</strong> 
                 ${Object.values(countryData.currencies)[0].name} <br>
-                ${currencyIcons[countryData.name.common.toLowerCase()] || ''}
+               
                 <span class="currency-symbol">
                     ${Object.values(countryData.currencies)[0].symbol || ''}
                 </span>
@@ -214,7 +214,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// --- Filter Logic ---
+// --- Filter Logic for filter bar and subregion buttons ---
+
+// Highlight active filter button 
+// This function is called when a filter button is clicked
+// It highlights the button and removes the highlight from others
 
 function highlightActiveFilter(buttonId) {
     document.querySelectorAll('.filter-bar button').forEach(btn => {
@@ -223,6 +227,22 @@ function highlightActiveFilter(buttonId) {
     const btn = document.getElementById(buttonId);
     if (btn) btn.classList.add('active-filter');
 }
+// Highlight active subregion filter button
+// This function is called when a subregion button is clicked
+// It highlights the button and removes the highlight from others in the same region
+
+function highlightActiveSubRegionFilter(buttonId) {
+    // Remove active-filter from all subregion buttons
+    document.querySelectorAll('#europe-region button').forEach(btn => {
+        btn.classList.remove('active-filter');
+    });
+    // Add active-filter to the selected button
+    const btn = document.getElementById(buttonId);
+    if (btn) btn.classList.add('active-filter');
+}
+
+// Close filter and sort popup
+// This function is called when the close button is clicked
 
 function filterRegion(regionCountries, buttonId) {
     highlightActiveFilter(buttonId);
@@ -235,6 +255,9 @@ function filterRegion(regionCountries, buttonId) {
     
 }
 
+// Close filter and sort popup
+// This function is called when the close button is clicked
+// It hides the filter and sort popup
 function filterAll() {
     document.getElementById('region-title').textContent = 'All Countries'; // <-- Add this line
     if (!allCountries || !allCountries.length) {
@@ -243,15 +266,21 @@ function filterAll() {
     }
     renderAllCountries(allCountries);
     highlightActiveFilter('All'); // Optional: highlight the "All Countries" button
+      // hide the subregion bar with animation
+    document.querySelector('.filter-bar-subregion').classList.remove('active');
 }
 
 function resetSortUIToAtoZ() {
+    document.getElementById('europe-region').innerHTML = '';
+    document.getElementById('asia-region').innerHTML = '';
     document.getElementById('SortAtoZ').checked = true;
     document.getElementById('SortZtoA').checked = false;
     document.getElementById('popHighToLow').checked = false;
     document.getElementById('popLowToHigh').checked = false;
     document.getElementById('sort-title').textContent = "A to Z";
 }
+
+// Filter Functions for each region
 
 function filterNorthAmerica() {
     document.getElementById('region-title').textContent = 'North America'; // <-- Add this line
@@ -260,6 +289,8 @@ function filterNorthAmerica() {
         "north-america-btn"
     );
     resetSortUIToAtoZ();
+      // hide the subregion bar with animation
+    document.querySelector('.filter-bar-subregion').classList.remove('active');
 }
 
 
@@ -270,6 +301,8 @@ function filterCentralAmerica() {
         "central-america-btn"
     );
     resetSortUIToAtoZ();
+      // hide the subregion bar with animation
+    document.querySelector('.filter-bar-subregion').classList.remove('active');
 }
 
 function filterSouthAmerica() {
@@ -280,6 +313,8 @@ function filterSouthAmerica() {
         "south-america-btn"
     );
     resetSortUIToAtoZ();
+      // hide the subregion bar with animation
+    document.querySelector('.filter-bar-subregion').classList.remove('active');
 }
 
 function filterEurope() {
@@ -296,10 +331,54 @@ function filterEurope() {
         "europe-btn"
     );
     resetSortUIToAtoZ();
-    
+    filterEuropeRegion(); // <-- Add this line
+     // Show the subregion bar with animation
+    document.querySelector('.filter-bar-subregion').classList.add('active');
+}
+
+function filterEuropeRegion() {
+    const europeRegion = document.getElementById('europe-region');
+    europeRegion.innerHTML = `
+        <div class = "europe-region-buttons">
+            <button id="east-europe-btn" class="region-btn" onclick="filterEastEurope()">East Europe</button>
+            <button id="west-europe-btn" class="region-btn" onclick="filterWestEurope()">West Europe</button>
+        </div>
+    `;
+}
+
+function filterEastEurope() {
+   // document.getElementById('europe-region').innerHTML = '';
+    document.getElementById('region-title').textContent = 'East Europe'; // <-- Add this line
+    filterRegion(
+        [
+            "Belarus", "Bulgaria", "Czech Republic", "Hungary", "Moldova", "Poland", "Romania", "Russia",
+            "Slovakia", "Ukraine"
+        ],
+        "east-europe-btn"
+    );
+    closeFilterSortPopup();
+    highlightActiveFilter('europe-btn');
+    highlightActiveSubRegionFilter('east-europe-btn');
+}
+
+function filterWestEurope() {
+  //  document.getElementById('europe-region').innerHTML = '';
+    document.getElementById('region-title').textContent = 'West Europe'; // <-- Add this line
+    filterRegion(
+        [
+            "Andorra", "Austria", "Belgium", "France", "Germany", "Liechtenstein", "Luxembourg", "Monaco",
+            "Netherlands", "San Marino", "Switzerland", "United Kingdom", "Vatican City"
+        ],
+        "west-europe-btn"
+    );
+    closeFilterSortPopup();
+    highlightActiveFilter('europe-btn');
+    highlightActiveSubRegionFilter('west-europe-btn');
 }
 
 function filterCaribbean() {
+    document.getElementById('europe-region').innerHTML = '';
+    document.getElementById('asia-region').innerHTML = '';
     document.getElementById('region-title').textContent = 'Caribbean'; // <-- Add this line
     filterRegion(
         [
@@ -309,6 +388,9 @@ function filterCaribbean() {
         ],
         "caribbean-btn"
     );
+    resetSortUIToAtoZ();
+  // hide the subregion bar with animation
+    document.querySelector('.filter-bar-subregion').classList.remove('active');
 }
 
 function filterMiddleEast() {
@@ -322,6 +404,8 @@ function filterMiddleEast() {
         "middle-east-btn"
     );
     resetSortUIToAtoZ();
+      // hide the subregion bar with animation
+    document.querySelector('.filter-bar-subregion').classList.remove('active');
 }
 
 function filterAfrica() {
@@ -339,7 +423,9 @@ function filterAfrica() {
         ],
         "africa-btn"
     );
-    resetSortUIToAtoZ();    
+    resetSortUIToAtoZ();   
+      // hide the subregion bar with animation
+    document.querySelector('.filter-bar-subregion').classList.remove('active'); 
 }
 
 function filterAsia() {
@@ -357,8 +443,42 @@ function filterAsia() {
         "asia-btn"
     );
     resetSortUIToAtoZ();
+    filterAsiaRegion(); // <-- Add this line
+    document.querySelector('.filter-bar-subregion').classList.add('active'); // <-- Add this line
 }
 
+function filterEastAsia() {
+    document.getElementById('region-title').textContent = 'East Asia'; // <-- Add this line
+    filterRegion(
+        ["China", "Japan", "Mongolia", "North Korea", "South Korea", "Taiwan"],
+        "east-asia-btn"
+    );
+    closeFilterSortPopup();
+    highlightActiveFilter('asia-btn');
+    highlightActiveSubRegionFilter('east-asia-btn');
+}
+
+function filterSouthAsia() {
+    document.getElementById('region-title').textContent = 'South Asia'; // <-- Add this line
+    filterRegion(
+        ["Afghanistan", "Bangladesh", "Bhutan", "India", "Maldives", "Nepal", "Pakistan", "Sri Lanka"],
+        "south-asia-btn"
+    );
+    closeFilterSortPopup();
+    highlightActiveFilter('asia-btn');
+    highlightActiveSubRegionFilter('south-asia-btn');
+}
+
+function filterAsiaRegion() {
+    const asiaRegion = document.getElementById('asia-region');
+    asiaRegion.innerHTML = `
+        <button id="south-asia-btn" class="region-btn" onclick="filterSouthAsia()">South Asia</button>
+        <button id="east-asia-btn" class="region-btn" onclick="filterEastAsia()">East Asia</button>
+        <button id="southeast-asia-btn" class="region-btn" onclick="filterSoutheastAsia()">Southeast Asia</button>
+        <button id="west-asia-btn" class="region-btn" onclick="filterWestAsia()">West Asia</button>
+        <button id="central-asia-btn" class="region-btn" onclick="filterCentralAsia()">Central Asia</button>
+    `;
+}
 function filterOceania() {
     document.getElementById('region-title').textContent = 'Oceania'; // <-- Add this line
     filterRegion(
@@ -373,7 +493,17 @@ function filterOceania() {
 }
 
 function filterSort() {
-    document.getElementById('filterSortPopup').style.display = 'flex';
+    const popup = document.getElementById('filterSortPopup');
+    if (popup.style.display === 'flex' || popup.style.display === 'block') {
+        popup.style.display = 'none';
+    } else {
+        popup.style.display = 'flex';
+        // Check if Europe is the active region
+        const regionTitle = document.getElementById('region-title').textContent;
+        if (regionTitle === 'Europe' || regionTitle === 'East Europe' || regionTitle === 'West Europe') {
+            filterEuropeRegion();
+        }
+    }
 }
 
 function closeFilterSortPopup() {
