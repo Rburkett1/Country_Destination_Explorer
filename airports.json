@@ -1,0 +1,3281 @@
+{
+  "Japan": [
+    {
+      "city": "Tokyo",
+      "country": "JP",
+      "airport_name": "Tokyo Haneda International Airport",
+      "iata_code": "HND",
+      "icao_code": "RJTT",
+      "lat": 35.552299,
+      "lon": 139.779999
+    },
+    {
+      "city": "Nagoya",
+      "country": "JP",
+      "airport_name": "Nagoya Airport / JASDF Komaki Air Base",
+      "iata_code": "NKM",
+      "icao_code": "RJNA",
+      "lat": 35.255759,
+      "lon": 136.924095
+    }
+  ],
+  "Indonesia": [
+    {
+      "city": "Jakarta",
+      "country": "ID",
+      "airport_name": "Halim Perdanakusuma International Airport",
+      "iata_code": "HLP",
+      "icao_code": "WIHH",
+      "lat": -6.266610145568848,
+      "lon": 106.89099884033203
+    },
+    {
+      "city": "Surabaya",
+      "country": "ID",
+      "airport_name": "Juanda International Airport",
+      "iata_code": "SUB",
+      "icao_code": "WARR",
+      "lat": -7.37983,
+      "lon": 112.787003
+    },
+    {
+      "city": "Medan",
+      "country": "ID",
+      "airport_name": "Soewondo Air Force Base",
+      "iata_code": "MES",
+      "icao_code": "WIMK",
+      "lat": 3.558425,
+      "lon": 98.672275
+    }
+  ],
+  "India": [
+    {
+      "city": "Mumbai",
+      "country": "IN",
+      "airport_name": "Chhatrapati Shivaji International Airport",
+      "iata_code": "BOM",
+      "icao_code": "VABB",
+      "lat": 19.0886993408,
+      "lon": 72.8678970337
+    }
+  ],
+  "China": [
+    {
+      "city": "Beijing",
+      "country": "CN",
+      "airport_name": "Beijing Shahezhen Air Base",
+      "iata_code": "",
+      "icao_code": "CN-0006",
+      "lat": 40.149166107177734,
+      "lon": 116.3213882446289
+    }
+  ],
+  "Philippines": [],
+  "Brazil": [
+    {
+      "city": "São Paulo",
+      "country": "BR",
+      "airport_name": "Guarulhos - Governador André Franco Montoro International Airport",
+      "iata_code": "GRU",
+      "icao_code": "SBGR",
+      "lat": -23.431944,
+      "lon": -46.467778
+    },
+    {
+      "city": "Rio de Janeiro",
+      "country": "BR",
+      "airport_name": "Campo Délio Jardim de Mattos Airport",
+      "iata_code": "",
+      "icao_code": "SBAF",
+      "lat": -22.875099,
+      "lon": -43.384701
+    },
+    {
+      "city": "Belo Horizonte",
+      "country": "BR",
+      "airport_name": "Pampulha - Carlos Drummond de Andrade Airport",
+      "iata_code": "PLU",
+      "icao_code": "SBBH",
+      "lat": -19.85074,
+      "lon": -43.950316
+    }
+  ],
+  "Korea, South": [
+    {
+      "city": "Seoul",
+      "country": "KR",
+      "airport_name": "Incheon International Airport",
+      "iata_code": "ICN",
+      "icao_code": "RKSI",
+      "lat": 37.469101,
+      "lon": 126.450996
+    },
+    {
+      "city": "Busan",
+      "country": "KR",
+      "airport_name": "Gimhae International Airport",
+      "iata_code": "PUS",
+      "icao_code": "RKPK",
+      "lat": 35.179501,
+      "lon": 128.938004
+    }
+  ],
+  "Mexico": [
+    {
+      "city": "Mexico City",
+      "country": "MX",
+      "airport_name": "General Felipe Ángeles International Airport",
+      "iata_code": "NLU",
+      "icao_code": "MMSM",
+      "lat": 19.7357,
+      "lon": -99.0257
+    },
+    {
+      "city": "Guadalajara",
+      "country": "MX",
+      "airport_name": "Guadalajara International Airport",
+      "iata_code": "GDL",
+      "icao_code": "MMGL",
+      "lat": 20.523342,
+      "lon": -103.310108
+    },
+    {
+      "city": "Monterrey",
+      "country": "MX",
+      "airport_name": "Del Norte International Airport",
+      "iata_code": "NTR",
+      "icao_code": "MMAN",
+      "lat": 25.865601,
+      "lon": -100.237
+    }
+  ],
+  "Egypt": [
+    {
+      "city": "Cairo",
+      "country": "EG",
+      "airport_name": "Cairo International Airport",
+      "iata_code": "CAI",
+      "icao_code": "HECA",
+      "lat": 30.111534,
+      "lon": 31.396694
+    },
+    {
+      "city": "Alexandria",
+      "country": "EG",
+      "airport_name": "Borj El Arab International Airport",
+      "iata_code": "HBE",
+      "icao_code": "HEBA",
+      "lat": 30.93249,
+      "lon": 29.696437
+    }
+  ],
+  "Pakistan": [
+    {
+      "city": "Karachi",
+      "country": "PK",
+      "airport_name": "Jinnah International Airport",
+      "iata_code": "KHI",
+      "icao_code": "OPKC",
+      "lat": 24.9065,
+      "lon": 67.160797
+    },
+    {
+      "city": "Lahore",
+      "country": "PK",
+      "airport_name": "Allama Iqbal International Airport",
+      "iata_code": "LHE",
+      "icao_code": "OPLA",
+      "lat": 31.521601,
+      "lon": 74.403603
+    }
+  ],
+  "Bangladesh": [
+    {
+      "city": "Dhaka",
+      "country": "BD",
+      "airport_name": "Hazrat Shahjalal International Airport",
+      "iata_code": "DAC",
+      "icao_code": "VGHS",
+      "lat": 23.843347,
+      "lon": 90.397783
+    }
+  ],
+  "United States": [
+    {
+      "city": "New York",
+      "country": "US",
+      "airport_name": "John F Kennedy International Airport",
+      "iata_code": "JFK",
+      "icao_code": "KJFK",
+      "lat": 40.639447,
+      "lon": -73.779317
+    },
+    {
+      "city": "Los Angeles",
+      "country": "US",
+      "airport_name": "Los Angeles International Airport",
+      "iata_code": "LAX",
+      "icao_code": "KLAX",
+      "lat": 33.942501,
+      "lon": -118.407997
+    },
+    {
+      "city": "Chicago",
+      "country": "US",
+      "airport_name": "Chicago Midway International Airport",
+      "iata_code": "MDW",
+      "icao_code": "KMDW",
+      "lat": 41.785999,
+      "lon": -87.752403
+    }
+  ],
+  "Thailand": [
+    {
+      "city": "Bangkok",
+      "country": "TH",
+      "airport_name": "Don Mueang International Airport",
+      "iata_code": "DMK",
+      "icao_code": "VTBD",
+      "lat": 13.9126,
+      "lon": 100.607002
+    },
+    {
+      "city": "Chiang Mai",
+      "country": "TH",
+      "airport_name": "Chiang Mai International Airport",
+      "iata_code": "CNX",
+      "icao_code": "VTCC",
+      "lat": 18.766799926799997,
+      "lon": 98.962600708
+    }
+  ],
+  "Russia": [
+    {
+      "city": "Moscow",
+      "country": "RU",
+      "airport_name": "Myachkovo Airfield",
+      "iata_code": "",
+      "icao_code": "RU-10054",
+      "lat": 55.560001,
+      "lon": 37.985001
+    },
+    {
+      "city": "Novosibirsk",
+      "country": "RU",
+      "airport_name": "Yeltsovka Airport",
+      "iata_code": "",
+      "icao_code": "UNNE",
+      "lat": 55.0924,
+      "lon": 83.004501
+    }
+  ],
+  "Argentina": [
+    {
+      "city": "Buenos Aires",
+      "country": "AR",
+      "airport_name": "Jorge Newbery Airpark",
+      "iata_code": "AEP",
+      "icao_code": "SABE",
+      "lat": -34.5592,
+      "lon": -58.4156
+    },
+    {
+      "city": "Córdoba",
+      "country": "ES",
+      "airport_name": "Córdoba Airport",
+      "iata_code": "ODB",
+      "icao_code": "LEBA",
+      "lat": 37.841999,
+      "lon": -4.84888
+    },
+    {
+      "city": "Rosario",
+      "country": "AR",
+      "airport_name": "Rosario Islas Malvinas International Airport",
+      "iata_code": "ROS",
+      "icao_code": "SAAR",
+      "lat": -32.9036,
+      "lon": -60.785
+    }
+  ],
+  "Nigeria": [
+    {
+      "city": "Lagos",
+      "country": "NG",
+      "airport_name": "Murtala Muhammed International Airport",
+      "iata_code": "LOS",
+      "icao_code": "DNMM",
+      "lat": 6.57737,
+      "lon": 3.32116
+    },
+    {
+      "city": "Kano",
+      "country": "NG",
+      "airport_name": "Mallam Aminu International Airport",
+      "iata_code": "KAN",
+      "icao_code": "DNKN",
+      "lat": 12.0476,
+      "lon": 8.52462
+    },
+    {
+      "city": "Abuja",
+      "country": "NG",
+      "airport_name": "Nnamdi Azikiwe International Airport",
+      "iata_code": "ABV",
+      "icao_code": "DNAA",
+      "lat": 9.00679,
+      "lon": 7.26317
+    }
+  ],
+  "Vietnam": [
+    {
+      "city": "Ho Chi Minh City",
+      "country": "VN",
+      "airport_name": "Tan Son Nhat International Airport",
+      "iata_code": "SGN",
+      "icao_code": "VVTS",
+      "lat": 10.8188,
+      "lon": 106.652
+    }
+  ],
+  "Turkey": [
+    {
+      "city": "Ankara",
+      "country": "TR",
+      "airport_name": "Esenboğa International Airport",
+      "iata_code": "ESB",
+      "icao_code": "LTAC",
+      "lat": 40.128101,
+      "lon": 32.995098
+    }
+  ],
+  "Iran": [
+    {
+      "city": "Tehran",
+      "country": "IR",
+      "airport_name": "Imam Khomeini International Airport",
+      "iata_code": "IKA",
+      "icao_code": "OIIE",
+      "lat": 35.416099548339844,
+      "lon": 51.152198791503906
+    },
+    {
+      "city": "Mashhad",
+      "country": "IR",
+      "airport_name": "Mashhad International Airport",
+      "iata_code": "MHD",
+      "icao_code": "OIMM",
+      "lat": 36.235198974609375,
+      "lon": 59.64099884033203
+    }
+  ],
+  "Congo (Kinshasa)": [
+    {
+      "city": "Kinshasa",
+      "country": "CD",
+      "airport_name": "Ndjili International Airport",
+      "iata_code": "FIH",
+      "icao_code": "FZAA",
+      "lat": -4.38575,
+      "lon": 15.4446
+    },
+    {
+      "city": "Kananga",
+      "country": "CD",
+      "airport_name": "Kananga Airport",
+      "iata_code": "KGA",
+      "icao_code": "FZUA",
+      "lat": -5.90005,
+      "lon": 22.4692
+    }
+  ],
+  "United Kingdom": [
+    {
+      "city": "London",
+      "country": "CA",
+      "airport_name": "London Airport",
+      "iata_code": "YXU",
+      "icao_code": "CYXU",
+      "lat": 43.035599,
+      "lon": -81.1539
+    },
+    {
+      "city": "Birmingham",
+      "country": "US",
+      "airport_name": "Birmingham-Shuttlesworth International Airport",
+      "iata_code": "BHM",
+      "icao_code": "KBHM",
+      "lat": 33.562901,
+      "lon": -86.753502
+    },
+    {
+      "city": "Portsmouth",
+      "country": "US",
+      "airport_name": "Portsmouth International at Pease Airport",
+      "iata_code": "PSM",
+      "icao_code": "KPSM",
+      "lat": 43.0778999329,
+      "lon": -70.8233032227
+    }
+  ],
+  "France": [
+    {
+      "city": "Paris",
+      "country": "US",
+      "airport_name": "Cox Field",
+      "iata_code": "PRX",
+      "icao_code": "KPRX",
+      "lat": 33.636600494385,
+      "lon": -95.450798034668
+    }
+  ],
+  "Peru": [
+    {
+      "city": "Lima",
+      "country": "PE",
+      "airport_name": "Jorge Chávez International Airport",
+      "iata_code": "LIM",
+      "icao_code": "SPIM",
+      "lat": -12.0219,
+      "lon": -77.114305
+    },
+    {
+      "city": "Arequipa",
+      "country": "PE",
+      "airport_name": "Rodríguez Ballón International Airport",
+      "iata_code": "AQP",
+      "icao_code": "SPQU",
+      "lat": -16.3411006927,
+      "lon": -71.5830993652
+    },
+    {
+      "city": "Trujillo",
+      "country": "HN",
+      "airport_name": "Trujillo Airport",
+      "iata_code": "TJI",
+      "icao_code": "MHTJ",
+      "lat": 15.926599,
+      "lon": -85.938573
+    }
+  ],
+  "Angola": [
+    {
+      "city": "Luanda",
+      "country": "AO",
+      "airport_name": "Quatro de Fevereiro International Airport",
+      "iata_code": "LAD",
+      "icao_code": "FNLU",
+      "lat": -8.85837,
+      "lon": 13.2312
+    }
+  ],
+  "Malaysia": [],
+  "Colombia": [
+    {
+      "city": "Cali",
+      "country": "CO",
+      "airport_name": "Alfonso Bonilla Aragon International Airport",
+      "iata_code": "CLO",
+      "icao_code": "SKCL",
+      "lat": 3.54322,
+      "lon": -76.3816
+    },
+    {
+      "city": "Medellín",
+      "country": "CO",
+      "airport_name": "Enrique Olaya Herrera Airport",
+      "iata_code": "EOH",
+      "icao_code": "SKMD",
+      "lat": 6.219686,
+      "lon": -75.590597
+    }
+  ],
+  "Tanzania": [
+    {
+      "city": "Dar es Salaam",
+      "country": "TZ",
+      "airport_name": "Julius Nyerere International Airport",
+      "iata_code": "DAR",
+      "icao_code": "HTDA",
+      "lat": -6.87811,
+      "lon": 39.202599
+    },
+    {
+      "city": "Mwanza",
+      "country": "TZ",
+      "airport_name": "Mwanza Airport",
+      "iata_code": "MWZ",
+      "icao_code": "HTMW",
+      "lat": -2.4444899559020996,
+      "lon": 32.932701110839844
+    }
+  ],
+  "Sudan": [
+    {
+      "city": "Khartoum",
+      "country": "SD",
+      "airport_name": "Khartoum International Airport",
+      "iata_code": "KRT",
+      "icao_code": "HSSK",
+      "lat": 15.5895,
+      "lon": 32.5532
+    }
+  ],
+  "South Africa": [
+    {
+      "city": "Johannesburg",
+      "country": "ZA",
+      "airport_name": "Rand Airport",
+      "iata_code": "QRA",
+      "icao_code": "FAGM",
+      "lat": -26.2425,
+      "lon": 28.151199
+    },
+    {
+      "city": "Cape Town",
+      "country": "ZA",
+      "airport_name": "Cape Town International Airport",
+      "iata_code": "CPT",
+      "icao_code": "FACT",
+      "lat": -33.9648017883,
+      "lon": 18.6016998291
+    },
+    {
+      "city": "Pretoria",
+      "country": "ZA",
+      "airport_name": "Swartkop Air Force Base",
+      "iata_code": "",
+      "icao_code": "FASK",
+      "lat": -25.8097,
+      "lon": 28.1646
+    }
+  ],
+  "Hong Kong": [
+    {
+      "city": "Hong Kong",
+      "country": "HK",
+      "airport_name": "Hong Kong International Airport",
+      "iata_code": "HKG",
+      "icao_code": "VHHH",
+      "lat": 22.308901,
+      "lon": 113.915001
+    }
+  ],
+  "Saudi Arabia": [
+    {
+      "city": "Riyadh",
+      "country": "SA",
+      "airport_name": "King Khaled International Airport",
+      "iata_code": "RUH",
+      "icao_code": "OERK",
+      "lat": 24.9576,
+      "lon": 46.698799
+    },
+    {
+      "city": "Jeddah",
+      "country": "SA",
+      "airport_name": "King Faisal Naval Base",
+      "iata_code": "",
+      "icao_code": "OEJF",
+      "lat": 21.348100662231445,
+      "lon": 39.17300033569336
+    }
+  ],
+  "Chile": [
+    {
+      "city": "Santiago",
+      "country": "DO",
+      "airport_name": "Cibao International Airport",
+      "iata_code": "STI",
+      "icao_code": "MDST",
+      "lat": 19.406099319458008,
+      "lon": -70.60469818115234
+    },
+    {
+      "city": "Concepción",
+      "country": "PY",
+      "airport_name": "Aeropuerto Nacional Tte. Cnel. Carmelo Peralta",
+      "iata_code": "CIO",
+      "icao_code": "SGCO",
+      "lat": -23.440334,
+      "lon": -57.429206
+    }
+  ],
+  "Burma": [
+    {
+      "city": "Mandalay",
+      "country": "MM",
+      "airport_name": "Mandalay International Airport",
+      "iata_code": "MDL",
+      "icao_code": "VYMD",
+      "lat": 21.702199935913086,
+      "lon": 95.97789764404297
+    }
+  ],
+  "Spain": [
+    {
+      "city": "Madrid",
+      "country": "ES",
+      "airport_name": "Madrid-Cuatro Vientos Airport",
+      "iata_code": "",
+      "icao_code": "LECU",
+      "lat": 40.370701,
+      "lon": -3.78514
+    },
+    {
+      "city": "Barcelona",
+      "country": "ES",
+      "airport_name": "Josep Tarradellas Barcelona-El Prat Airport",
+      "iata_code": "BCN",
+      "icao_code": "LEBL",
+      "lat": 41.2971,
+      "lon": 2.07846
+    },
+    {
+      "city": "Valencia",
+      "country": "ES",
+      "airport_name": "Valencia Airport",
+      "iata_code": "VLC",
+      "icao_code": "LEVC",
+      "lat": 39.4893,
+      "lon": -0.481625
+    }
+  ],
+  "Iraq": [
+    {
+      "city": "Baghdad",
+      "country": "IQ",
+      "airport_name": "Rasheed Air Base",
+      "iata_code": "",
+      "icao_code": "IQ-0039",
+      "lat": 33.279327,
+      "lon": 44.493706
+    },
+    {
+      "city": "Mosul",
+      "country": "IQ",
+      "airport_name": "Mosul International Airport",
+      "iata_code": "OSM",
+      "icao_code": "ORBM",
+      "lat": 36.305801,
+      "lon": 43.1474
+    }
+  ],
+  "Singapore": [
+    {
+      "city": "Singapore",
+      "country": "SG",
+      "airport_name": "Changi Air Base (East)",
+      "iata_code": "",
+      "icao_code": "WSAC",
+      "lat": 1.3441400528,
+      "lon": 104.009002686
+    }
+  ],
+  "Cameroon": [
+    {
+      "city": "Douala",
+      "country": "CM",
+      "airport_name": "Douala International Airport",
+      "iata_code": "DLA",
+      "icao_code": "FKKD",
+      "lat": 4.0060801506,
+      "lon": 9.719479560849999
+    },
+    {
+      "city": "Yaoundé",
+      "country": "CM",
+      "airport_name": "Yaoundé Airport",
+      "iata_code": "YAO",
+      "icao_code": "FKKY",
+      "lat": 3.83604,
+      "lon": 11.5235
+    },
+    {
+      "city": "Garoua",
+      "country": "CM",
+      "airport_name": "Garoua International Airport",
+      "iata_code": "GOU",
+      "icao_code": "FKKR",
+      "lat": 9.33588981628418,
+      "lon": 13.370100021362305
+    }
+  ],
+  "Ethiopia": [
+    {
+      "city": "Addis Ababa",
+      "country": "ET",
+      "airport_name": "Addis Ababa Bole International Airport",
+      "iata_code": "ADD",
+      "icao_code": "HAAB",
+      "lat": 8.97789,
+      "lon": 38.799301
+    }
+  ],
+  "Canada": [
+    {
+      "city": "Toronto",
+      "country": "CA",
+      "airport_name": "Billy Bishop Toronto City Centre Airport",
+      "iata_code": "YTZ",
+      "icao_code": "CYTZ",
+      "lat": 43.627499,
+      "lon": -79.396202
+    },
+    {
+      "city": "Montréal",
+      "country": "CA",
+      "airport_name": "Montréal / Saint-Hubert Metropolitan Airport",
+      "iata_code": "YHU",
+      "icao_code": "CYHU",
+      "lat": 45.517502,
+      "lon": -73.416901
+    },
+    {
+      "city": "Vancouver",
+      "country": "CA",
+      "airport_name": "Vancouver International Airport",
+      "iata_code": "YVR",
+      "icao_code": "CYVR",
+      "lat": 49.193901062,
+      "lon": -123.183998108
+    }
+  ],
+  "Kenya": [
+    {
+      "city": "Nairobi",
+      "country": "KE",
+      "airport_name": "Jomo Kenyatta International Airport",
+      "iata_code": "NBO",
+      "icao_code": "HKJK",
+      "lat": -1.31923997402,
+      "lon": 36.9277992249
+    },
+    {
+      "city": "Mombasa",
+      "country": "KE",
+      "airport_name": "Moi International Airport",
+      "iata_code": "MBA",
+      "icao_code": "HKMO",
+      "lat": -4.03483,
+      "lon": 39.5942
+    },
+    {
+      "city": "Kisumu",
+      "country": "KE",
+      "airport_name": "Kisumu Airport",
+      "iata_code": "KIS",
+      "icao_code": "HKKI",
+      "lat": -0.0861390009522438,
+      "lon": 34.72890090942383
+    }
+  ],
+  "Australia": [
+    {
+      "city": "Melbourne",
+      "country": "US",
+      "airport_name": "Melbourne Orlando International Airport",
+      "iata_code": "MLB",
+      "icao_code": "KMLB",
+      "lat": 28.1028,
+      "lon": -80.645302
+    },
+    {
+      "city": "Sydney",
+      "country": "CA",
+      "airport_name": "Sydney / J.A. Douglas McCurdy Airport",
+      "iata_code": "YQY",
+      "icao_code": "CYQY",
+      "lat": 46.1614,
+      "lon": -60.047798
+    },
+    {
+      "city": "Brisbane",
+      "country": "AU",
+      "airport_name": "Brisbane International Airport",
+      "iata_code": "BNE",
+      "icao_code": "YBBN",
+      "lat": -27.384199142456055,
+      "lon": 153.11700439453125
+    }
+  ],
+  "Côte d’Ivoire": [
+    {
+      "city": "Abidjan",
+      "country": "CI",
+      "airport_name": "Félix-Houphouët-Boigny International Airport",
+      "iata_code": "ABJ",
+      "icao_code": "DIAP",
+      "lat": 5.26139,
+      "lon": -3.92629
+    },
+    {
+      "city": "Bouaké",
+      "country": "CI",
+      "airport_name": "Bouaké Airport",
+      "iata_code": "BYK",
+      "icao_code": "DIBK",
+      "lat": 7.7388,
+      "lon": -5.07367
+    }
+  ],
+  "Germany": [
+    {
+      "city": "Berlin",
+      "country": "DE",
+      "airport_name": "Berlin Brandenburg Airport",
+      "iata_code": "BER",
+      "icao_code": "EDDB",
+      "lat": 52.362247,
+      "lon": 13.500672
+    },
+    {
+      "city": "Stuttgart",
+      "country": "DE",
+      "airport_name": "Stuttgart Airport",
+      "iata_code": "STR",
+      "icao_code": "EDDS",
+      "lat": 48.689899,
+      "lon": 9.22196
+    },
+    {
+      "city": "Munich",
+      "country": "DE",
+      "airport_name": "Munich Airport",
+      "iata_code": "MUC",
+      "icao_code": "EDDM",
+      "lat": 48.353802,
+      "lon": 11.7861
+    }
+  ],
+  "Afghanistan": [
+    {
+      "city": "Kabul",
+      "country": "AF",
+      "airport_name": "Kabul International Airport",
+      "iata_code": "KBL",
+      "icao_code": "OAKB",
+      "lat": 34.565899,
+      "lon": 69.212303
+    }
+  ],
+  "Mali": [
+    {
+      "city": "Bamako",
+      "country": "ML",
+      "airport_name": "Modibo Keita International Airport",
+      "iata_code": "BKO",
+      "icao_code": "GABS",
+      "lat": 12.5335,
+      "lon": -7.94994
+    }
+  ],
+  "Jordan": [
+    {
+      "city": "Amman",
+      "country": "JO",
+      "airport_name": "Queen Alia International Airport",
+      "iata_code": "AMM",
+      "icao_code": "OJAI",
+      "lat": 31.7226009369,
+      "lon": 35.9931983948
+    }
+  ],
+  "Ghana": [
+    {
+      "city": "Kumasi",
+      "country": "GH",
+      "airport_name": "Kumasi Airport",
+      "iata_code": "KMS",
+      "icao_code": "DGSI",
+      "lat": 6.714560031890869,
+      "lon": -1.5908199548721313
+    },
+    {
+      "city": "Tamale",
+      "country": "GH",
+      "airport_name": "Tamale Airport",
+      "iata_code": "TML",
+      "icao_code": "DGLE",
+      "lat": 9.55718994140625,
+      "lon": -0.8632140159606934
+    }
+  ],
+  "United Arab Emirates": [
+    {
+      "city": "Dubai",
+      "country": "AE",
+      "airport_name": "Dubai International Airport",
+      "iata_code": "DXB",
+      "icao_code": "OMDB",
+      "lat": 25.2527999878,
+      "lon": 55.3643989563
+    },
+    {
+      "city": "Abu Dhabi",
+      "country": "AE",
+      "airport_name": "Zayed International Airport",
+      "iata_code": "AUH",
+      "icao_code": "OMAA",
+      "lat": 24.443764,
+      "lon": 54.651718
+    },
+    {
+      "city": "Sharjah",
+      "country": "AE",
+      "airport_name": "Sharjah International Airport",
+      "iata_code": "SHJ",
+      "icao_code": "OMSJ",
+      "lat": 25.3286,
+      "lon": 55.5172
+    }
+  ],
+  "Venezuela": [
+    {
+      "city": "Caracas",
+      "country": "VE",
+      "airport_name": "Generalissimo Francisco de Miranda Air Base",
+      "iata_code": "",
+      "icao_code": "SVFM",
+      "lat": 10.485033,
+      "lon": -66.843513
+    },
+    {
+      "city": "Maracaibo",
+      "country": "VE",
+      "airport_name": "La Chinita International Airport",
+      "iata_code": "MAR",
+      "icao_code": "SVMC",
+      "lat": 10.5582084656,
+      "lon": -71.7278594971
+    },
+    {
+      "city": "Valencia",
+      "country": "ES",
+      "airport_name": "Valencia Airport",
+      "iata_code": "VLC",
+      "icao_code": "LEVC",
+      "lat": 39.4893,
+      "lon": -0.481625
+    }
+  ],
+  "Morocco": [
+    {
+      "city": "Casablanca",
+      "country": "MA",
+      "airport_name": "Mohammed V International Airport",
+      "iata_code": "CMN",
+      "icao_code": "GMMN",
+      "lat": 33.3675,
+      "lon": -7.58997
+    },
+    {
+      "city": "Tangier",
+      "country": "MA",
+      "airport_name": "Tangier Ibn Battuta Airport",
+      "iata_code": "TNG",
+      "icao_code": "GMTT",
+      "lat": 35.731741,
+      "lon": -5.921459
+    }
+  ],
+  "Bolivia": [
+    {
+      "city": "Cochabamba",
+      "country": "BO",
+      "airport_name": "Jorge Wilsterman International Airport",
+      "iata_code": "CBB",
+      "icao_code": "SLCB",
+      "lat": -17.421100616455078,
+      "lon": -66.1771011352539
+    }
+  ],
+  "Uzbekistan": [
+    {
+      "city": "Tashkent",
+      "country": "UZ",
+      "airport_name": "Tashkent East Airport",
+      "iata_code": "",
+      "icao_code": "UTTP",
+      "lat": 41.312889,
+      "lon": 69.395535
+    }
+  ],
+  "Ecuador": [
+    {
+      "city": "Guayaquil",
+      "country": "EC",
+      "airport_name": "José Joaquín de Olmedo International Airport",
+      "iata_code": "GYE",
+      "icao_code": "SEGU",
+      "lat": -2.15742,
+      "lon": -79.883598
+    },
+    {
+      "city": "Quito",
+      "country": "EC",
+      "airport_name": "Mariscal Sucre International Airport",
+      "iata_code": "UIO",
+      "icao_code": "SEQM",
+      "lat": -0.125399,
+      "lon": -78.354306
+    },
+    {
+      "city": "Cuenca",
+      "country": "EC",
+      "airport_name": "Mariscal Lamar Airport",
+      "iata_code": "CUE",
+      "icao_code": "SECU",
+      "lat": -2.88947,
+      "lon": -78.984398
+    }
+  ],
+  "Burkina Faso": [
+    {
+      "city": "Ouagadougou",
+      "country": "BF",
+      "airport_name": "Ouagadougou Airport",
+      "iata_code": "OUA",
+      "icao_code": "DFFD",
+      "lat": 12.3532,
+      "lon": -1.51242
+    }
+  ],
+  "Greece": [
+    {
+      "city": "Athens",
+      "country": "US",
+      "airport_name": "Athens Ben Epps Airport",
+      "iata_code": "AHN",
+      "icao_code": "KAHN",
+      "lat": 33.948842,
+      "lon": -83.325634
+    }
+  ],
+  "Guatemala": [
+    {
+      "city": "Guatemala City",
+      "country": "GT",
+      "airport_name": "La Aurora Airport",
+      "iata_code": "GUA",
+      "icao_code": "MGGT",
+      "lat": 14.5833,
+      "lon": -90.527496
+    }
+  ],
+  "Kuwait": [
+    {
+      "city": "Kuwait City",
+      "country": "KW",
+      "airport_name": "Kuwait International Airport",
+      "iata_code": "KWI",
+      "icao_code": "OKKK",
+      "lat": 29.226601,
+      "lon": 47.968899
+    }
+  ],
+  "Ukraine": [
+    {
+      "city": "Kyiv",
+      "country": "UA",
+      "airport_name": "Ihor Sikorsky Kyiv International Airport (Zhuliany)",
+      "iata_code": "IEV",
+      "icao_code": "UKKK",
+      "lat": 50.40194,
+      "lon": 30.45194
+    },
+    {
+      "city": "Kharkiv",
+      "country": "UA",
+      "airport_name": "Kharkiv International Airport",
+      "iata_code": "HRK",
+      "icao_code": "UKHH",
+      "lat": 49.926943,
+      "lon": 36.290814
+    }
+  ],
+  "Korea, North": [
+    {
+      "city": "Pyongyang",
+      "country": "KP",
+      "airport_name": "Pyongyang Sunan International Airport",
+      "iata_code": "FNJ",
+      "icao_code": "ZKPY",
+      "lat": 39.224098,
+      "lon": 125.669998
+    }
+  ],
+  "Taiwan": [],
+  "Italy": [
+    {
+      "city": "Rome",
+      "country": "US",
+      "airport_name": "Griffiss International Airport",
+      "iata_code": "RME",
+      "icao_code": "KRME",
+      "lat": 43.23379898,
+      "lon": -75.40699768
+    },
+    {
+      "city": "Naples",
+      "country": "US",
+      "airport_name": "Naples Municipal Airport",
+      "iata_code": "APF",
+      "icao_code": "KAPF",
+      "lat": 26.1525993347,
+      "lon": -81.7752990723
+    }
+  ],
+  "Syria": [
+    {
+      "city": "Damascus",
+      "country": "SY",
+      "airport_name": "Damascus International Airport",
+      "iata_code": "DAM",
+      "icao_code": "OSDI",
+      "lat": 33.4114990234375,
+      "lon": 36.51559829711914
+    },
+    {
+      "city": "Aleppo",
+      "country": "SY",
+      "airport_name": "Aleppo International Airport",
+      "iata_code": "ALP",
+      "icao_code": "OSAP",
+      "lat": 36.180698,
+      "lon": 37.2244
+    }
+  ],
+  "Congo (Brazzaville)": [
+    {
+      "city": "Brazzaville",
+      "country": "CG",
+      "airport_name": "Maya-Maya Airport",
+      "iata_code": "BZV",
+      "icao_code": "FCBB",
+      "lat": -4.251699924468994,
+      "lon": 15.253000259399414
+    }
+  ],
+  "Yemen": [
+    {
+      "city": "Sanaa",
+      "country": "YE",
+      "airport_name": "Sanaa International Airport",
+      "iata_code": "SAH",
+      "icao_code": "OYSN",
+      "lat": 15.4763,
+      "lon": 44.2197
+    },
+    {
+      "city": "Aden",
+      "country": "YE",
+      "airport_name": "Aden International Airport",
+      "iata_code": "ADE",
+      "icao_code": "OYAA",
+      "lat": 12.8295,
+      "lon": 45.028801
+    }
+  ],
+  "Lebanon": [
+    {
+      "city": "Beirut",
+      "country": "LB",
+      "airport_name": "Beirut Rafic Hariri International Airport",
+      "iata_code": "BEY",
+      "icao_code": "OLBA",
+      "lat": 33.820899963378906,
+      "lon": 35.488399505615234
+    },
+    {
+      "city": "Tripoli",
+      "country": "LY",
+      "airport_name": "Mitiga International Airport",
+      "iata_code": "MJI",
+      "icao_code": "HLLM",
+      "lat": 32.89177,
+      "lon": 13.287878
+    }
+  ],
+  "Romania": [
+    {
+      "city": "Bucharest",
+      "country": "RO",
+      "airport_name": "Bucharest Băneasa Aurel Vlaicu International Airport",
+      "iata_code": "BBU",
+      "icao_code": "LRBS",
+      "lat": 44.503201,
+      "lon": 26.1021
+    },
+    {
+      "city": "Cluj-Napoca",
+      "country": "RO",
+      "airport_name": "Cluj Avram Iancu International Airport",
+      "iata_code": "CLJ",
+      "icao_code": "LRCL",
+      "lat": 46.787425,
+      "lon": 23.684292
+    },
+    {
+      "city": "Iaşi",
+      "country": "RO",
+      "airport_name": "Iaşi Airport",
+      "iata_code": "IAS",
+      "icao_code": "LRIA",
+      "lat": 47.180278,
+      "lon": 27.620833
+    }
+  ],
+  "Algeria": [
+    {
+      "city": "Algiers",
+      "country": "DZ",
+      "airport_name": "Houari Boumediene Airport",
+      "iata_code": "ALG",
+      "icao_code": "DAAG",
+      "lat": 36.693886,
+      "lon": 3.214531
+    },
+    {
+      "city": "Constantine",
+      "country": "DZ",
+      "airport_name": "Mohamed Boudiaf International Airport",
+      "iata_code": "CZL",
+      "icao_code": "DABC",
+      "lat": 36.2760009765625,
+      "lon": 6.620389938354492
+    }
+  ],
+  "Azerbaijan": [
+    {
+      "city": "Baku",
+      "country": "AZ",
+      "airport_name": "Baku Kala Air Base",
+      "iata_code": "",
+      "icao_code": "UB18",
+      "lat": 40.408409,
+      "lon": 50.200287
+    }
+  ],
+  "Kazakhstan": [
+    {
+      "city": "Almaty",
+      "country": "KZ",
+      "airport_name": "Almaty International Airport",
+      "iata_code": "ALA",
+      "icao_code": "UAAA",
+      "lat": 43.354267,
+      "lon": 77.042828
+    },
+    {
+      "city": "Shymkent",
+      "country": "KZ",
+      "airport_name": "Shymkent Airport",
+      "iata_code": "CIT",
+      "icao_code": "UAII",
+      "lat": 42.364200592041016,
+      "lon": 69.47889709472656
+    },
+    {
+      "city": "Astana",
+      "country": "KZ",
+      "airport_name": "Nursultan Nazarbayev International Airport",
+      "iata_code": "NQZ",
+      "icao_code": "UACC",
+      "lat": 51.027035,
+      "lon": 71.467094
+    }
+  ],
+  "Austria": [
+    {
+      "city": "Vienna",
+      "country": "AT",
+      "airport_name": "Vienna International Airport",
+      "iata_code": "VIE",
+      "icao_code": "LOWW",
+      "lat": 48.110298,
+      "lon": 16.5697
+    },
+    {
+      "city": "Linz",
+      "country": "AT",
+      "airport_name": "Linz-Hörsching Airport / Vogler Air Base",
+      "iata_code": "LNZ",
+      "icao_code": "LOWL",
+      "lat": 48.2332,
+      "lon": 14.1875
+    }
+  ],
+  "Cambodia": [
+    {
+      "city": "Siem Reap",
+      "country": "KH",
+      "airport_name": "Siem Reap-Angkor International Airport",
+      "iata_code": "SAI",
+      "icao_code": "VDSA",
+      "lat": 13.369167,
+      "lon": 104.223056
+    },
+    {
+      "city": "Battambang",
+      "country": "KH",
+      "airport_name": "Battambang Airport",
+      "iata_code": "BBM",
+      "icao_code": "VDBG",
+      "lat": 13.0956,
+      "lon": 103.223999
+    }
+  ],
+  "Somalia": [
+    {
+      "city": "Mogadishu",
+      "country": "SO",
+      "airport_name": "Aden Adde International Airport",
+      "iata_code": "MGQ",
+      "icao_code": "HCMM",
+      "lat": 2.0144400596618652,
+      "lon": 45.3046989440918
+    }
+  ],
+  "Cuba": [
+    {
+      "city": "Havana",
+      "country": "CU",
+      "airport_name": "José Martí International Airport",
+      "iata_code": "HAV",
+      "icao_code": "MUHA",
+      "lat": 22.989200592041016,
+      "lon": -82.40910339355469
+    }
+  ],
+  "Poland": [
+    {
+      "city": "Warsaw",
+      "country": "PL",
+      "airport_name": "Warsaw Chopin Airport",
+      "iata_code": "WAW",
+      "icao_code": "EPWA",
+      "lat": 52.165699,
+      "lon": 20.9671
+    },
+    {
+      "city": "Gdańsk",
+      "country": "PL",
+      "airport_name": "Gdańsk Lech Wałęsa Airport",
+      "iata_code": "GDN",
+      "icao_code": "EPGD",
+      "lat": 54.377602,
+      "lon": 18.4662
+    }
+  ],
+  "Belarus": [
+    {
+      "city": "Minsk",
+      "country": "BY",
+      "airport_name": "Minsk National Airport",
+      "iata_code": "MSQ",
+      "icao_code": "UMMS",
+      "lat": 53.888071,
+      "lon": 28.039964
+    },
+    {
+      "city": "Hrodna",
+      "country": "BY",
+      "airport_name": "Hrodna Airport",
+      "iata_code": "GNA",
+      "icao_code": "UMMG",
+      "lat": 53.602001,
+      "lon": 24.053801
+    }
+  ],
+  "Netherlands": [
+    {
+      "city": "Amsterdam",
+      "country": "NL",
+      "airport_name": "Amsterdam Airport Schiphol",
+      "iata_code": "AMS",
+      "icao_code": "EHAM",
+      "lat": 52.308601,
+      "lon": 4.76389
+    },
+    {
+      "city": "Rotterdam",
+      "country": "NL",
+      "airport_name": "Rotterdam The Hague Airport",
+      "iata_code": "RTM",
+      "icao_code": "EHRD",
+      "lat": 51.956902,
+      "lon": 4.43722
+    }
+  ],
+  "Puerto Rico": [
+    {
+      "city": "San Juan",
+      "country": "AR",
+      "airport_name": "Domingo Faustino Sarmiento Airport",
+      "iata_code": "UAQ",
+      "icao_code": "SANU",
+      "lat": -31.571501,
+      "lon": -68.418198
+    },
+    {
+      "city": "Aguadilla",
+      "country": "PR",
+      "airport_name": "Rafael Hernández International Airport",
+      "iata_code": "BQN",
+      "icao_code": "TJBQ",
+      "lat": 18.4949,
+      "lon": -67.129402
+    }
+  ],
+  "Zambia": [
+    {
+      "city": "Lusaka",
+      "country": "ZM",
+      "airport_name": "Lusaka City Airport",
+      "iata_code": "",
+      "icao_code": "FLLC",
+      "lat": -15.4138,
+      "lon": 28.3307
+    },
+    {
+      "city": "Kitwe",
+      "country": "ZM",
+      "airport_name": "Southdowns Airport",
+      "iata_code": "KIW",
+      "icao_code": "FLSO",
+      "lat": -12.9005,
+      "lon": 28.1499
+    },
+    {
+      "city": "Ndola",
+      "country": "ZM",
+      "airport_name": "Peter Zuze Air Force Base",
+      "iata_code": "",
+      "icao_code": "FLND",
+      "lat": -12.997222,
+      "lon": 28.663889
+    }
+  ],
+  "Oman": [
+    {
+      "city": "Muscat",
+      "country": "OM",
+      "airport_name": "Muscat International Airport",
+      "iata_code": "MCT",
+      "icao_code": "OOMS",
+      "lat": 23.5933,
+      "lon": 58.284401
+    }
+  ],
+  "Uruguay": [
+    {
+      "city": "Montevideo",
+      "country": "UY",
+      "airport_name": "Ángel S. Adami International Airport",
+      "iata_code": "",
+      "icao_code": "SUAA",
+      "lat": -34.7892,
+      "lon": -56.264702
+    },
+    {
+      "city": "Ciudad de la Costa",
+      "country": "UY",
+      "airport_name": "Carrasco General Cesáreo L. Berisso International Airport",
+      "iata_code": "MVD",
+      "icao_code": "SUMU",
+      "lat": -34.835647,
+      "lon": -56.026497
+    }
+  ],
+  "Hungary": [
+    {
+      "city": "Budapest",
+      "country": "HU",
+      "airport_name": "Budapest Liszt Ferenc International Airport",
+      "iata_code": "BUD",
+      "icao_code": "LHBP",
+      "lat": 47.43018,
+      "lon": 19.262393
+    },
+    {
+      "city": "Debrecen",
+      "country": "HU",
+      "airport_name": "Debrecen International Airport",
+      "iata_code": "DEB",
+      "icao_code": "LHDC",
+      "lat": 47.488899,
+      "lon": 21.615299
+    }
+  ],
+  "Uganda": [
+    {
+      "city": "Kampala",
+      "country": "UG",
+      "airport_name": "Entebbe International Airport",
+      "iata_code": "EBB",
+      "icao_code": "HUEN",
+      "lat": 0.042386,
+      "lon": 32.443501
+    }
+  ],
+  "Guinea": [
+    {
+      "city": "Conakry",
+      "country": "GN",
+      "airport_name": "Conakry International Airport",
+      "iata_code": "CKY",
+      "icao_code": "GUCY",
+      "lat": 9.57689,
+      "lon": -13.612
+    }
+  ],
+  "Tajikistan": [
+    {
+      "city": "Dushanbe",
+      "country": "TJ",
+      "airport_name": "Gissar Air Base",
+      "iata_code": "",
+      "icao_code": "TJ-UT45",
+      "lat": 38.512298584,
+      "lon": 68.67250061040001
+    }
+  ],
+  "Zimbabwe": [
+    {
+      "city": "Harare",
+      "country": "ZW",
+      "airport_name": "Robert Gabriel Mugabe International Airport",
+      "iata_code": "HRE",
+      "icao_code": "FVHA",
+      "lat": -17.931801,
+      "lon": 31.0928
+    },
+    {
+      "city": "Bulawayo",
+      "country": "ZW",
+      "airport_name": "Joshua Mqabuko Nkomo International Airport",
+      "iata_code": "BUQ",
+      "icao_code": "FVBU",
+      "lat": -20.021254,
+      "lon": 28.626296
+    }
+  ],
+  "Costa Rica": [
+    {
+      "city": "San Marcos",
+      "country": "US",
+      "airport_name": "San Marcos Regional Airport",
+      "iata_code": "",
+      "icao_code": "KHYI",
+      "lat": 29.8927,
+      "lon": -97.862999
+    }
+  ],
+  "El Salvador": [
+    {
+      "city": "San Salvador",
+      "country": "SV",
+      "airport_name": "Ilopango International Airport",
+      "iata_code": "ILS",
+      "icao_code": "MSSS",
+      "lat": 13.6995,
+      "lon": -89.119904
+    }
+  ],
+  "Togo": [
+    {
+      "city": "Lomé",
+      "country": "TG",
+      "airport_name": "Lomé–Tokoin International Airport",
+      "iata_code": "LFW",
+      "icao_code": "DXXX",
+      "lat": 6.16561,
+      "lon": 1.25451
+    }
+  ],
+  "Niger": [
+    {
+      "city": "Niamey",
+      "country": "NE",
+      "airport_name": "Diori Hamani International Airport",
+      "iata_code": "NIM",
+      "icao_code": "DRRN",
+      "lat": 13.4815,
+      "lon": 2.18361
+    },
+    {
+      "city": "Maradi",
+      "country": "NE",
+      "airport_name": "Maradi Airport",
+      "iata_code": "MFQ",
+      "icao_code": "DRRM",
+      "lat": 13.5025,
+      "lon": 7.12675
+    },
+    {
+      "city": "Zinder",
+      "country": "NE",
+      "airport_name": "Zinder Airport",
+      "iata_code": "ZND",
+      "icao_code": "DRZR",
+      "lat": 13.779000282287598,
+      "lon": 8.983759880065918
+    }
+  ],
+  "New Zealand": [
+    {
+      "city": "Auckland",
+      "country": "NZ",
+      "airport_name": "Auckland International Airport",
+      "iata_code": "AKL",
+      "icao_code": "NZAA",
+      "lat": -37.01199,
+      "lon": 174.786331
+    },
+    {
+      "city": "Christchurch",
+      "country": "NZ",
+      "airport_name": "Christchurch International Airport",
+      "iata_code": "CHC",
+      "icao_code": "NZCH",
+      "lat": -43.489029,
+      "lon": 172.532065
+    },
+    {
+      "city": "Wellington",
+      "country": "NZ",
+      "airport_name": "Wellington International Airport",
+      "iata_code": "WLG",
+      "icao_code": "NZWN",
+      "lat": -41.327202,
+      "lon": 174.804993
+    }
+  ],
+  "Senegal": [
+    {
+      "city": "Dakar",
+      "country": "SN",
+      "airport_name": "Blaise Diagne International Airport",
+      "iata_code": "DSS",
+      "icao_code": "GOBD",
+      "lat": 14.670878,
+      "lon": -17.072829
+    }
+  ],
+  "Bulgaria": [
+    {
+      "city": "Sofia",
+      "country": "BG",
+      "airport_name": "Sofia Airport",
+      "iata_code": "SOF",
+      "icao_code": "LBSF",
+      "lat": 42.696357,
+      "lon": 23.417671
+    },
+    {
+      "city": "Varna",
+      "country": "BG",
+      "airport_name": "Varna Airport",
+      "iata_code": "VAR",
+      "icao_code": "LBWN",
+      "lat": 43.232101,
+      "lon": 27.8251
+    },
+    {
+      "city": "Plovdiv",
+      "country": "BG",
+      "airport_name": "Plovdiv International Airport",
+      "iata_code": "PDV",
+      "icao_code": "LBPD",
+      "lat": 42.067799,
+      "lon": 24.8508
+    }
+  ],
+  "Mongolia": [
+    {
+      "city": "Ulaanbaatar",
+      "country": "MN",
+      "airport_name": "Buyant-Ukhaa International Airport",
+      "iata_code": "ULN",
+      "icao_code": "ZMUB",
+      "lat": 47.843102,
+      "lon": 106.766998
+    },
+    {
+      "city": "Mörön",
+      "country": "MN",
+      "airport_name": "Mörön Airport",
+      "iata_code": "MXV",
+      "icao_code": "ZMMN",
+      "lat": 49.663299560546875,
+      "lon": 100.0989990234375
+    }
+  ],
+  "Czechia": [
+    {
+      "city": "Prague",
+      "country": "CZ",
+      "airport_name": "Prague–Kbely Air Base",
+      "iata_code": "",
+      "icao_code": "LKKB",
+      "lat": 50.121399,
+      "lon": 14.5436
+    },
+    {
+      "city": "Brno",
+      "country": "CZ",
+      "airport_name": "Brno-Tuřany Airport",
+      "iata_code": "BRQ",
+      "icao_code": "LKTB",
+      "lat": 49.15129852294922,
+      "lon": 16.694400787353516
+    }
+  ],
+  "Denmark": [
+    {
+      "city": "Copenhagen",
+      "country": "DK",
+      "airport_name": "Copenhagen Kastrup Airport",
+      "iata_code": "CPH",
+      "icao_code": "EKCH",
+      "lat": 55.617900848389,
+      "lon": 12.656000137329
+    },
+    {
+      "city": "Aarhus",
+      "country": "DK",
+      "airport_name": "Aarhus Airport",
+      "iata_code": "AAR",
+      "icao_code": "EKAH",
+      "lat": 56.303331,
+      "lon": 10.618286
+    },
+    {
+      "city": "Odense",
+      "country": "DK",
+      "airport_name": "Odense Hans Christian Andersen Airport",
+      "iata_code": "ODE",
+      "icao_code": "EKOD",
+      "lat": 55.475307,
+      "lon": 10.327206
+    }
+  ],
+  "Finland": [],
+  "Dominican Republic": [
+    {
+      "city": "Santiago",
+      "country": "DO",
+      "airport_name": "Cibao International Airport",
+      "iata_code": "STI",
+      "icao_code": "MDST",
+      "lat": 19.406099319458008,
+      "lon": -70.60469818115234
+    },
+    {
+      "city": "Santo Domingo",
+      "country": "DO",
+      "airport_name": "Las Américas International Airport",
+      "iata_code": "SDQ",
+      "icao_code": "MDSD",
+      "lat": 18.42970085144,
+      "lon": -69.668899536133
+    }
+  ],
+  "Madagascar": [
+    {
+      "city": "Antananarivo",
+      "country": "MG",
+      "airport_name": "Ivato Airport",
+      "iata_code": "TNR",
+      "icao_code": "FMMI",
+      "lat": -18.7969,
+      "lon": 47.478802
+    },
+    {
+      "city": "Antsirabe",
+      "country": "MG",
+      "airport_name": "Antsirabe Airport",
+      "iata_code": "ANM",
+      "icao_code": "FMNH",
+      "lat": -14.9994,
+      "lon": 50.320202
+    }
+  ],
+  "Honduras": [
+    {
+      "city": "Tegucigalpa",
+      "country": "HN",
+      "airport_name": "Toncontín International Airport",
+      "iata_code": "TGU",
+      "icao_code": "MHTG",
+      "lat": 14.0609,
+      "lon": -87.217201
+    },
+    {
+      "city": "San Pedro Sula",
+      "country": "HN",
+      "airport_name": "Ramón Villeda Morales International Airport",
+      "iata_code": "SAP",
+      "icao_code": "MHLM",
+      "lat": 15.4526,
+      "lon": -87.923599
+    }
+  ],
+  "Belgium": [
+    {
+      "city": "Antwerp",
+      "country": "BE",
+      "airport_name": "Antwerp International Airport (Deurne)",
+      "iata_code": "ANR",
+      "icao_code": "EBAW",
+      "lat": 51.190667,
+      "lon": 4.463153
+    }
+  ],
+  "Serbia": [
+    {
+      "city": "Belgrade",
+      "country": "RS",
+      "airport_name": "Belgrade Nikola Tesla Airport",
+      "iata_code": "BEG",
+      "icao_code": "LYBE",
+      "lat": 44.818401,
+      "lon": 20.309099
+    },
+    {
+      "city": "Niš",
+      "country": "RS",
+      "airport_name": "Niš Constantine the Great Airport",
+      "iata_code": "INI",
+      "icao_code": "LYNI",
+      "lat": 43.337009,
+      "lon": 21.85451
+    }
+  ],
+  "Qatar": [
+    {
+      "city": "Doha",
+      "country": "QA",
+      "airport_name": "Doha International Airport",
+      "iata_code": "DIA",
+      "icao_code": "OTBD",
+      "lat": 25.261101,
+      "lon": 51.565102
+    }
+  ],
+  "Libya": [
+    {
+      "city": "Tripoli",
+      "country": "LY",
+      "airport_name": "Mitiga International Airport",
+      "iata_code": "MJI",
+      "icao_code": "HLLM",
+      "lat": 32.89177,
+      "lon": 13.287878
+    }
+  ],
+  "Rwanda": [
+    {
+      "city": "Kigali",
+      "country": "RW",
+      "airport_name": "Kigali International Airport",
+      "iata_code": "KGL",
+      "icao_code": "HRYR",
+      "lat": -1.96863,
+      "lon": 30.1395
+    }
+  ],
+  "Kyrgyzstan": [
+    {
+      "city": "Bishkek",
+      "country": "KG",
+      "airport_name": "Manas International Airport",
+      "iata_code": "FRU",
+      "icao_code": "UAFM",
+      "lat": 43.061298,
+      "lon": 74.4776
+    },
+    {
+      "city": "Osh",
+      "country": "KG",
+      "airport_name": "Osh Airport",
+      "iata_code": "OSS",
+      "icao_code": "UAFO",
+      "lat": 40.609001,
+      "lon": 72.793297
+    },
+    {
+      "city": "Jalal-Abad",
+      "country": "KG",
+      "airport_name": "Jalal-Abad Airport",
+      "iata_code": "",
+      "icao_code": "KG-0001",
+      "lat": 40.944401,
+      "lon": 72.977798
+    }
+  ],
+  "Burundi": [
+    {
+      "city": "Bujumbura",
+      "country": "BI",
+      "airport_name": "Bujumbura Melchior Ndadaye International Airport",
+      "iata_code": "BJM",
+      "icao_code": "HBBA",
+      "lat": -3.32402,
+      "lon": 29.318501
+    }
+  ],
+  "Mozambique": [
+    {
+      "city": "Maputo",
+      "country": "MZ",
+      "airport_name": "Maputo Airport",
+      "iata_code": "MPM",
+      "icao_code": "FQMA",
+      "lat": -25.920799,
+      "lon": 32.572601
+    },
+    {
+      "city": "Nampula",
+      "country": "MZ",
+      "airport_name": "Nampula Airport",
+      "iata_code": "APL",
+      "icao_code": "FQNP",
+      "lat": -15.105600357055664,
+      "lon": 39.28179931640625
+    }
+  ],
+  "Georgia": [
+    {
+      "city": "Tbilisi",
+      "country": "GE",
+      "airport_name": "Tbilisi Marneuli Air Base",
+      "iata_code": "",
+      "icao_code": "UG22",
+      "lat": 41.459202,
+      "lon": 44.783199
+    },
+    {
+      "city": "Batumi",
+      "country": "GE",
+      "airport_name": "Batumi International Airport",
+      "iata_code": "BUS",
+      "icao_code": "UGSB",
+      "lat": 41.610298,
+      "lon": 41.599701
+    }
+  ],
+  "Armenia": [
+    {
+      "city": "Yerevan",
+      "country": "AM",
+      "airport_name": "Erebuni Airport",
+      "iata_code": "",
+      "icao_code": "UDYE",
+      "lat": 40.122100830099996,
+      "lon": 44.465000152600005
+    },
+    {
+      "city": "Gyumri",
+      "country": "AM",
+      "airport_name": "Shirak International Airport",
+      "iata_code": "LWN",
+      "icao_code": "UDSG",
+      "lat": 40.750401,
+      "lon": 43.859299
+    }
+  ],
+  "Mauritania": [
+    {
+      "city": "Nouakchott",
+      "country": "MR",
+      "airport_name": "Nouakchott–Oumtounsy International Airport",
+      "iata_code": "NKC",
+      "icao_code": "GQNO",
+      "lat": 18.31,
+      "lon": -15.969722
+    }
+  ],
+  "Nicaragua": [
+    {
+      "city": "Managua",
+      "country": "NI",
+      "airport_name": "Augusto C. Sandino (Managua) International Airport",
+      "iata_code": "MGA",
+      "icao_code": "MNMG",
+      "lat": 12.141500473022461,
+      "lon": -86.16819763183594
+    }
+  ],
+  "Turkmenistan": [
+    {
+      "city": "Ashgabat",
+      "country": "TM",
+      "airport_name": "Ashgabat Bezmein Air Base",
+      "iata_code": "",
+      "icao_code": "UT1G",
+      "lat": 38.012001,
+      "lon": 58.195
+    },
+    {
+      "city": "Türkmenabat",
+      "country": "TM",
+      "airport_name": "Türkmenabat International Airport",
+      "iata_code": "CRZ",
+      "icao_code": "UTAV",
+      "lat": 38.930662,
+      "lon": 63.563982
+    },
+    {
+      "city": "Daşoguz",
+      "country": "TM",
+      "airport_name": "Daşoguz Airport",
+      "iata_code": "TAZ",
+      "icao_code": "UTAT",
+      "lat": 41.759853,
+      "lon": 59.836149
+    }
+  ],
+  "Liberia": [
+    {
+      "city": "Monrovia",
+      "country": "LR",
+      "airport_name": "Spriggs Payne Airport",
+      "iata_code": "MLW",
+      "icao_code": "GLMR",
+      "lat": 6.28906,
+      "lon": -10.7587
+    }
+  ],
+  "Sweden": [
+    {
+      "city": "Stockholm",
+      "country": "SE",
+      "airport_name": "Stockholm-Arlanda Airport",
+      "iata_code": "ARN",
+      "icao_code": "ESSA",
+      "lat": 59.64849,
+      "lon": 17.928829
+    },
+    {
+      "city": "Malmö",
+      "country": "SE",
+      "airport_name": "Malmö Sturup Airport",
+      "iata_code": "MMX",
+      "icao_code": "ESMS",
+      "lat": 55.535564,
+      "lon": 13.376327
+    }
+  ],
+  "Malawi": [
+    {
+      "city": "Blantyre",
+      "country": "MW",
+      "airport_name": "Chileka International Airport",
+      "iata_code": "BLZ",
+      "icao_code": "FWCL",
+      "lat": -15.679100036621094,
+      "lon": 34.9739990234375
+    },
+    {
+      "city": "Mzuzu",
+      "country": "MW",
+      "airport_name": "Mzuzu Airport",
+      "iata_code": "ZZU",
+      "icao_code": "FWUU",
+      "lat": -11.4447,
+      "lon": 34.011799
+    }
+  ],
+  "Haiti": [
+    {
+      "city": "Port-au-Prince",
+      "country": "HT",
+      "airport_name": "Toussaint Louverture International Airport",
+      "iata_code": "PAP",
+      "icao_code": "MTPP",
+      "lat": 18.580023,
+      "lon": -72.292596
+    }
+  ],
+  "Eritrea": [
+    {
+      "city": "Asmara",
+      "country": "ER",
+      "airport_name": "Asmara International Airport",
+      "iata_code": "ASM",
+      "icao_code": "HHAS",
+      "lat": 15.291899681091309,
+      "lon": 38.910701751708984
+    }
+  ],
+  "Sierra Leone": [
+    {
+      "city": "Bo",
+      "country": "SL",
+      "airport_name": "Bo Airport",
+      "iata_code": "KBS",
+      "icao_code": "GFBO",
+      "lat": 7.9444,
+      "lon": -11.761
+    },
+    {
+      "city": "Kenema",
+      "country": "SL",
+      "airport_name": "Kenema Airport",
+      "iata_code": "KEN",
+      "icao_code": "GFKE",
+      "lat": 7.896364,
+      "lon": -11.174126
+    }
+  ],
+  "Laos": [
+    {
+      "city": "Vientiane",
+      "country": "LA",
+      "airport_name": "Wattay International Airport",
+      "iata_code": "VTE",
+      "icao_code": "VLVT",
+      "lat": 17.988300323500003,
+      "lon": 102.56300354
+    }
+  ],
+  "Israel": [
+    {
+      "city": "Haifa",
+      "country": "IL",
+      "airport_name": "Haifa International Airport",
+      "iata_code": "HFA",
+      "icao_code": "LLHA",
+      "lat": 32.80939865112305,
+      "lon": 35.04309844970703
+    }
+  ],
+  "Central African Republic": [
+    {
+      "city": "Bangui",
+      "country": "CF",
+      "airport_name": "Bangui M'Poko International Airport",
+      "iata_code": "BGF",
+      "icao_code": "FEFF",
+      "lat": 4.39847993850708,
+      "lon": 18.518800735473633
+    }
+  ],
+  "Panama": [
+    {
+      "city": "Panama City",
+      "country": "US",
+      "airport_name": "Tyndall Air Force Base",
+      "iata_code": "PAM",
+      "icao_code": "KPAM",
+      "lat": 30.069599,
+      "lon": -85.575401
+    },
+    {
+      "city": "David",
+      "country": "PA",
+      "airport_name": "Enrique Malek International Airport",
+      "iata_code": "DAV",
+      "icao_code": "MPDA",
+      "lat": 8.391,
+      "lon": -82.434998
+    }
+  ],
+  "Nepal": [
+    {
+      "city": "Kathmandu",
+      "country": "NP",
+      "airport_name": "Tribhuvan International Airport",
+      "iata_code": "KTM",
+      "icao_code": "VNKT",
+      "lat": 27.6966,
+      "lon": 85.3591
+    },
+    {
+      "city": "Pokhara",
+      "country": "NP",
+      "airport_name": "Pokhara International Airport",
+      "iata_code": "PHH",
+      "icao_code": "NP-0003",
+      "lat": 28.1838,
+      "lon": 84.0147
+    }
+  ],
+  "Chad": [
+    {
+      "city": "Moundou",
+      "country": "TD",
+      "airport_name": "Moundou Airport",
+      "iata_code": "MQQ",
+      "icao_code": "FTTD",
+      "lat": 8.628503,
+      "lon": 16.074241
+    }
+  ],
+  "Gabon": [
+    {
+      "city": "Libreville",
+      "country": "GA",
+      "airport_name": "Libreville Leon M'ba International Airport",
+      "iata_code": "LBV",
+      "icao_code": "FOOL",
+      "lat": 0.458600014448,
+      "lon": 9.412280082699999
+    },
+    {
+      "city": "Franceville",
+      "country": "GA",
+      "airport_name": "M'Vengue El Hadj Omar Bongo Ondimba International Airport",
+      "iata_code": "MVB",
+      "icao_code": "FOON",
+      "lat": -1.6561599969863892,
+      "lon": 13.437999725341797
+    }
+  ],
+  "Croatia": [],
+  "Sri Lanka": [
+    {
+      "city": "Colombo",
+      "country": "LK",
+      "airport_name": "Bandaranaike International Colombo Airport",
+      "iata_code": "CMB",
+      "icao_code": "VCBI",
+      "lat": 7.180759906768799,
+      "lon": 79.88410186767578
+    }
+  ],
+  "Bahrain": [
+    {
+      "city": "Manama",
+      "country": "BH",
+      "airport_name": "Bahrain International Airport",
+      "iata_code": "BAH",
+      "icao_code": "OBBI",
+      "lat": 26.267295,
+      "lon": 50.63764
+    }
+  ],
+  "Norway": [
+    {
+      "city": "Oslo",
+      "country": "NO",
+      "airport_name": "Moss Airport, Rygge",
+      "iata_code": "",
+      "icao_code": "ENRY",
+      "lat": 59.378817,
+      "lon": 10.785439
+    },
+    {
+      "city": "Bergen",
+      "country": "NO",
+      "airport_name": "Bergen Airport, Flesland",
+      "iata_code": "BGO",
+      "icao_code": "ENBR",
+      "lat": 60.2934,
+      "lon": 5.21814
+    },
+    {
+      "city": "Trondheim",
+      "country": "NO",
+      "airport_name": "Trondheim Airport, Værnes",
+      "iata_code": "TRD",
+      "icao_code": "ENVA",
+      "lat": 63.457802,
+      "lon": 10.924
+    }
+  ],
+  "Benin": [
+    {
+      "city": "Cotonou",
+      "country": "BJ",
+      "airport_name": "Cadjehoun Airport",
+      "iata_code": "COO",
+      "icao_code": "DBBB",
+      "lat": 6.357230186462402,
+      "lon": 2.384350061416626
+    }
+  ],
+  "Moldova": [
+    {
+      "city": "Tiraspol",
+      "country": "MD",
+      "airport_name": "Tiraspol Airport",
+      "iata_code": "",
+      "icao_code": "LUTR",
+      "lat": 46.868099,
+      "lon": 29.590599
+    }
+  ],
+  "Estonia": [
+    {
+      "city": "Tallinn",
+      "country": "EE",
+      "airport_name": "Lennart Meri Tallinn Airport",
+      "iata_code": "TLL",
+      "icao_code": "EETN",
+      "lat": 59.413246,
+      "lon": 24.83264
+    }
+  ],
+  "Latvia": [
+    {
+      "city": "Riga",
+      "country": "LV",
+      "airport_name": "Riga International Airport",
+      "iata_code": "RIX",
+      "icao_code": "EVRA",
+      "lat": 56.923599,
+      "lon": 23.9711
+    },
+    {
+      "city": "Liepāja",
+      "country": "LV",
+      "airport_name": "Liepāja International Airport",
+      "iata_code": "LPX",
+      "icao_code": "EVLA",
+      "lat": 56.517502,
+      "lon": 21.096901
+    }
+  ],
+  "Djibouti": [],
+  "Tunisia": [
+    {
+      "city": "Tunis",
+      "country": "TN",
+      "airport_name": "Tunis Carthage International Airport",
+      "iata_code": "TUN",
+      "icao_code": "DTTA",
+      "lat": 36.851002,
+      "lon": 10.2272
+    },
+    {
+      "city": "Sfax",
+      "country": "TN",
+      "airport_name": "Sfax Thyna International Airport",
+      "iata_code": "SFA",
+      "icao_code": "DTTX",
+      "lat": 34.71799850463867,
+      "lon": 10.690999984741211
+    }
+  ],
+  "Ireland": [
+    {
+      "city": "Dublin",
+      "country": "IE",
+      "airport_name": "Dublin Airport",
+      "iata_code": "DUB",
+      "icao_code": "EIDW",
+      "lat": 53.428713,
+      "lon": -6.262121
+    },
+    {
+      "city": "Cork",
+      "country": "IE",
+      "airport_name": "Cork Airport",
+      "iata_code": "ORK",
+      "icao_code": "EICK",
+      "lat": 51.841301,
+      "lon": -8.49111
+    }
+  ],
+  "Gaza Strip": [],
+  "Lithuania": [
+    {
+      "city": "Vilnius",
+      "country": "LT",
+      "airport_name": "Vilnius International Airport",
+      "iata_code": "VNO",
+      "icao_code": "EYVI",
+      "lat": 54.634102,
+      "lon": 25.285801
+    },
+    {
+      "city": "Kaunas",
+      "country": "LT",
+      "airport_name": "Kaunas International Airport",
+      "iata_code": "KUN",
+      "icao_code": "EYKA",
+      "lat": 54.96390151977539,
+      "lon": 24.084800720214844
+    }
+  ],
+  "Jamaica": [
+    {
+      "city": "Kingston",
+      "country": "CA",
+      "airport_name": "Kingston Norman Rogers Airport",
+      "iata_code": "YGK",
+      "icao_code": "CYGK",
+      "lat": 44.2253,
+      "lon": -76.596901
+    }
+  ],
+  "Macau": [],
+  "Portugal": [
+    {
+      "city": "Lisbon",
+      "country": "PT",
+      "airport_name": "Lisbon Humberto Delgado Airport",
+      "iata_code": "LIS",
+      "icao_code": "LPPT",
+      "lat": 38.7813,
+      "lon": -9.13592
+    },
+    {
+      "city": "Sintra",
+      "country": "PT",
+      "airport_name": "Sintra Air Base",
+      "iata_code": "",
+      "icao_code": "LPST",
+      "lat": 38.8311,
+      "lon": -9.33955
+    }
+  ],
+  "Guinea-Bissau": [
+    {
+      "city": "Bissau",
+      "country": "GW",
+      "airport_name": "Osvaldo Vieira International Airport",
+      "iata_code": "OXB",
+      "icao_code": "GGOV",
+      "lat": 11.894800186157227,
+      "lon": -15.65369987487793
+    }
+  ],
+  "Malta": [
+    {
+      "city": "Valletta",
+      "country": "MT",
+      "airport_name": "Malta International Airport",
+      "iata_code": "MLA",
+      "icao_code": "LMML",
+      "lat": 35.857498,
+      "lon": 14.4775
+    }
+  ],
+  "Paraguay": [
+    {
+      "city": "Asunción",
+      "country": "PY",
+      "airport_name": "Aeropuerto Internacional Silvio Pettirossi",
+      "iata_code": "ASU",
+      "icao_code": "SGAS",
+      "lat": -25.240156,
+      "lon": -57.519227
+    },
+    {
+      "city": "Ciudad del Este",
+      "country": "PY",
+      "airport_name": "Aeropuerto Internacional Guaraní",
+      "iata_code": "AGT",
+      "icao_code": "SGES",
+      "lat": -25.457186,
+      "lon": -54.839544
+    }
+  ],
+  "Slovakia": [
+    {
+      "city": "Bratislava",
+      "country": "SK",
+      "airport_name": "M. R. Štefánik Airport",
+      "iata_code": "BTS",
+      "icao_code": "LZIB",
+      "lat": 48.1702,
+      "lon": 17.2127
+    },
+    {
+      "city": "Košice",
+      "country": "SK",
+      "airport_name": "Košice International Airport",
+      "iata_code": "KSC",
+      "icao_code": "LZKZ",
+      "lat": 48.663101,
+      "lon": 21.2411
+    }
+  ],
+  "South Sudan": [
+    {
+      "city": "Juba",
+      "country": "SS",
+      "airport_name": "Juba International Airport",
+      "iata_code": "JUB",
+      "icao_code": "HJJJ",
+      "lat": 4.87201,
+      "lon": 31.601101
+    },
+    {
+      "city": "Bor",
+      "country": "RU",
+      "airport_name": "Podkamennaya Tunguska Airport",
+      "iata_code": "TGP",
+      "icao_code": "UNIP",
+      "lat": 61.589699,
+      "lon": 89.994003
+    }
+  ],
+  "Switzerland": [
+    {
+      "city": "Geneva",
+      "country": "CH",
+      "airport_name": "Geneva Cointrin International Airport",
+      "iata_code": "GVA",
+      "icao_code": "LSGG",
+      "lat": 46.238098,
+      "lon": 6.10895
+    }
+  ],
+  "Namibia": [
+    {
+      "city": "Windhoek",
+      "country": "NA",
+      "airport_name": "Eros Airport",
+      "iata_code": "ERS",
+      "icao_code": "FYWE",
+      "lat": -22.612199783325195,
+      "lon": 17.080400466918945
+    },
+    {
+      "city": "Rundu",
+      "country": "NA",
+      "airport_name": "Rundu Airport",
+      "iata_code": "NDU",
+      "icao_code": "FYRU",
+      "lat": -17.956499099731,
+      "lon": 19.719400405884
+    }
+  ],
+  "North Macedonia": [],
+  "Albania": [],
+  "Gambia, The": [],
+  "Lesotho": [],
+  "Cyprus": [
+    {
+      "city": "Larnaca",
+      "country": "CY",
+      "airport_name": "Larnaca International Airport",
+      "iata_code": "LCA",
+      "icao_code": "LCLK",
+      "lat": 34.875099,
+      "lon": 33.624901
+    }
+  ],
+  "Reunion": [],
+  "Papua New Guinea": [
+    {
+      "city": "Port Moresby",
+      "country": "PG",
+      "airport_name": "Port Moresby Jacksons International Airport",
+      "iata_code": "POM",
+      "icao_code": "AYPY",
+      "lat": -9.443380355834961,
+      "lon": 147.22000122070312
+    },
+    {
+      "city": "Lae",
+      "country": "PG",
+      "airport_name": "Nadzab Airport",
+      "iata_code": "LAE",
+      "icao_code": "AYNZ",
+      "lat": -6.569803,
+      "lon": 146.725977
+    },
+    {
+      "city": "Popondetta",
+      "country": "PG",
+      "airport_name": "Girua Airport",
+      "iata_code": "PNP",
+      "icao_code": "AYGR",
+      "lat": -8.80453968048,
+      "lon": 148.309005737
+    }
+  ],
+  "Equatorial Guinea": [
+    {
+      "city": "Malabo",
+      "country": "GQ",
+      "airport_name": "Malabo Airport",
+      "iata_code": "SSG",
+      "icao_code": "FGSL",
+      "lat": 3.755270004272461,
+      "lon": 8.708720207214355
+    },
+    {
+      "city": "Bata",
+      "country": "GQ",
+      "airport_name": "Bata Airport",
+      "iata_code": "BSG",
+      "icao_code": "FGBT",
+      "lat": 1.90547,
+      "lon": 9.80568
+    }
+  ],
+  "Slovenia": [],
+  "Bahamas, The": [
+    {
+      "city": "Nassau",
+      "country": "BS",
+      "airport_name": "Lynden Pindling International Airport",
+      "iata_code": "NAS",
+      "icao_code": "MYNN",
+      "lat": 25.039,
+      "lon": -77.466202
+    }
+  ],
+  "Martinique": [
+    {
+      "city": "Fort-de-France",
+      "country": "MQ",
+      "airport_name": "Martinique Aimé Césaire International Airport",
+      "iata_code": "FDF",
+      "icao_code": "TFFF",
+      "lat": 14.591,
+      "lon": -61.003201
+    }
+  ],
+  "Guadeloupe": [
+    {
+      "city": "Pointe-à-Pitre",
+      "country": "GP",
+      "airport_name": "Guadeloupe - Maryse Condé International Airport",
+      "iata_code": "PTP",
+      "icao_code": "TFFR",
+      "lat": 16.265301,
+      "lon": -61.531799
+    }
+  ],
+  "Bosnia and Herzegovina": [
+    {
+      "city": "Sarajevo",
+      "country": "BA",
+      "airport_name": "Sarajevo International Airport",
+      "iata_code": "SJJ",
+      "icao_code": "LQSA",
+      "lat": 43.8246,
+      "lon": 18.331499
+    }
+  ],
+  "Suriname": [],
+  "Botswana": [
+    {
+      "city": "Gaborone",
+      "country": "BW",
+      "airport_name": "Sir Seretse Khama International Airport",
+      "iata_code": "GBE",
+      "icao_code": "FBSK",
+      "lat": -24.555201,
+      "lon": 25.9182
+    },
+    {
+      "city": "Francistown",
+      "country": "BW",
+      "airport_name": "P G Matante Intl",
+      "iata_code": "FRW",
+      "icao_code": "FBFT",
+      "lat": -21.15914,
+      "lon": 27.468545
+    }
+  ],
+  "Guyana": [
+    {
+      "city": "Georgetown",
+      "country": "GY",
+      "airport_name": "Cheddi Jagan International Airport",
+      "iata_code": "GEO",
+      "icao_code": "SYCJ",
+      "lat": 6.49855,
+      "lon": -58.254101
+    }
+  ],
+  "Timor-Leste": [
+    {
+      "city": "Dili",
+      "country": "TL",
+      "airport_name": "Presidente Nicolau Lobato International Airport",
+      "iata_code": "DIL",
+      "icao_code": "WPDL",
+      "lat": -8.546562,
+      "lon": 125.524507
+    },
+    {
+      "city": "Baucau",
+      "country": "TL",
+      "airport_name": "Cakung Airport",
+      "iata_code": "BCH",
+      "icao_code": "WPEC",
+      "lat": -8.486479,
+      "lon": 126.399981
+    }
+  ],
+  "Kosovo": [],
+  "West Bank": [],
+  "New Caledonia": [
+    {
+      "city": "Nouméa",
+      "country": "NC",
+      "airport_name": "Nouméa Magenta Airport",
+      "iata_code": "GEA",
+      "icao_code": "NWWM",
+      "lat": -22.25812,
+      "lon": 166.472783
+    }
+  ],
+  "Montenegro": [
+    {
+      "city": "Podgorica",
+      "country": "ME",
+      "airport_name": "Podgorica Airport / Podgorica Golubovci Airbase",
+      "iata_code": "TGD",
+      "icao_code": "LYPG",
+      "lat": 42.359402,
+      "lon": 19.2519
+    }
+  ],
+  "Curaçao": [
+    {
+      "city": "Willemstad",
+      "country": "CW",
+      "airport_name": "Hato International Airport",
+      "iata_code": "CUR",
+      "icao_code": "TNCC",
+      "lat": 12.1889,
+      "lon": -68.959801
+    }
+  ],
+  "Mauritius": [],
+  "Iceland": [
+    {
+      "city": "Reykjavík",
+      "country": "IS",
+      "airport_name": "Keflavik International Airport",
+      "iata_code": "KEF",
+      "icao_code": "BIKF",
+      "lat": 63.985001,
+      "lon": -22.6056
+    }
+  ],
+  "Maldives": [],
+  "Luxembourg": [
+    {
+      "city": "Luxembourg",
+      "country": "LU",
+      "airport_name": "Luxembourg-Findel International Airport",
+      "iata_code": "LUX",
+      "icao_code": "ELLX",
+      "lat": 49.6233333,
+      "lon": 6.2044444
+    }
+  ],
+  "French Polynesia": [
+    {
+      "city": "Papeete",
+      "country": "PF",
+      "airport_name": "Faa'a International Airport",
+      "iata_code": "PPT",
+      "icao_code": "NTAA",
+      "lat": -17.553699,
+      "lon": -149.606995
+    }
+  ],
+  "Guam": [
+    {
+      "city": "Hagåtña",
+      "country": "GU",
+      "airport_name": "Antonio B. Won Pat International Airport",
+      "iata_code": "GUM",
+      "icao_code": "PGUM",
+      "lat": 13.485,
+      "lon": 144.797282
+    }
+  ],
+  "Bhutan": [],
+  "Eswatini": [
+    {
+      "city": "Manzini",
+      "country": "SZ",
+      "airport_name": "Matsapha Airport",
+      "iata_code": "MTS",
+      "icao_code": "FDMS",
+      "lat": -26.528999,
+      "lon": 31.307501
+    }
+  ],
+  "Barbados": [
+    {
+      "city": "Bridgetown",
+      "country": "BB",
+      "airport_name": "Grantley Adams International Airport",
+      "iata_code": "BGI",
+      "icao_code": "TBPB",
+      "lat": 13.0746,
+      "lon": -59.4925
+    }
+  ],
+  "Trinidad and Tobago": [
+    {
+      "city": "Port of Spain",
+      "country": "TT",
+      "airport_name": "Piarco International Airport",
+      "iata_code": "POS",
+      "icao_code": "TTPP",
+      "lat": 10.5954,
+      "lon": -61.3372
+    },
+    {
+      "city": "San Fernando",
+      "country": "PH",
+      "airport_name": "San Fernando Airport",
+      "iata_code": "SFE",
+      "icao_code": "RPUS",
+      "lat": 16.5956,
+      "lon": 120.303001
+    }
+  ],
+  "Fiji": [
+    {
+      "city": "Nadi",
+      "country": "FJ",
+      "airport_name": "Nadi International Airport",
+      "iata_code": "NAN",
+      "icao_code": "NFFN",
+      "lat": -17.755399703979492,
+      "lon": 177.4429931640625
+    },
+    {
+      "city": "Nausori",
+      "country": "FJ",
+      "airport_name": "Nausori International Airport",
+      "iata_code": "SUV",
+      "icao_code": "NFNA",
+      "lat": -18.04330062866211,
+      "lon": 178.5590057373047
+    }
+  ],
+  "Solomon Islands": [
+    {
+      "city": "Honiara",
+      "country": "SB",
+      "airport_name": "Honiara International Airport",
+      "iata_code": "HIR",
+      "icao_code": "AGGH",
+      "lat": -9.428,
+      "lon": 160.054993
+    }
+  ],
+  "Sao Tome and Principe": [
+    {
+      "city": "São Tomé",
+      "country": "ST",
+      "airport_name": "São Tomé International Airport",
+      "iata_code": "TMS",
+      "icao_code": "FPST",
+      "lat": 0.378175,
+      "lon": 6.71215
+    }
+  ],
+  "Mayotte": [],
+  "Cabo Verde": [
+    {
+      "city": "Praia",
+      "country": "CV",
+      "airport_name": "Nelson Mandela International Airport",
+      "iata_code": "RAI",
+      "icao_code": "GVNP",
+      "lat": 14.941126,
+      "lon": -23.484728
+    }
+  ],
+  "Saint Lucia": [
+    {
+      "city": "Castries",
+      "country": "LC",
+      "airport_name": "George F. L. Charles Airport",
+      "iata_code": "SLU",
+      "icao_code": "TLPC",
+      "lat": 14.0202,
+      "lon": -60.992901
+    }
+  ],
+  "French Guiana": [],
+  "Brunei": [
+    {
+      "city": "Bandar Seri Begawan",
+      "country": "BN",
+      "airport_name": "Brunei International Airport",
+      "iata_code": "BWN",
+      "icao_code": "WBSB",
+      "lat": 4.9442,
+      "lon": 114.928001
+    }
+  ],
+  "Vanuatu": [
+    {
+      "city": "Luganville",
+      "country": "VU",
+      "airport_name": "Santo Pekoa International Airport",
+      "iata_code": "SON",
+      "icao_code": "NVSS",
+      "lat": -15.505000114399998,
+      "lon": 167.220001221
+    }
+  ],
+  "Belize": [
+    {
+      "city": "Belize City",
+      "country": "BZ",
+      "airport_name": "Sir Barry Bowen Municipal Airport",
+      "iata_code": "TZA",
+      "icao_code": "BZ-TZA",
+      "lat": 17.517239,
+      "lon": -88.195775
+    }
+  ],
+  "Monaco": [],
+  "Samoa": [
+    {
+      "city": "Apia",
+      "country": "WS",
+      "airport_name": "Faleolo International Airport",
+      "iata_code": "APW",
+      "icao_code": "NSFA",
+      "lat": -13.829999923706055,
+      "lon": -172.00799560546875
+    }
+  ],
+  "Gibraltar": [
+    {
+      "city": "Gibraltar",
+      "country": "GI",
+      "airport_name": "Gibraltar Airport",
+      "iata_code": "GIB",
+      "icao_code": "LXGB",
+      "lat": 36.151199,
+      "lon": -5.34966
+    }
+  ],
+  "Grenada": [],
+  "Jersey": [
+    {
+      "city": "Saint Helier",
+      "country": "JE",
+      "airport_name": "Jersey Airport",
+      "iata_code": "JER",
+      "icao_code": "EGJJ",
+      "lat": 49.20790100097656,
+      "lon": -2.195509910583496
+    }
+  ],
+  "Comoros": [
+    {
+      "city": "Ouani",
+      "country": "KM",
+      "airport_name": "Ouani Airport",
+      "iata_code": "AJN",
+      "icao_code": "FMCV",
+      "lat": -12.131047,
+      "lon": 44.430044
+    }
+  ],
+  "Marshall Islands": [],
+  "Kiribati": [
+    {
+      "city": "Tarawa",
+      "country": "KI",
+      "airport_name": "Bonriki International Airport",
+      "iata_code": "TRW",
+      "icao_code": "NGTA",
+      "lat": 1.38164,
+      "lon": 173.147003
+    }
+  ],
+  "Aruba": [
+    {
+      "city": "Oranjestad",
+      "country": "AW",
+      "airport_name": "Queen Beatrix International Airport",
+      "iata_code": "AUA",
+      "icao_code": "TNCA",
+      "lat": 12.5014,
+      "lon": -70.015198
+    }
+  ],
+  "Isle of Man": [],
+  "Cayman Islands": [
+    {
+      "city": "George Town",
+      "country": "KY",
+      "airport_name": "Owen Roberts International Airport",
+      "iata_code": "GCM",
+      "icao_code": "MWCR",
+      "lat": 19.292801,
+      "lon": -81.357697
+    }
+  ],
+  "Tonga": [],
+  "Seychelles": [
+    {
+      "city": "Victoria",
+      "country": "CA",
+      "airport_name": "Victoria International Airport",
+      "iata_code": "YYJ",
+      "icao_code": "CYYJ",
+      "lat": 48.647201,
+      "lon": -123.427792
+    }
+  ],
+  "Saint Vincent and the Grenadines": [
+    {
+      "city": "Kingstown",
+      "country": "VC",
+      "airport_name": "Argyle International Airport",
+      "iata_code": "SVD",
+      "icao_code": "TVSA",
+      "lat": 13.156695,
+      "lon": -61.149945
+    }
+  ],
+  "Andorra": [],
+  "Antigua and Barbuda": [],
+  "Guernsey": [
+    {
+      "city": "Saint Peter Port",
+      "country": "GG",
+      "airport_name": "Guernsey Airport",
+      "iata_code": "GCI",
+      "icao_code": "EGJB",
+      "lat": 49.435001,
+      "lon": -2.60197
+    }
+  ],
+  "Greenland": [
+    {
+      "city": "Nuuk",
+      "country": "GL",
+      "airport_name": "Nuuk Airport",
+      "iata_code": "GOH",
+      "icao_code": "BGGH",
+      "lat": 64.191066,
+      "lon": -51.67914
+    },
+    {
+      "city": "Sisimiut",
+      "country": "GL",
+      "airport_name": "Sisimiut Airport",
+      "iata_code": "JHS",
+      "icao_code": "BGSS",
+      "lat": 66.951302,
+      "lon": -53.729301
+    },
+    {
+      "city": "Ilulissat",
+      "country": "GL",
+      "airport_name": "Ilulissat Airport",
+      "iata_code": "JAV",
+      "icao_code": "BGJN",
+      "lat": 69.243202,
+      "lon": -51.057098
+    }
+  ],
+  "Dominica": [],
+  "Micronesia, Federated States of": [],
+  "Faroe Islands": [],
+  "Saint Kitts and Nevis": [
+    {
+      "city": "Basseterre",
+      "country": "KN",
+      "airport_name": "Robert L. Bradshaw International Airport",
+      "iata_code": "SKB",
+      "icao_code": "TKPK",
+      "lat": 17.311199188232422,
+      "lon": -62.71870040893555
+    }
+  ],
+  "Virgin Islands, British": [],
+  "American Samoa": [
+    {
+      "city": "Pago Pago",
+      "country": "AS",
+      "airport_name": "Pago Pago International Airport",
+      "iata_code": "PPG",
+      "icao_code": "NSTU",
+      "lat": -14.331,
+      "lon": -170.710007
+    }
+  ],
+  "San Marino": [],
+  "Bonaire, Sint Eustatius, and Saba": [
+    {
+      "city": "Kralendijk",
+      "country": "BQ",
+      "airport_name": "Flamingo International Airport",
+      "iata_code": "BON",
+      "icao_code": "TNCB",
+      "lat": 12.131,
+      "lon": -68.268501
+    },
+    {
+      "city": "Oranjestad",
+      "country": "AW",
+      "airport_name": "Queen Beatrix International Airport",
+      "iata_code": "AUA",
+      "icao_code": "TNCA",
+      "lat": 12.5014,
+      "lon": -70.015198
+    }
+  ],
+  "Palau": [],
+  "Tuvalu": [
+    {
+      "city": "Funafuti",
+      "country": "TV",
+      "airport_name": "Funafuti International Airport",
+      "iata_code": "FUN",
+      "icao_code": "NGFU",
+      "lat": -8.525,
+      "lon": 179.195999
+    }
+  ],
+  "Liechtenstein": [],
+  "Saint Martin": [
+    {
+      "city": "Marigot",
+      "country": "DM",
+      "airport_name": "Douglas-Charles Airport",
+      "iata_code": "DOM",
+      "icao_code": "TDPD",
+      "lat": 15.547,
+      "lon": -61.299999
+    }
+  ],
+  "Saint Pierre and Miquelon": [
+    {
+      "city": "Saint-Pierre",
+      "country": "RE",
+      "airport_name": "Pierrefonds Airport",
+      "iata_code": "ZSE",
+      "icao_code": "FMEP",
+      "lat": -21.319362,
+      "lon": 55.422506
+    }
+  ],
+  "Cook Islands": [
+    {
+      "city": "Avarua",
+      "country": "CK",
+      "airport_name": "Rarotonga International Airport",
+      "iata_code": "RAR",
+      "icao_code": "NCRG",
+      "lat": -21.2027,
+      "lon": -159.806
+    }
+  ],
+  "Turks and Caicos Islands": [],
+  "Anguilla": [
+    {
+      "city": "The Valley",
+      "country": "AI",
+      "airport_name": "Clayton J Lloyd International Airport",
+      "iata_code": "AXA",
+      "icao_code": "TQPF",
+      "lat": 18.204773,
+      "lon": -63.05383
+    }
+  ],
+  "Northern Mariana Islands": [],
+  "Saint Barthelemy": [
+    {
+      "city": "Gustavia",
+      "country": "BL",
+      "airport_name": "Saint Barthélemy - Gustaf III Airport",
+      "iata_code": "SBH",
+      "icao_code": "TFFJ",
+      "lat": 17.9044,
+      "lon": -62.843601
+    }
+  ],
+  "Falkland Islands (Islas Malvinas)": [
+    {
+      "city": "Stanley",
+      "country": "FK",
+      "airport_name": "Port Stanley Airport",
+      "iata_code": "PSY",
+      "icao_code": "SFAL",
+      "lat": -51.685699462891,
+      "lon": -57.777599334717
+    }
+  ],
+  "Sint Maarten": [],
+  "Svalbard": [
+    {
+      "city": "Longyearbyen",
+      "country": "NO",
+      "airport_name": "Svalbard Airport, Longyear",
+      "iata_code": "LYR",
+      "icao_code": "ENSB",
+      "lat": 78.246101379395,
+      "lon": 15.465600013733
+    }
+  ],
+  "Christmas Island": [
+    {
+      "city": "Flying Fish Cove",
+      "country": "CX",
+      "airport_name": "Christmas Island Airport",
+      "iata_code": "XCH",
+      "icao_code": "YPXM",
+      "lat": -10.449382,
+      "lon": 105.690931
+    }
+  ],
+  "Wallis and Futuna": [],
+  "Bermuda": [
+    {
+      "city": "Hamilton",
+      "country": "CA",
+      "airport_name": "John C. Munro Hamilton International Airport",
+      "iata_code": "YHM",
+      "icao_code": "CYHM",
+      "lat": 43.173599243199995,
+      "lon": -79.93499755859999
+    }
+  ],
+  "Vatican City": [],
+  "Nauru": [],
+  "Saint Helena, Ascension, and Tristan da Cunha": [
+    {
+      "city": "Jamestown",
+      "country": "US",
+      "airport_name": "Chautauqua County-Jamestown Airport",
+      "iata_code": "JHW",
+      "icao_code": "KJHW",
+      "lat": 42.15425,
+      "lon": -79.254008
+    }
+  ],
+  "Niue": [
+    {
+      "city": "Alofi",
+      "country": "NU",
+      "airport_name": "Niue International Airport",
+      "iata_code": "IUE",
+      "icao_code": "NIUE",
+      "lat": -19.079030990600586,
+      "lon": -169.92559814453125
+    }
+  ],
+  "Montserrat": [],
+  "Norfolk Island": [
+    {
+      "city": "Kingston",
+      "country": "CA",
+      "airport_name": "Kingston Norman Rogers Airport",
+      "iata_code": "YGK",
+      "icao_code": "CYGK",
+      "lat": 44.2253,
+      "lon": -76.596901
+    }
+  ],
+  "South Georgia and South Sandwich Islands": [],
+  "Pitcairn Islands": []
+}

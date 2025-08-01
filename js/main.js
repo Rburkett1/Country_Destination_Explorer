@@ -620,6 +620,7 @@ async function fetchWikipediaSummary(countryName) {
 
 
 // --- Airports ---
+/*
 async function renderAirports(countryData) {
     const apiKey = '857e84fcc8e43fb6604ba22eb772c283';
     const airportBox = document.getElementById('airports');
@@ -653,6 +654,42 @@ async function renderAirports(countryData) {
         airportBox.innerHTML = '<div class="airport-title">Airports</div><p>Error loading airport data.</p>';
     }
 }
+*/
+
+// --- Load Airports from Local JSON ---
+async function displayLocalAirports(countryName) {
+    const airportBox = document.querySelector('.info-box-4.airport');
+    if (!airportBox) return;
+    
+    try {
+        const res = await fetch('airports.json');
+        if (!res.ok) throw new Error('Could not load airports.json');
+        const airportsData = await res.json();
+        
+        const countryAirports = airportsData[countryName];
+        
+        if (countryAirports && countryAirports.length > 0) {
+            const airportsHtml = `
+                <div class="airport-title">Airports</div>
+                <ul>
+                    ${countryAirports.map(airport => `
+                        <li>
+                            <strong>${airport.city} – ${airport.airport_name}</strong><br>
+                            IATA: ${airport.iata_code || 'N/A'} | ICAO: ${airport.icao_code || 'N/A'}<br>
+                            Lat: ${airport.lat}, Lon: ${airport.lon}
+                        </li>
+                    `).join('')}
+                </ul>
+            `;
+            airportBox.innerHTML = airportsHtml;
+        } else {
+            airportBox.innerHTML = '<div class="airport-title">Airports</div><p>No airport data available for this country.</p>';
+        }
+    } catch (error) {
+        console.error('Error loading airports:', error);
+        airportBox.innerHTML = '<div class="airport-title">Airports</div><p>Error loading airport data.</p>';
+    }
+}
 
 // --- Main Function ---
 async function getCountryInfo(country) {
@@ -679,7 +716,7 @@ async function getCountryInfo(country) {
         );
         document.getElementById('info').innerHTML = infoHtml;
 
-        await renderAirports(countryData);
+        await displayLocalAirports(countryData.name.common);
         await renderWeather(countryData);
 
     } catch (error) {
@@ -782,4 +819,33 @@ document.addEventListener("DOMContentLoaded", function() {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 }
+
+// --- Hamburger Menu Functions ---
+function toggleHamburgerMenu() {
+    console.log('Hamburger menu clicked!'); // Debug log
+    const dropdown = document.getElementById('hamburger-dropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('show');
+        console.log('Dropdown classes:', dropdown.classList.toString()); // Debug log
+    } else {
+        console.log('Dropdown element not found!'); // Debug log
+    }
+}
+
+function closeHamburgerMenu() {
+    const dropdown = document.getElementById('hamburger-dropdown');
+    if (dropdown) {
+        dropdown.classList.remove('show');
+    }
+}
+
+// Close hamburger menu when clicking outside
+document.addEventListener('click', function(event) {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const dropdown = document.getElementById('hamburger-dropdown');
+    
+    if (hamburgerMenu && dropdown && !hamburgerMenu.contains(event.target)) {
+        dropdown.classList.remove('show');
+    }
+});
 });

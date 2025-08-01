@@ -1,0 +1,464 @@
+/* Mobile Responsive CSS - Add to your existing CSS file */
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none;
+    position: relative;
+    margin-left: auto;
+}
+
+.hamburger-btn {
+    background: #2c3e50;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-btn:hover {
+    background: #34495e;
+}
+
+.hamburger-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-top: 5px;
+}
+
+.hamburger-dropdown.show {
+    display: block !important;
+}
+
+.hamburger-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-dropdown li {
+    border-bottom: 1px solid #eee;
+}
+
+.hamburger-dropdown li:last-child {
+    border-bottom: none;
+}
+
+.hamburger-dropdown button {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.hamburger-dropdown button:hover {
+    background: #f8f9fa;
+}
+
+.hamburger-dropdown button:active {
+    background: #e9ecef;
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    
+    /* Navigation adjustments for hamburger menu */
+    nav {
+        justify-content: space-between !important;
+        position: relative;
+    }
+    
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Show hamburger menu, hide regular filter bar */
+    .hamburger-menu {
+        display: block !important;
+        margin-right: 15px;
+    }
+    
+    .filter-wrapper {
+        display: none !important;
+    }
+    
+    /* Country cards grid */
+    #country-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .country-card {
+        padding: 12px;
+    }
+    
+    .country-card img {
+        height: 120px;
+    }
+    
+    /* Search bar */
+    .searchbar {
+        flex-direction: column;
+        gap: 6px;
+        padding: 8px;
+        max-width: 100%;
+    }
+
+    .searchbar input {
+        width: 100%;
+        margin-bottom: 6px;
+        font-size: 14px;
+        padding: 8px;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+
+    .searchbar button {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    /* Country info containers */
+    .country-info-container-1 {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .country-info-container-2 {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .country-info-container-3 {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .country-info-container-4 {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .country-info-container-5 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Info boxes */
+    .info-box {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .info-box-2 {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .info-box-4 {
+        width: 100%;
+        min-height: 200px;
+    }
+    
+    .info-box-5 {
+        padding: 12px;
+    }
+    
+    /* Weather section */
+    .country-info-weather {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .info-box-6 {
+        width: 100%;
+    }
+    
+    /* Google map */
+    .google-map {
+        height: 250px;
+        width: 100%;
+    }
+    
+    /* Flag and coat of arms */
+    .flag-section img {
+        max-width: 200px;
+        height: auto;
+    }
+    
+    .coat-of-arms-img {
+        max-width: 30px;
+        height: auto;
+    }
+    
+    /* Filter sort popup */
+    #filterSortPopup {
+        width: 90%;
+        max-width: 350px;
+        margin: 20px;
+    }
+    
+    .popup-content {
+        padding: 15px;
+    }
+    
+    /* Back to top button */
+    #backToTop {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    
+    /* Filter bars */
+    .filter-bar {
+        justify-content: center;
+        gap: 5px;
+        padding: 5px;
+    }
+    
+    .filter-bar button {
+        font-size: 10px;
+        padding: 4px 8px;
+        flex: 1;
+        min-width: 70px;
+        max-width: 90px;
+    }
+    
+    .filter-bar-subregion button {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+    
+    /* Country cards */
+    #country-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .country-card {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .country-card img {
+        height: 100px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    /* Search bar */
+    .searchbar {
+        padding: 8px;
+        gap: 6px;
+    }
+
+    .searchbar input {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+
+    .searchbar button {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+
+    /* Country info layout */
+    .country-info-container-1 {
+        padding: 10px;
+    }
+    
+    .country {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    
+    .capital {
+        font-size: 16px;
+    }
+    
+    .country-info-container-2 {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px;
+    }
+    
+    .country-info-container-3 {
+        padding: 10px;
+    }
+    
+    .info-box {
+        padding: 8px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .info-box-2 {
+        padding: 6px;
+        font-size: 11px;
+        text-align: center;
+    }
+    
+    .info-box-4 {
+        min-height: 180px;
+    }
+    
+    /* Weather section */
+    .weather-title {
+        font-size: 16px;
+    }
+    
+    .weather-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .weather-row {
+        font-size: 12px;
+        padding: 4px 0;
+    }
+    
+    /* Google map */
+    .google-map {
+        height: 200px;
+    }
+    
+    /* Airport and attraction lists */
+    .airport-title,
+    .weather-title,
+    .googlemap-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    ul {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    
+    li {
+        margin-bottom: 8px;
+        padding: 6px;
+    }
+    
+    /* Autocomplete */
+    .autocomplete-item {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .autocomplete-item img {
+        width: 18px;
+        height: 12px;
+    }
+    
+    /* Currency symbol */
+    .currency-symbol {
+        font-size: 20px;
+        display: block;
+        margin-top: 5px;
+    }
+    
+    /* Fact container */
+    .fact-container {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .extra {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    
+    .hamburger-btn {
+        padding: 10px;
+        font-size: 16px;
+        margin: 8px;
+    }
+    
+    .searchbar {
+        padding: 6px;
+        gap: 4px;
+    }
+    
+    .searchbar input {
+        padding: 6px;
+        font-size: 14px;
+    }
+    
+    .searchbar button {
+        padding: 6px;
+        font-size: 12px;
+    }
+    
+    .filter-bar button {
+        font-size: 9px;
+        padding: 3px 5px;
+        min-width: 60px;
+        max-width: 75px;
+    }
+    
+    .country-card {
+        padding: 8px;
+    }
+    
+    .country {
+        font-size: 20px;
+    }
+    
+    .info-box,
+    .info-box-2 {
+        font-size: 11px;
+        padding: 6px;
+    }
+    
+    .google-map {
+        height: 150px;
+    }
+    
+    ul {
+        font-size: 11px;
+    }
+    
+    .weather-row {
+        font-size: 11px;
+    }
+}
